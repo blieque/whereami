@@ -30,7 +30,12 @@ const initPanorama = (latitude, longitude) => {
 };
 
 const initConnection = (locationID) => {
-  const connection = new WebSocket(`ws://${location.hostname}:9000`, 'geo');
+  const connection = new WebSocket(
+    location.origin.startsWith('http://localhost')
+      ? `ws://${location.hostname}:9000`
+      : `wss://${location.hostname}/socket`,
+    'geo',
+  );
 
   console.log(`Reqesting position for location ${locationID}`);
   connection.addEventListener(
