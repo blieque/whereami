@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Geolite</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDehFh0U0jbYDJttd_mRsy0WxiJDrOlH3M"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+      html,
+      body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        min-height: 100%;
+        height: 100%;
+        background: #ddd;
+      }
+
+      .panorama {
+        width: 100%;
+        height: 100%;
+      }
+
+      .reveal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        pointer-events: none;
+      }
+      .reveal__name {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 12vw;
+        line-height: 1;
+        letter-spacing: 0.1em;
+        word-spacing: 0.1em;
+      }
+      .reveal__character {
+        opacity: 0;
+        filter: blur(1em);
+        transition: all 3s ease-out;
+      }
+      .reveal--revealed .reveal__character {
+        opacity: 1;
+        filter: blur(0);
+      }
+      .reveal__link-container {
+        animation: wiggle;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+      .reveal__link {
+        display: block;
+        margin: -2rem 0 4rem;
+        padding: 0.3em 1em 0.36em;
+        background: #ee3748;
+        font-size: 1.2rem;
+        color: #fff;
+        text-decoration: none;
+        pointer-events: initial;
+        transform: scaleX(0);
+        transition: all 0.4s ease-out 7s;
+      }
+      @media (max-width: 50rem) {
+        .reveal__link {
+          margin-top: -1.2rem;
+          font-size: 1rem;
+        }
+      }
+      @media (max-width: 32rem) {
+        .reveal__link {
+          margin-top: -0.4rem;
+          font-size: 0.8rem;
+        }
+      }
+      .reveal--revealed .reveal__link {
+        transform: scaleX(1);
+      }
+
+      @keyframes wiggle {
+        0% { transform: rotate(-5deg) }
+        100% { transform: rotate(5deg) }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="panorama"></div>
+    <div class="reveal">
+      <span class="reveal__name"></span>
+
+      <div class="reveal__cursor">
+        <div class="reveal__link-container">
+          <a class="reveal__link">view on google maps</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="client.js"></script>
+
+    <!--
+    JUDAS, JUDA-AH-AS
+    JUDAS, JUDA-AH-AS
+    JUDAS, JUDA-AH-AS
+    JUDAS, GA-GA
+    -->
+  </body>
+</html>
