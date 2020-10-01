@@ -1,7 +1,97 @@
-const WebSocketServer = require('websocket').server;
+const fs = require('fs');
 const http = require('http');
+const crypto = require('crypto');
 
+const WebSocketServer = require('websocket').server;
+
+// Utilities
+
+const log = (message) => {
+  console.log(`${(new Date()).toISOString()}: ${message}`);
+};
+
+const warn = (message) => {
+  console.warn(`${(new Date()).toISOString()}: ${message}`);
+};
+
+const getLocationByID = (locationID) => {
+  return locations.find(location => location.id === locationID);
+};
+
+/**
+  `id` and `isEnabled` can be omitted when adding new locations. They will be
+  added by the server at startup and saved back to `locations.json`.
+
+  `locations.json` is in the form:
+
+  ```
+  [
+    {
+      "id": "231b158",
+      "isEnabled": true,
+      "name": "London",
+      "clues": [
+        "\"Royal Observatory\" the south-east",
+        "London skyline to the north-north-west"
+      ],
+      "difficulty": 2,
+      latitude: 51.4779733,
+      longitude: -0.0015356,
+    },
+    ...
+  ]
+  ```
+ */
 const locations = require('./locations.json');
+
+// Process locations
+
+let modifiedLocations = 0;
+
+locations.forEach((location) => {
+  let modified = false;
+
+  if (typeof location.id === 'undefined') {
+    const hash = crypto.createHash('md5');
+    hash.update(`${location.latitude},${location.longitude}`);
+    location.id = hash.digest('hex').slice(0, 7);
+    modified = true;
+  }
+
+  if (typeof location.isEnabled === 'undefined') {
+    location.isEnabled = true;
+    modified = true;
+  }
+
+  if (modified) modifiedLocations += 1;
+});
+
+if (modifiedLocations > 0) {
+  log(`Modified ${modifiedLocations} locations`);
+  log(`Updating \`locations.json\` on the filesystem`);
+  fs.writeFile(
+    'locations.json',
+    JSON.stringify(
+      locations,
+      ['id', 'isEnabled', 'name', 'difficulty', 'latitude', 'longitude', 'clues'],
+      2,
+    ),
+    'utf8',
+    (error) => {
+      if (error !== null) {
+        log('Error encountered saving `locations.json`:');
+        console.log(error);
+      }
+    },
+  );
+}
+
+log(`Loaded ${locations.length} locations:`);
+locations.forEach(location => console.log(
+  `  ${location.id} ${location.name} ${location.difficulty}/10`
+));
+
+// Initialise server
 
 const connections = [];
 
@@ -23,10 +113,6 @@ wsServer = new WebSocketServer({
   autoAcceptConnections: false,
 });
 
-const log = (message) => {
-  console.log(`${(new Date()).toISOString()}: ${message}`);
-};
-
 wsServer.on('request', (request) => {
   // Make sure we only accept requests from an allowed origin
   if (
@@ -46,41 +132,71 @@ wsServer.on('request', (request) => {
   log(`Connection from ${connection.remoteAddress} accepted`);
   log(` └ current connections: ${connections.length}`);
 
+  // Create object to maintain per-connection state.
   connection._meta = {};
 
   connection.on(
     'message',
     (message) => {
-      // if (message.type !== 'utf8') connection.close();
+      // Drop connection on unexpected message format.
+      if (message.type !== 'utf8') connection.close();
+
       if (message.type === 'utf8') {
         log(`Received: "${message.utf8Data}"`);
         const payload = JSON.parse(message.utf8Data);
 
         switch (payload.type) {
+          /**
+           * Client requests that the server provide it the latitude and
+           * longitude of a specified location (by `locationID`).
+           */
           case 'getPosition':
-            if (locations[payload.locationID] !== undefined) {
-              log(`Providing map position for location "${payload.locationID}" to ${connection.remoteAddress}`);
-              connection.sendUTF(JSON.stringify({
-                type: 'position',
-                latitude: locations[payload.locationID].latitude,
-                longitude: locations[payload.locationID].longitude,
-              }));
-              log(`Remembering location "${payload.locationID}" for ${connection.remoteAddress}`);
-              connection._meta.locationID = payload.locationID;
-            } else {
-              log(`Ignoring request from ${connection.remoteAddress} for non-existent location "${payload.locationID}"`);
+            if (!(payload?.locationID?.length > 0)) {
+              warn(`Ignoring request from ${connection.remoteAddress} for non-specified location`);
+              break;
             }
+
+            const location = getLocationByID(payload.locationID);
+            if (location === undefined || !location.isEnabled) {
+              warn(`Ignoring request from ${connection.remoteAddress} for non-existent location "${payload.locationID}"`);
+              break;
+            }
+
+            log(`Providing map position for location "${payload.locationID}" to ${connection.remoteAddress}`);
+            connection.sendUTF(JSON.stringify({
+              type: 'position',
+              latitude: location.latitude,
+              longitude: location.longitude,
+            }));
+            log(`Remembering location "${payload.locationID}" for ${connection.remoteAddress}`);
+            connection._meta.locationID = payload.locationID;
+
             break;
 
+          /**
+           * Client requests that the server tell all connected clients to
+           * reveal their respective locations.
+           */
           case 'reveal':
             log(`Sending solutions`);
             connections.forEach((connection) => {
-              connection.sendUTF(JSON.stringify({
-                type: 'reveal',
-                name: locations[connection._meta.locationID].name,
-              }));
+              const location = getLocationByID(connection._meta.locationID);
+              if (location === undefined) {
+                warn(`Couldn't find location "${connection._meta.locationID}" for ${connection.remoteAddress}`);
+              } else {
+                connection.sendUTF(JSON.stringify({
+                  type: 'reveal',
+                  name: location.name,
+                  clues: location.clues,
+                }));
+              }
             });
             break;
+
+          default:
+            // Drop connection on unexpected payload type.
+            warn(`Unrecognised payload type "${payload.type}"; dropping connection to ${connection.remoteAddress}`);
+            connection.close();
         }
       }
     },

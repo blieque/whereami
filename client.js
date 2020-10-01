@@ -2,8 +2,67 @@ const elPanorama = document.querySelector('.panorama');
 
 const elReveal = document.querySelector('.reveal');
 const elRevealName = document.querySelector('.reveal__name');
-// const elRevealCursor = document.querySelector('.reveal__cursor');
 const elRevealLink = document.querySelector('.reveal__link');
+const elRevealCluesContainer = document.querySelector('.reveal__clues-container');
+const elRevealClues = document.querySelector('.reveal__clues');
+
+const initCluesDragging = () => {
+  let initialMousePosition = null;
+  let initialCluesPosition = { x: 0, y: 0 };
+
+  // Move the card
+  const moveClues = (event) => {
+    const deltaX = event.clientX - initialMousePosition.x;
+    const deltaY = event.clientY - initialMousePosition.y;
+
+    const positionX = initialCluesPosition.x + deltaX;
+    const positionY = initialCluesPosition.y + deltaY;
+
+    elRevealCluesContainer.style.transform =
+      `translate(${positionX}px, ${positionY}px)`;
+  };
+
+  // Drop the card
+  const dropClues = () => {
+    initialMousePosition = null;
+
+    window.removeEventListener('mousemove', moveClues);
+    window.removeEventListener('touchmove', moveClues);
+
+    window.removeEventListener('mouseup', dropClues);
+    window.removeEventListener('touchend', dropClues);
+    window.removeEventListener('touchcancel', dropClues);
+    // document.removeEventListener('mouseout', dropClues);
+  };
+
+  // Pick up the card
+  const pickUpClues = (event) => {
+    initialMousePosition = {
+      x: event.clientX,
+      y: event.clientY,
+    };
+
+    if (elRevealCluesContainer.style.transform.includes('translate')) {
+      initialCluesMatch = elRevealCluesContainer.style.transform
+        .match(/translate\(([-0-9.]+)px, ?([-0-9.]+)px\)/);
+      initialCluesPosition = {
+        x: parseFloat(initialCluesMatch[1]),
+        y: parseFloat(initialCluesMatch[2]),
+      };
+    }
+
+    window.addEventListener('mousemove', moveClues);
+    window.addEventListener('touchmove', moveClues);
+
+    window.addEventListener('mouseup', dropClues);
+    window.addEventListener('touchend', dropClues);
+    window.addEventListener('touchcancel', dropClues);
+    // document.addEventListener('mouseout', dropClues);
+  };
+
+  elRevealClues.addEventListener('mousedown', pickUpClues);
+  elRevealClues.addEventListener('touchstart', pickUpClues);
+};
 
 const initPanorama = (latitude, longitude) => {
   new google.maps.StreetViewPanorama(
@@ -30,19 +89,19 @@ const initPanorama = (latitude, longitude) => {
 };
 
 const initConnection = (locationID) => {
-  const connection = new WebSocket(
-    location.origin.startsWith('http://localhost')
-      ? `ws://${location.hostname}:9000`
-      : `wss://${location.hostname}/socket`,
-    'geo',
-  );
+  // HTTP implies development server, HTTPS implies production
+  const url = location.protocol === 'http:'
+    ? `ws://${location.hostname}:9000`
+    : `wss://${location.hostname}/socket`;
+  console.log(`Opening WebSocket connection to ${url}`);
+  const connection = new WebSocket(url, 'geo');
 
-  connection._meta = {};
+  let position;
 
-  console.log(`Reqesting position for location ${locationID}`);
   connection.addEventListener(
     'open',
     () => {
+      console.log(`Reqesting position for location "${locationID}"`);
       connection.send(JSON.stringify({
         type: 'getPosition',
         locationID,
@@ -58,14 +117,29 @@ const initConnection = (locationID) => {
       console.log(`Recieved: ${message}`);
 
       switch (payload.type) {
+        /**
+         * Server requests that the provided latitude and longitude be passed
+         * to the Street View API.
+         */
         case 'position':
-          connection._meta.position = payload;
+          position = payload;
           initPanorama(payload.latitude, payload.longitude);
           break;
 
+        /**
+         * Server requests that the client reveal the provided name as the
+         * solution.
+         */
         case 'reveal':
-          reveal(payload.name, connection._meta.position);
+          if (position === undefined) {
+            console.warn('Received reveal request before receiving a position');
+          } else {
+            reveal(payload.name, payload.clues, position);
+          }
           break;
+
+        default:
+          console.warn(`Unrecognised payload type "${payload.type}"`);
       }
     },
   );
@@ -77,35 +151,53 @@ const initConnection = (locationID) => {
   };
 };
 
-// const initCursor = () => {
-//   window.addEventListener('mousemove', (event) => {
-//     // screenX, pageX, layerX, clientX
-//     elRevealCursor.style.transform =
-//       `translate(calc(${event.clientX}px - 50%), calc(${event.clientY}px - 50%))`;
-//   });
-// };
-
-const reveal = (name, position) => {
+/**
+ * Update the Google Maps link based on the provided position, and then reveal
+ * the name of the location, all smooth like.
+ */
+const reveal = (name, clues, position) => {
   const longestWordLength = name
     .split(' ')
     .map(part => part.length)
     .reduce((a, b) => Math.max(a, b));
-  elReveal.style.fontSize = `${100 / longestWordLength}vw`;
-
+  elRevealName.style.fontSize = `${100 / longestWordLength}vmin`;
   splitSpanLetters(name);
 
+  if (clues?.length > 0) {
+    setClues(clues);
+    elReveal.classList.add('reveal--showClues');
+  }
+
+  if (typeof position === 'object') {
+    elReveal.classList.add('reveal--showLink');
+    elRevealLink.href =
+      `https://www.google.co.uk/maps/@${position.latitude},${position.longitude},20z`;
+  }
+
+  elReveal.style = '';
   setTimeout(
     () => {
       elReveal.classList.add('reveal--revealed');
     },
     50,
   );
-
-  // initCursor();
-  elRevealLink.href =
-    `https://www.google.co.uk/maps/@${position.latitude},${position.longitude},20z`;
 };
 
+const setClues = (clues) => {
+  elRevealClues.innerHTML = '';
+
+  clues.forEach((clue) => {
+    const elClue = document.createElement('li');
+    elClue.innerText = clue;
+    elRevealClues.appendChild(elClue);
+  })
+};
+
+/**
+ * Split the word characters in `.reveal__name` into individual `<span>`s, and
+ * replace any spaces with `<br>`s. Each `<span>` is given a random
+ * `transition-delay` CSS property between 0 and 5 seconds.
+ */
 const splitSpanLetters = (name) => {
   elRevealName.innerHTML = '';
   name
@@ -124,7 +216,13 @@ const splitSpanLetters = (name) => {
     });
 };
 
-// INIT
+// Initialisation
 const locationID = location.pathname.slice(1) || location.hash.slice(1);
-initConnection(locationID);
-// reveal('Newcasle upon Tyne');
+if (locationID?.length > 0) {
+  elReveal.style.display = 'none';
+  initCluesDragging();
+  initConnection(locationID);
+} else {
+  console.error('No `locationID` found in `location.pathname` or `location.hash`');
+}
+// reveal('Novosibirsk');

@@ -1,129 +1,142 @@
-{
-  "7b9453e": {
+[
+  {
+    "id": "7b9453e",
+    "isEnabled": true,
     "name": "Rotterdam",
-    "notes": [
+    "difficulty": 5,
+    "latitude": 51.9123495,
+    "longitude": 4.4830536,
+    "clues": [
       "Name on building to the north-north-east",
       "Bikes",
       "Driving on the right"
-    ],
-    "difficulty": 5,
-    "latitude": 51.9123495,
-    "longitude": 4.4830536
+    ]
   },
-
-  "723431c": {
+  {
+    "id": "723431c",
+    "isEnabled": true,
     "name": "Marseille",
-    "notes": [
-      "Name on sign to university",
-      "South of France feel"
-    ],
     "difficulty": 3,
     "latitude": 43.3051315,
-    "longitude": 5.3806031
+    "longitude": 5.3806031,
+    "clues": [
+      "Name on sign to university",
+      "South of France feel"
+    ]
   },
-
-  "--0cf9997": {
+  {
+    "id": "0cf9997",
+    "isEnabled": false,
     "name": "Sofia",
-    "notes": [
-      "Name on barrier, right of Jesus",
-      "Flag",
-      "Cyrillic and English"
-    ],
     "difficulty": 8,
     "latitude": 42.6974833,
-    "longitude": 23.3220823
+    "longitude": 23.3220823,
+    "clues": [
+      "Name on barrier, right of Jesus",
+      "Flag",
+      "Cyrillic and Latin characters"
+    ]
   },
-
-  "cf3ff15": {
+  {
+    "id": "cf3ff15",
+    "isEnabled": true,
     "name": "Sofia",
-    "notes": [
+    "difficulty": 7,
+    "latitude": 42.6979111,
+    "longitude": 23.3218663,
+    "clues": [
       "\"Sofia Hotel Balkan\" to the south-south-west, on the roof",
       "\"Bulbank\" and \".bg\" website",
       "Flag",
       "Cyrillic and Latin characters"
-    ],
-    "difficulty": 7,
-    "latitude": 42.6979111,
-    "longitude": 23.3218663
+    ]
   },
-
-  "88376cd": {
+  {
+    "id": "88376cd",
+    "isEnabled": true,
     "name": "Vienna",
-    "notes": [
-      "Zurich insurance trickery"
-    ],
     "difficulty": 9,
     "latitude": 48.22213,
-    "longitude": 16.3977179
+    "longitude": 16.3977179,
+    "clues": [
+      "Zurich insurance trickery"
+    ]
   },
-
-  "d282f31": {
+  {
+    "id": "d282f31",
+    "isEnabled": true,
     "name": "Sydney",
-    "notes": [
-      "Name in Sydney's Best Fish and Chips"
-    ],
     "difficulty": 4,
     "latitude": -33.891112,
-    "longitude": 151.2743281
+    "longitude": 151.2743281,
+    "clues": [
+      "Name in Sydney's Best Fish and Chips"
+    ]
   },
-
-  "83751fe": {
+  {
+    "id": "83751fe",
+    "isEnabled": true,
     "name": "Geneva",
-    "notes": [
-      "Jet d'Eau",
-      "Swiss flag"
-    ],
     "difficulty": 2,
     "latitude": 46.2079471,
-    "longitude": 6.14877
-  },
-
-  "b0a8a17": {
-    "name": "Geneva",
-    "notes": [
+    "longitude": 6.14877,
+    "clues": [
       "Jet d'Eau",
-      "Name in \"Genevoiseries?\""
-    ],
+      "Swiss flag"
+    ]
+  },
+  {
+    "id": "b0a8a17",
+    "isEnabled": true,
+    "name": "Geneva",
     "difficulty": 7,
     "latitude": 46.2113501,
-    "longitude": 6.1525779
+    "longitude": 6.1525779,
+    "clues": [
+      "Jet d'Eau",
+      "Name in \"Genevoiseries?\""
+    ]
   },
-
-  "7630e90": {
+  {
+    "id": "7630e90",
+    "isEnabled": true,
     "name": "Rio de Janeiro",
-    "notes": [
+    "difficulty": 6,
+    "latitude": -22.9074212,
+    "longitude": -43.1269323,
+    "clues": [
       "No name",
       "Sugar Loaf",
       "Canadian red herring"
-    ],
-    "difficulty": 6,
-    "latitude": -22.9074212,
-    "longitude": -43.1269323
+    ]
   },
-
-  "99b5ff7": {
+  {
+    "id": "99b5ff7",
+    "isEnabled": true,
     "name": "Macau",
-    "notes": [
-      "Canadian College of Macau",
-      "Portugese and Chinese",
-      "Casinos"
-    ],
     "difficulty": 6,
     "latitude": 22.1896926,
-    "longitude": 113.5472438
+    "longitude": 113.5472438,
+    "clues": [
+      "Canadian College of Macau",
+      "\"Macau\" on the taxi",
+      "Casinos!",
+      "Portugese and Chinese"
+    ]
   },
-
-  "965ad95": {
+  {
+    "id": "965ad95",
+    "isEnabled": true,
     "name": "New York City",
-    "notes": [
+    "difficulty": 4,
+    "latitude": 40.7196447,
+    "longitude": -73.9962544,
+    "clues": [
       "\"Mott NYC\" to the north-north-east",
       "\"NYC\" on the poster at 158 (south-west)",
       "Fire escapes!",
       "Vehicles",
-      "Canadian red herring"
-    ],
-    "difficulty": 4,
-    "latitude": 40.7196447,
-    "longitude": -73.9962544
+      "Chinatown in Manhattan"
+    ]
   }
-}
+]
