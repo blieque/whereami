@@ -37,6 +37,8 @@ const initConnection = (locationID) => {
     'geo',
   );
 
+  connection._meta = {};
+
   console.log(`Reqesting position for location ${locationID}`);
   connection.addEventListener(
     'open',
@@ -57,11 +59,12 @@ const initConnection = (locationID) => {
 
       switch (payload.type) {
         case 'position':
+          connection._meta.position = payload;
           initPanorama(payload.latitude, payload.longitude);
           break;
 
         case 'reveal':
-          reveal(payload.name, payload.link);
+          reveal(payload.name, connection._meta.position);
           break;
       }
     },
@@ -82,7 +85,7 @@ const initConnection = (locationID) => {
 //   });
 // };
 
-const reveal = (name, link) => {
+const reveal = (name, position) => {
   const longestWordLength = name
     .split(' ')
     .map(part => part.length)
@@ -99,7 +102,8 @@ const reveal = (name, link) => {
   );
 
   // initCursor();
-  elRevealLink.href = link;
+  elRevealLink.href =
+    `https://www.google.co.uk/maps/@${position.latitude},${position.longitude},20z`;
 };
 
 const splitSpanLetters = (name) => {

@@ -78,7 +78,6 @@ wsServer.on('request', (request) => {
               connection.sendUTF(JSON.stringify({
                 type: 'reveal',
                 name: locations[connection._meta.locationID].name,
-                link: locations[connection._meta.locationID].link,
               }));
             });
             break;
