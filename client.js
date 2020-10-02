@@ -6,6 +6,10 @@ const elRevealLink = document.querySelector('.reveal__link');
 const elRevealCluesContainer = document.querySelector('.reveal__clues-container');
 const elRevealClues = document.querySelector('.reveal__clues');
 
+if (navigator.userAgent.includes('Windows')) {
+  document.body.classList.add('os--windows');
+}
+
 const initCluesDragging = () => {
   let initialMousePosition = null;
   let initialCluesPosition = { x: 0, y: 0 };
@@ -86,6 +90,18 @@ const initPanorama = (latitude, longitude) => {
       showRoadLabels: false,
     },
   );
+
+  // Move `.reveal` inside the maps panorama element so that the overlay still
+  // shows when the panorama is made full-screen.
+  setTimeout(
+    () => {
+      const elGMStyle = document.querySelector('.panorama > .gm-style');
+      if (elGMStyle !== null) {
+        elGMStyle.appendChild(elReveal);
+      }
+    },
+    1000,
+  )
 };
 
 const initConnection = (locationID) => {

@@ -39,9 +39,11 @@
         width: 100%;
         height: 100%;
         color: #fff;
+        font-family: 'Poppins', sans-serif;
         pointer-events: none;
       }
       .reveal__name {
+        margin-bottom: -0.2em;
         text-align: center;
         text-transform: uppercase;
         font-size: 12vmin;
@@ -61,7 +63,6 @@
         filter: blur(0);
       }
       .reveal__link-container {
-        margin-top: -4rem;
         animation: wiggle;
         animation-duration: 1s;
         animation-timing-function: ease-in-out;
@@ -81,13 +82,11 @@
       }
       @media (max-width: 50rem) {
         .reveal__link {
-          margin-top: -1.2rem;
           font-size: 1rem;
         }
       }
       @media (max-width: 32rem) {
         .reveal__link {
-          margin-top: -0.4rem;
           font-size: 0.8rem;
         }
       }
@@ -100,8 +99,8 @@
         left: 60%;
       }
       .reveal__clues {
-        padding: 2.6em 1.2em 1.1em 2.4em;
-        max-width: 12em;
+        padding: 2.6em 1.6em 1.1em 2.4em;
+        max-width: 13em;
         color: black;
         background: white;
         font-size: calc(1vmin + 0.6em);
@@ -109,19 +108,19 @@
         list-style: '— ';
         text-transform: lowercase;
         box-shadow:
-          0 0.2em 0.4em rgba(0, 0, 0, 0.2),
-          0 1.2em 1em -0.3em rgba(0, 0, 0, 0.4);
+          0 0.05em 0.2em -0.05em rgba(0, 0, 0, 0.4),
+          0 0.3em 0.7em -0.4em rgba(0, 0, 0, 0.4);
         pointer-events: initial;
         cursor: grab;
         user-select: none;
         transform: scale(0) rotate(5deg);
-        transition: transform 0.4s ease-out 7.2s;
+        transition: transform 0.4s ease-out 7.4s;
       }
       .reveal__clues:active {
         cursor: grabbing;
       }
       .reveal--revealed.reveal--showClues .reveal__clues {
-        transform: scale(1) rotate(5deg);
+        transform: scale(1) rotate(3deg);
       }
       .reveal__clues::after,
       .reveal__clues::before {
@@ -133,7 +132,10 @@
         color: #ee3748;
       }
       .reveal__clues::before {
-        transform: rotate(90deg) translate(0.16em, -0.18em);
+        transform: translate(0.2em, 0.18em) rotate(90deg);
+      }
+      .os--windows .reveal__clues::before {
+        transform: translate(0.05em, 0.05em) rotate(90deg);
       }
       .reveal__clues li:not(:first-child) {
         margin-top: 0.5em;
