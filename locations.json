@@ -4,13 +4,15 @@
     "isEnabled": true,
     "name": "Rotterdam",
     "flag": "🇳🇱",
-    "difficulty": 5,
+    "difficulty": 7,
     "latitude": 51.9123495,
     "longitude": 4.4830536,
     "clues": [
-      "Name on building (north-north-east)",
-      "Bikes",
-      "Driving on the right"
+      "\"Rotterdamsch\" on building (north-north-east)",
+      "Yellow front plates – classic Netherlands",
+      "Driving on the right",
+      "Bikes! 🚴‍♀️",
+      "Canals!"
     ]
   },
   {
@@ -22,9 +24,9 @@
     "latitude": 43.3051315,
     "longitude": 5.3806031,
     "clues": [
-      "Name on sign to university (north-east-east)",
+      "\"Aix-Marseille Université\" sign (north-east-east)",
       "Abundence of French",
-      "Coastal feel",
+      "Coastal feel ⛱",
       "Sunny South of France"
     ]
   },
@@ -78,7 +80,7 @@
     "latitude": -33.891112,
     "longitude": 151.2743281,
     "clues": [
-      "\"Bondi Surf Seafood: Sydney's Best Fish and Chips\" (east)",
+      "\"Bondi Surf Seafood: Sydney's Best Fish and Chips\" 🏄‍♂️ (east)",
       "Sun in the north, therefore southern hemisphere",
       "Driving on the left"
     ]
@@ -95,7 +97,7 @@
       "\"Genève Tourisme\" (north)",
       "Swiss flag (south-west)",
       "Tidy Swiss opulence",
-      "Jet d'Eau"
+      "Jet d'Eau ⛲️"
     ]
   },
   {
@@ -110,7 +112,7 @@
       "Name in \"Genevoiseries?\" (south-west)",
       "\".ch\" website (north-east)",
       "Tidy Swiss opulence",
-      "Jet d'Eau"
+      "Jet d'Eau ⛲️"
     ]
   },
   {
@@ -118,13 +120,14 @@
     "isEnabled": true,
     "name": "Rio de Janeiro",
     "flag": "🇧🇷",
-    "difficulty": 6,
+    "difficulty": 7,
     "latitude": -22.9074212,
     "longitude": -43.1269323,
     "clues": [
-      "No name",
-      "Sugar Loaf",
-      "Canadian red herring"
+      "No city name – psych!",
+      "Sugar Loaf mountain (south-south-west)",
+      "Canadian red herring",
+      "\".br\" website"
     ]
   },
   {
@@ -153,8 +156,7 @@
     "clues": [
       "\"Mott NYC\" (north-north-east)",
       "\"NYC\" on the poster at 158 (south-west)",
-      "Fire escapes!",
-      "Vehicles",
+      "Fire escapes! 🔥",
       "Chinatown in Manhattan"
     ]
   }
