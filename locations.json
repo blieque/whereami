@@ -1,5 +1,19 @@
 [
   {
+    "id": "85aece2",
+    "name": "Dakar",
+    "flag": "🇸🇳",
+    "difficulty": 9,
+    "latitude": 14.7056776,
+    "longitude": -17.4353976,
+    "clues": [
+      "\"Dakar-Port\" on the sign (north-east)",
+      "\"Theis\" (third largest city) on the white lorry",
+      "French and Arabic in Africa – usually Senegal",
+      "Unique yellow and black taxis (north)"
+    ]
+  },
+  {
     "id": "83751fe",
     "isUsed": true,
     "name": "Geneva",
@@ -69,6 +83,20 @@
       "\"NYC\" on the poster at 158 (south-west)",
       "Fire escapes! 🔥",
       "Chinatown in Manhattan"
+    ]
+  },
+  {
+    "id": "0a3c672",
+    "name": "Reykjavik",
+    "flag": "🇮🇸",
+    "difficulty": 7,
+    "latitude": 64.1464321,
+    "longitude": -21.9428643,
+    "clues": [
+      "\"Reykjavikur\" (east) (try squinting)",
+      "\".is\" website (north-west)",
+      "\"…nir\" and \"ð\" indicate Iceland",
+      "Trendy concrete block architecture"
     ]
   },
   {
