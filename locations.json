@@ -1,93 +1,7 @@
 [
   {
-    "id": "7b9453e",
-    "isEnabled": true,
-    "name": "Rotterdam",
-    "flag": "🇳🇱",
-    "difficulty": 7,
-    "latitude": 51.9123495,
-    "longitude": 4.4830536,
-    "clues": [
-      "\"Rotterdamsch\" on building (north-north-east)",
-      "Yellow front plates – classic Netherlands",
-      "Driving on the right",
-      "Bikes! 🚴‍♀️",
-      "Canals!"
-    ]
-  },
-  {
-    "id": "723431c",
-    "isEnabled": true,
-    "name": "Marseille",
-    "flag": "🇫🇷",
-    "difficulty": 4,
-    "latitude": 43.3051315,
-    "longitude": 5.3806031,
-    "clues": [
-      "\"Aix-Marseille Université\" sign (north-east-east)",
-      "Abundence of French",
-      "Coastal feel ⛱",
-      "Sunny South of France"
-    ]
-  },
-  {
-    "id": "0cf9997",
-    "isEnabled": false,
-    "flag": "🇧🇬",
-    "name": "Sofia",
-    "difficulty": 8,
-    "latitude": 42.6974833,
-    "longitude": 23.3220823,
-    "clues": [
-      "Name on barrier, right of Jesus",
-      "Flag",
-      "Cyrillic and Latin characters"
-    ]
-  },
-  {
-    "id": "cf3ff15",
-    "isEnabled": true,
-    "name": "Sofia",
-    "flag": "🇧🇬",
-    "difficulty": 7,
-    "latitude": 42.6979111,
-    "longitude": 23.3218663,
-    "clues": [
-      "\"Sofia Hotel Balkan\" on the roof (south-south-west)",
-      "\"Bulbank\" and \".bg\" website",
-      "Flag",
-      "Cyrillic and Latin characters"
-    ]
-  },
-  {
-    "id": "88376cd",
-    "isEnabled": true,
-    "name": "Vienna",
-    "flag": "🇦🇹",
-    "difficulty": 9,
-    "latitude": 48.22213,
-    "longitude": 16.3977179,
-    "clues": [
-      "Zurich insurance trickery"
-    ]
-  },
-  {
-    "id": "d282f31",
-    "isEnabled": true,
-    "name": "Sydney",
-    "flag": "🇦🇺",
-    "difficulty": 4,
-    "latitude": -33.891112,
-    "longitude": 151.2743281,
-    "clues": [
-      "\"Bondi Surf Seafood: Sydney's Best Fish and Chips\" 🏄‍♂️ (east)",
-      "Sun in the north, therefore southern hemisphere",
-      "Driving on the left"
-    ]
-  },
-  {
     "id": "83751fe",
-    "isEnabled": true,
+    "isUsed": true,
     "name": "Geneva",
     "flag": "🇨🇭",
     "difficulty": 2,
@@ -102,7 +16,7 @@
   },
   {
     "id": "b0a8a17",
-    "isEnabled": true,
+    "isUsed": true,
     "name": "Geneva",
     "flag": "🇨🇭",
     "difficulty": 8,
@@ -116,23 +30,7 @@
     ]
   },
   {
-    "id": "7630e90",
-    "isEnabled": true,
-    "name": "Rio de Janeiro",
-    "flag": "🇧🇷",
-    "difficulty": 7,
-    "latitude": -22.9074212,
-    "longitude": -43.1269323,
-    "clues": [
-      "No city name – psych!",
-      "Sugar Loaf mountain (south-south-west)",
-      "Canadian red herring",
-      "\".br\" website"
-    ]
-  },
-  {
     "id": "99b5ff7",
-    "isEnabled": true,
     "name": "Macau",
     "flag": "🇲🇴",
     "difficulty": 6,
@@ -146,8 +44,21 @@
     ]
   },
   {
+    "id": "723431c",
+    "name": "Marseille",
+    "flag": "🇫🇷",
+    "difficulty": 4,
+    "latitude": 43.3051315,
+    "longitude": 5.3806031,
+    "clues": [
+      "\"Aix-Marseille Université\" sign (north-east-east)",
+      "Abundence of French",
+      "Coastal feel ⛱",
+      "Sunny South of France"
+    ]
+  },
+  {
     "id": "965ad95",
-    "isEnabled": true,
     "name": "New York City",
     "flag": "🇺🇸",
     "difficulty": 4,
@@ -158,6 +69,89 @@
       "\"NYC\" on the poster at 158 (south-west)",
       "Fire escapes! 🔥",
       "Chinatown in Manhattan"
+    ]
+  },
+  {
+    "id": "7630e90",
+    "name": "Rio de Janeiro",
+    "flag": "🇧🇷",
+    "difficulty": 7,
+    "latitude": -22.9074212,
+    "longitude": -43.1269323,
+    "clues": [
+      "No city name – psych!",
+      "Sugar Loaf mountain (south-south-west)",
+      "Canadian red herring",
+      "\".br\" website"
+    ]
+  },
+  {
+    "id": "7b9453e",
+    "name": "Rotterdam",
+    "flag": "🇳🇱",
+    "difficulty": 7,
+    "latitude": 51.9123495,
+    "longitude": 4.4830536,
+    "clues": [
+      "\"Rotterdamsch\" on building (north-north-east)",
+      "Yellow front plates – classic Netherlands",
+      "Driving on the right",
+      "Bikes! 🚴‍♀️",
+      "Canals!"
+    ]
+  },
+  {
+    "id": "cf3ff15",
+    "isUsed": true,
+    "name": "Sofia",
+    "flag": "🇧🇬",
+    "difficulty": 7,
+    "latitude": 42.6979111,
+    "longitude": 23.3218663,
+    "clues": [
+      "\"Sofia Hotel Balkan\" on the roof (south-south-west)",
+      "\"Bulbank\" and \".bg\" website",
+      "Flag",
+      "Cyrillic and Latin characters"
+    ]
+  },
+  {
+    "id": "d282f31",
+    "isUsed": true,
+    "name": "Sydney",
+    "flag": "🇦🇺",
+    "difficulty": 4,
+    "latitude": -33.891112,
+    "longitude": 151.2743281,
+    "clues": [
+      "\"Bondi Surf Seafood: Sydney's Best Fish and Chips\" 🏄‍♂️ (east)",
+      "Sun in the north, therefore southern hemisphere",
+      "Driving on the left"
+    ]
+  },
+  {
+    "id": "88376cd",
+    "name": "Vienna",
+    "flag": "🇦🇹",
+    "difficulty": 9,
+    "latitude": 48.22213,
+    "longitude": 16.3977179,
+    "clues": [
+      "Zurich insurance trickery"
+    ]
+  },
+  {
+    "id": "0cf9997",
+    "isEnabled": false,
+    "name": "Sofia",
+    "flag": "🇧🇬",
+    "difficulty": 8,
+    "latitude": 42.6974833,
+    "longitude": 23.3220823,
+    "clues": [
+      "Name on barrier, right of Jesus",
+      "Flag",
+      "Cyrillic and Latin characters"
     ]
   }
 ]

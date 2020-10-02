@@ -18,9 +18,67 @@ const getLocationByID = (locationID) => {
   return locations.find(location => location.id === locationID);
 };
 
+const defaultToTrue = (value) => {
+  return typeof value === 'boolean'
+    ? value
+    : true;
+};
+
+const objectArrayToTable = (input, keys) => {
+  const stringifiedInput = input.map(item => keys.reduce(
+    (acc, key) => {
+      const type = typeof item[key];
+      let value;
+
+      if (type === 'string') value = item[key];
+      if (type === 'number') value = `${item[key]}`;
+      if (type === 'boolean') value = item[key] ? '✓' : '✕';
+      if (value === undefined) value = '';
+
+      return {
+        ...acc,
+        [key]: value,
+      };
+    },
+    {},
+  ));
+
+  const maxValueLengths = keys.reduce(
+    (acc, key) => {
+      return {
+        ...acc,
+        [key]: stringifiedInput
+          .map(item => item[key])
+          .map(s => s.length)
+          .reduce(
+            (a, b) => Math.max(a, b),
+            key.length
+          ),
+      }
+    },
+    {},
+  );
+
+  return [
+    // Heading row
+    keys
+      .map(k => k.toUpperCase().padEnd(maxValueLengths[k]))
+      .join('  '),
+    // Content rows
+    ...stringifiedInput.map(item => keys
+      .map(k => item[k].padEnd(maxValueLengths[k]))
+      .join('  ')),
+  ]
+    .map(line => `  ${line}`)
+    .join('\n');
+};
+
 /**
-  `id` and `isEnabled` can be omitted when adding new locations. They will be
-  added by the server at startup and saved back to `locations.json`.
+  `id` can be omitted when adding new locations. It will be added by the server
+  at startup and saved back to `locations.json`.
+
+  `isEnabled` and `isUsed` are optional, and will default to `true` and `false`
+  respectively.
 
   `locations.json` is in the form:
 
@@ -29,6 +87,7 @@ const getLocationByID = (locationID) => {
     {
       "id": "231b158",
       "isEnabled": true,
+      "isUsed": false,
       "name": "London",
       "clues": [
         "\"Royal Observatory\" the south-east",
@@ -49,31 +108,49 @@ const locations = require('./locations.json');
 let modifiedLocations = 0;
 
 locations.forEach((location) => {
-  let modified = false;
-
   if (typeof location.id === 'undefined') {
     const hash = crypto.createHash('md5');
     hash.update(`${location.latitude},${location.longitude}`);
     location.id = hash.digest('hex').slice(0, 7);
-    modified = true;
+    modifiedLocations += 1;
   }
-
-  if (typeof location.isEnabled === 'undefined') {
-    location.isEnabled = true;
-    modified = true;
-  }
-
-  if (modified) modifiedLocations += 1;
 });
 
-if (modifiedLocations > 0) {
+log(`Sorting locations`);
+locations.sort((a, b) => {
+  if (defaultToTrue(a.isEnabled) !== defaultToTrue(b.isEnabled)) {
+    return defaultToTrue(a.isEnabled) ? -1 : 1;
+  }
+
+  if (a.name !== b.name) {
+    return a.name < b.name ? -1 : 1;
+  }
+
+  if (a.difficulty !== b.difficulty) {
+    return a.difficulty < b.difficulty ? -1 : 1;
+  }
+
+  return 0;
+});
+
+if (modifiedLocations > 0 || 1) {
   log(`Modified ${modifiedLocations} locations`);
   log(`Updating \`locations.json\` on the filesystem`);
   fs.writeFile(
     'locations.json',
     JSON.stringify(
       locations,
-      ['id', 'isEnabled', 'name', 'flag', 'difficulty', 'latitude', 'longitude', 'clues'],
+      [
+        'id',
+        'isEnabled',
+        'isUsed',
+        'name',
+        'flag',
+        'difficulty',
+        'latitude',
+        'longitude',
+        'clues',
+      ],
       2,
     ),
     'utf8',
@@ -87,8 +164,9 @@ if (modifiedLocations > 0) {
 }
 
 log(`Loaded ${locations.length} locations:`);
-locations.forEach(location => console.log(
-  `  ${location.id} ${location.name} ${location.difficulty}/10`
+console.log(objectArrayToTable(
+  locations,
+  ['id', 'name', 'difficulty', 'isEnabled', 'isUsed'],
 ));
 
 // Initialise server
@@ -157,7 +235,10 @@ wsServer.on('request', (request) => {
             }
 
             const location = getLocationByID(payload.locationID);
-            if (location === undefined || !location.isEnabled) {
+            if (
+              location === undefined ||
+              location.isEnabled === false // but not `undefined`
+            ) {
               warn(`Ignoring request from ${connection.remoteAddress} for non-existent location "${payload.locationID}"`);
               break;
             }
@@ -211,7 +292,7 @@ wsServer.on('request', (request) => {
         connections.indexOf(connection),
         1,
       );
-      log(`Connection to ${connection.remoteAddress} closed.`);
+      log(`Connection to ${connection.remoteAddress} closed`);
       log(` └ current connections: ${connections.length}`);
     },
   );
