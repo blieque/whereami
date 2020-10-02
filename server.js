@@ -73,7 +73,7 @@ if (modifiedLocations > 0) {
     'locations.json',
     JSON.stringify(
       locations,
-      ['id', 'isEnabled', 'name', 'difficulty', 'latitude', 'longitude', 'clues'],
+      ['id', 'isEnabled', 'name', 'flag', 'difficulty', 'latitude', 'longitude', 'clues'],
       2,
     ),
     'utf8',
@@ -168,6 +168,7 @@ wsServer.on('request', (request) => {
               latitude: location.latitude,
               longitude: location.longitude,
             }));
+
             log(`Remembering location "${payload.locationID}" for ${connection.remoteAddress}`);
             connection._meta.locationID = payload.locationID;
 
@@ -187,6 +188,7 @@ wsServer.on('request', (request) => {
                 connection.sendUTF(JSON.stringify({
                   type: 'reveal',
                   name: location.name,
+                  flag: location.flag,
                   clues: location.clues,
                 }));
               }

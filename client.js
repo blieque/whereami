@@ -5,6 +5,8 @@ const elRevealName = document.querySelector('.reveal__name');
 const elRevealLink = document.querySelector('.reveal__link');
 const elRevealCluesContainer = document.querySelector('.reveal__clues-container');
 const elRevealClues = document.querySelector('.reveal__clues');
+const elRevealFlagContainer = document.querySelector('.reveal__flag-container');
+const elRevealFlag = document.querySelector('.reveal__flag');
 
 if (navigator.userAgent.includes('Windows')) {
   document.body.classList.add('os--windows');
@@ -150,7 +152,7 @@ const initConnection = (locationID) => {
           if (position === undefined) {
             console.warn('Received reveal request before receiving a position');
           } else {
-            reveal(payload.name, payload.clues, position);
+            reveal(payload.name, payload.flag, payload.clues, position);
           }
           break;
 
@@ -171,7 +173,7 @@ const initConnection = (locationID) => {
  * Update the Google Maps link based on the provided position, and then reveal
  * the name of the location, all smooth like.
  */
-const reveal = (name, clues, position) => {
+const reveal = (name, flag, clues, position) => {
   const longestWordLength = name
     .split(' ')
     .map(part => part.length)
@@ -179,9 +181,13 @@ const reveal = (name, clues, position) => {
   elRevealName.style.fontSize = `${100 / longestWordLength}vmin`;
   splitSpanLetters(name);
 
+  if (typeof flag === 'string') {
+    elRevealFlag.innerText = flag;
+  }
+
   if (clues?.length > 0) {
-    setClues(clues);
     elReveal.classList.add('reveal--showClues');
+    setClues(clues);
   }
 
   if (typeof position === 'object') {

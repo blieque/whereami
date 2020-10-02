@@ -42,6 +42,7 @@
         font-family: 'Poppins', sans-serif;
         pointer-events: none;
       }
+
       .reveal__name {
         margin-bottom: -0.2em;
         text-align: center;
@@ -52,6 +53,7 @@
         letter-spacing: 0.1em;
         word-spacing: 0.1em;
       }
+
       .reveal__character {
         opacity: 0;
         filter: blur(1em);
@@ -61,6 +63,11 @@
       .reveal--revealed .reveal__character {
         opacity: 1;
         filter: blur(0);
+      }
+
+      @keyframes wiggle {
+        0% { transform: rotate(-5deg) }
+        100% { transform: rotate(5deg) }
       }
       .reveal__link-container {
         animation: wiggle;
@@ -93,6 +100,7 @@
       .reveal--revealed.reveal--showLink .reveal__link {
         transform: scaleX(1);
       }
+
       .reveal__clues-container {
         position: absolute;
         top: 28%;
@@ -100,6 +108,7 @@
       }
       .reveal__clues {
         padding: 2.6em 1.6em 1.1em 2.4em;
+        min-width: 8em;
         max-width: 13em;
         color: black;
         background: white;
@@ -141,9 +150,17 @@
         margin-top: 0.5em;
       }
 
-      @keyframes wiggle {
-        0% { transform: rotate(-5deg) }
-        100% { transform: rotate(5deg) }
+      .reveal__flag {
+        position: absolute;
+        top: 0.3em;
+        right: -0.4em;
+        line-height: 0;
+        font-size: 6em;
+        transform: scale(0) rotate(3deg);
+        transition: transform 0.4s cubic-bezier(.51,1.54,.78,.97) 7.5s;
+      }
+      .reveal--revealed.reveal--showClues .reveal__flag {
+        transform: scale(1) rotate(3deg);
       }
     </style>
   </head>
@@ -160,6 +177,7 @@
 
       <div class="reveal__clues-container">
         <ul class="reveal__clues"></ul>
+        <div class="reveal__flag"></div>
       </div>
     </div>
 
