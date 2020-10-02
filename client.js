@@ -12,62 +12,58 @@ if (navigator.userAgent.includes('Windows')) {
   document.body.classList.add('os--windows');
 }
 
-const initCluesDragging = () => {
+const makeElementDraggable = (el, elHandle) => {
   let initialMousePosition = null;
-  let initialCluesPosition = { x: 0, y: 0 };
+  let initialElementPosition = { x: 0, y: 0 };
 
-  // Move the card
-  const moveClues = (event) => {
+  const moveElement = (event) => {
     const deltaX = event.clientX - initialMousePosition.x;
     const deltaY = event.clientY - initialMousePosition.y;
 
-    const positionX = initialCluesPosition.x + deltaX;
-    const positionY = initialCluesPosition.y + deltaY;
+    const positionX = initialElementPosition.x + deltaX;
+    const positionY = initialElementPosition.y + deltaY;
 
-    elRevealCluesContainer.style.transform =
+    el.style.transform =
       `translate(${positionX}px, ${positionY}px)`;
   };
 
-  // Drop the card
-  const dropClues = () => {
+  const dropElement = () => {
     initialMousePosition = null;
 
-    window.removeEventListener('mousemove', moveClues);
-    window.removeEventListener('touchmove', moveClues);
+    window.removeEventListener('mousemove', moveElement);
+    window.removeEventListener('touchmove', moveElement);
 
-    window.removeEventListener('mouseup', dropClues);
-    window.removeEventListener('touchend', dropClues);
-    window.removeEventListener('touchcancel', dropClues);
-    // document.removeEventListener('mouseout', dropClues);
+    window.removeEventListener('mouseup', dropElement);
+    window.removeEventListener('touchend', dropElement);
+    window.removeEventListener('touchcancel', dropElement);
   };
 
-  // Pick up the card
-  const pickUpClues = (event) => {
+  const pickUpElement = (event) => {
     initialMousePosition = {
       x: event.clientX,
       y: event.clientY,
     };
 
-    if (elRevealCluesContainer.style.transform.includes('translate')) {
-      initialCluesMatch = elRevealCluesContainer.style.transform
+    if (el.style.transform.includes('translate')) {
+      initialElementMatch = el.style.transform
         .match(/translate\(([-0-9.]+)px, ?([-0-9.]+)px\)/);
-      initialCluesPosition = {
-        x: parseFloat(initialCluesMatch[1]),
-        y: parseFloat(initialCluesMatch[2]),
+
+      initialElementPosition = {
+        x: parseFloat(initialElementMatch[1]),
+        y: parseFloat(initialElementMatch[2]),
       };
     }
 
-    window.addEventListener('mousemove', moveClues);
-    window.addEventListener('touchmove', moveClues);
+    window.addEventListener('mousemove', moveElement);
+    window.addEventListener('touchmove', moveElement);
 
-    window.addEventListener('mouseup', dropClues);
-    window.addEventListener('touchend', dropClues);
-    window.addEventListener('touchcancel', dropClues);
-    // document.addEventListener('mouseout', dropClues);
+    window.addEventListener('mouseup', dropElement);
+    window.addEventListener('touchend', dropElement);
+    window.addEventListener('touchcancel', dropElement);
   };
 
-  elRevealClues.addEventListener('mousedown', pickUpClues);
-  elRevealClues.addEventListener('touchstart', pickUpClues);
+  (elHandle || el).addEventListener('mousedown', pickUpElement);
+  (elHandle || el).addEventListener('touchstart', pickUpElement);
 };
 
 const initPanorama = (latitude, longitude) => {
@@ -242,9 +238,10 @@ const splitSpanLetters = (name) => {
 const locationID = location.pathname.slice(1) || location.hash.slice(1);
 if (locationID?.length > 0) {
   elReveal.style.display = 'none';
-  initCluesDragging();
+  makeElementDraggable(elRevealCluesContainer, elRevealClues);
   initConnection(locationID);
 } else {
   console.error('No `locationID` found in `location.pathname` or `location.hash`');
 }
-// reveal('Novosibirsk');
+
+// setTimeout(() => reveal('Novosibirsk', '🇷🇺', ['a clue']), 1500);
