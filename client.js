@@ -181,7 +181,10 @@ const reveal = (name, flag, clues, position) => {
     elRevealFlag.innerText = flag;
   }
 
-  if (clues?.length > 0) {
+  if (
+    clues != null &&
+    clues.length > 0
+  ) {
     elReveal.classList.add('reveal--showClues');
     setClues(clues);
   }
@@ -236,7 +239,10 @@ const splitSpanLetters = (name) => {
 
 // Initialisation
 const locationID = location.pathname.slice(1) || location.hash.slice(1);
-if (locationID?.length > 0) {
+if (
+  typeof locationID === 'string' &&
+  locationID.length > 0
+) {
   elReveal.style.display = 'none';
   makeElementDraggable(elRevealCluesContainer, elRevealClues);
   initConnection(locationID);
