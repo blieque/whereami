@@ -45,6 +45,7 @@
   },
   {
     "id": "99b5ff7",
+    "isUsed": true,
     "name": "Macau",
     "flag": "🇲🇴",
     "difficulty": 6,
@@ -59,6 +60,7 @@
   },
   {
     "id": "723431c",
+    "isUsed": true,
     "name": "Marseille",
     "flag": "🇫🇷",
     "difficulty": 4,
@@ -115,6 +117,7 @@
   },
   {
     "id": "7b9453e",
+    "isUsed": true,
     "name": "Rotterdam",
     "flag": "🇳🇱",
     "difficulty": 7,
