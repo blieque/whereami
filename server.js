@@ -107,6 +107,7 @@ const locations = require('./locations.json');
 
 let modifiedLocations = 0;
 
+log(`Validating locations`);
 locations.forEach((location) => {
   if (typeof location.id === 'undefined') {
     const hash = crypto.createHash('md5');
@@ -115,6 +116,7 @@ locations.forEach((location) => {
     modifiedLocations += 1;
   }
 });
+log(` └ modified ${modifiedLocations} locations`);
 
 log(`Sorting locations`);
 locations.sort((a, b) => {
@@ -133,35 +135,33 @@ locations.sort((a, b) => {
   return 0;
 });
 
-if (modifiedLocations > 0 || 1) {
-  log(`Modified ${modifiedLocations} locations`);
-  log(`Updating \`locations.json\` on the filesystem`);
-  fs.writeFile(
-    'locations.json',
-    JSON.stringify(
-      locations,
-      [
-        'id',
-        'isEnabled',
-        'isUsed',
-        'name',
-        'flag',
-        'difficulty',
-        'latitude',
-        'longitude',
-        'clues',
-      ],
-      2,
-    ),
-    'utf8',
-    (error) => {
-      if (error !== null) {
-        log('Error encountered saving `locations.json`:');
-        console.log(error);
-      }
-    },
-  );
-}
+log(`Updating \`locations.json\` on the filesystem`);
+const locationsJSON = JSON.stringify(
+  locations,
+  [
+    'id',
+    'isEnabled',
+    'isUsed',
+    'name',
+    'flag',
+    'difficulty',
+    'latitude',
+    'longitude',
+    'clues',
+  ],
+  2,
+);
+fs.writeFile(
+  'locations.json',
+  `${locationsJSON}\n`,
+  'utf8',
+  (error) => {
+    if (error !== null) {
+      log('Error encountered saving `locations.json`:');
+      console.log(error);
+    }
+  },
+);
 
 log(`Loaded ${locations.length} locations:`);
 console.log(objectArrayToTable(
