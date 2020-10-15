@@ -77,8 +77,11 @@ const objectArrayToTable = (input, keys) => {
   `id` can be omitted when adding new locations. It will be added by the server
   at startup and saved back to `locations.json`.
 
-  `isEnabled` and `isUsed` are optional, and will default to `true` and `false`
-  respectively.
+  Some properties are optional:
+  - `isEnabled`, default `true`
+  - `isUsed`, default `false`
+  - `flag`, default `undefined`
+  - `bonus`, default `undefined`
 
   `locations.json` is in the form:
 
@@ -148,6 +151,7 @@ const locationsJSON = JSON.stringify(
     'latitude',
     'longitude',
     'clues',
+    'bonus',
   ],
   2,
 );
@@ -271,6 +275,7 @@ wsServer.on('request', (request) => {
                   name: location.name,
                   flag: location.flag,
                   clues: location.clues,
+                  bonus: location.bonus,
                 }));
               }
             });

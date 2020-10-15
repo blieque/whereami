@@ -5,8 +5,11 @@ const elRevealName = document.querySelector('.reveal__name');
 const elRevealLink = document.querySelector('.reveal__link');
 const elRevealCluesContainer = document.querySelector('.reveal__clues-container');
 const elRevealClues = document.querySelector('.reveal__clues');
-const elRevealFlagContainer = document.querySelector('.reveal__flag-container');
+const elRevealCluesList = document.querySelector('.reveal__clues-list');
 const elRevealFlag = document.querySelector('.reveal__flag');
+const elRevealBonusContainer = document.querySelector('.reveal__bonus-container');
+const elRevealBonus = document.querySelector('.reveal__bonus');
+const elRevealBonusVideo = document.querySelector('.reveal__bonus-video');
 
 if (navigator.userAgent.includes('Windows')) {
   document.body.classList.add('os--windows');
@@ -148,7 +151,7 @@ const initConnection = (locationID) => {
           if (position === undefined) {
             console.warn('Received reveal request before receiving a position');
           } else {
-            reveal(payload.name, payload.flag, payload.clues, position);
+            reveal(payload, position);
           }
           break;
 
@@ -165,52 +168,13 @@ const initConnection = (locationID) => {
   };
 };
 
-/**
- * Update the Google Maps link based on the provided position, and then reveal
- * the name of the location, all smooth like.
- */
-const reveal = (name, flag, clues, position) => {
-  const longestWordLength = name
-    .split(' ')
-    .map(part => part.length)
-    .reduce((a, b) => Math.max(a, b));
-  elRevealName.style.fontSize = `${100 / longestWordLength}vmin`;
-  splitSpanLetters(name);
-
-  if (typeof flag === 'string') {
-    elRevealFlag.innerText = flag;
-  }
-
-  if (
-    clues != null &&
-    clues.length > 0
-  ) {
-    elReveal.classList.add('reveal--showClues');
-    setClues(clues);
-  }
-
-  if (typeof position === 'object') {
-    elReveal.classList.add('reveal--showLink');
-    elRevealLink.href =
-      `https://www.google.co.uk/maps/@${position.latitude},${position.longitude},20z`;
-  }
-
-  elReveal.style = '';
-  setTimeout(
-    () => {
-      elReveal.classList.add('reveal--revealed');
-    },
-    50,
-  );
-};
-
 const setClues = (clues) => {
-  elRevealClues.innerHTML = '';
+  elRevealCluesList.innerHTML = '';
 
   clues.forEach((clue) => {
     const elClue = document.createElement('li');
     elClue.innerText = clue;
-    elRevealClues.appendChild(elClue);
+    elRevealCluesList.appendChild(elClue);
   })
 };
 
@@ -237,6 +201,51 @@ const splitSpanLetters = (name) => {
     });
 };
 
+/**
+ * Update the Google Maps link based on the provided position, and then reveal
+ * the name of the location, all smooth like.
+ */
+const reveal = ({name, flag, clues, bonus}, position) => {
+  const longestWordLength = name
+    .split(' ')
+    .map(part => part.length)
+    .reduce((a, b) => Math.max(a, b));
+  elRevealName.style.fontSize = `${100 / longestWordLength}vmin`;
+  splitSpanLetters(name);
+
+  if (typeof flag === 'string') {
+    elRevealFlag.innerText = flag;
+  }
+
+  if (
+    clues != null &&
+    clues.length > 0
+  ) {
+    elReveal.classList.add('reveal--showClues');
+    setClues(clues);
+  }
+
+  if (bonus != null) {
+    elReveal.classList.add('reveal--showBonus');
+    elRevealBonusVideo.src = `bonus/${bonus}`;
+    setTimeout(() => { elRevealBonusVideo.play() }, 8500);
+  }
+
+  if (typeof position === 'object') {
+    elReveal.classList.add('reveal--showLink');
+    elRevealLink.href =
+      `https://www.google.co.uk/maps/@${position.latitude},${position.longitude},20z`;
+  }
+
+  elReveal.style = '';
+  setTimeout(
+    () => {
+      elReveal.classList.add('reveal--revealed');
+    },
+    50,
+  );
+};
+
 // Initialisation
 const locationID = location.pathname.slice(1) || location.hash.slice(1);
 if (
@@ -245,6 +254,7 @@ if (
 ) {
   elReveal.style.display = 'none';
   makeElementDraggable(elRevealCluesContainer, elRevealClues);
+  makeElementDraggable(elRevealBonusContainer, elRevealBonus);
   initConnection(locationID);
 } else {
   console.error('No `locationID` found in `location.pathname` or `location.hash`');

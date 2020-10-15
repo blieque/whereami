@@ -109,11 +109,12 @@
     "latitude": -22.9074212,
     "longitude": -43.1269323,
     "clues": [
-      "No city name – psych!",
       "Sugar Loaf mountain (south-southwest)",
-      "Canadian red herring",
-      "\".br\" website"
-    ]
+      "\".br\" website",
+      "No city name – psych!",
+      "Canadian red herring"
+    ],
+    "bonus": "01.mp4"
   },
   {
     "id": "7b9453e",

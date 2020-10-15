@@ -107,14 +107,12 @@
         left: 60%;
       }
       .reveal__clues {
-        padding: 2.6em 1.6em 1.1em 2.4em;
         min-width: 8em;
         max-width: 13em;
         color: black;
         background: white;
         font-size: calc(1vmin + 0.6em);
         line-height: 1;
-        list-style: '— ';
         text-transform: lowercase;
         box-shadow:
           0 0.05em 0.2em -0.05em rgba(0, 0, 0, 0.4),
@@ -131,22 +129,17 @@
       .reveal--revealed.reveal--showClues .reveal__clues {
         transform: scale(1) rotate(3deg);
       }
-      .reveal__clues::after,
-      .reveal__clues::before {
-        content: '⟷';
+      .reveal__clues .arrows-icon {
         position: absolute;
-        top: 0.26em;
-        left: 0.75em;
-        font-size: 1.5em;
+        top: 0.3em;
+        left: 0.8em;
         color: #ee3748;
       }
-      .reveal__clues::before {
-        transform: translate(0.2em, 0.18em) rotate(90deg);
+      .reveal__clues-list {
+        padding: 2.6em 1.6em 1.1em 2.4em;
+        list-style: '— ';
       }
-      .os--windows .reveal__clues::before {
-        transform: translate(0.05em, 0.05em) rotate(90deg);
-      }
-      .reveal__clues li:not(:first-child) {
+      .reveal__clues-list li:not(:first-child) {
         margin-top: 0.5em;
       }
 
@@ -162,6 +155,55 @@
       .reveal--revealed.reveal--showClues .reveal__flag {
         transform: scale(1) rotate(3deg);
       }
+
+      .reveal__bonus-container {
+        position: absolute;
+        top: 45%;
+        left: 20%;
+      }
+      .reveal__bonus .arrows-icon {
+        position: absolute;
+        top: 0.8em;
+        left: 0.8em;
+        color: #fff;
+      }
+      .reveal__bonus {
+        box-shadow:
+          0 0.05em 0.2em -0.05em rgba(0, 0, 0, 0.4),
+          0 0.3em 0.7em -0.4em rgba(0, 0, 0, 0.4);
+        pointer-events: initial;
+        cursor: grab;
+        user-select: none;
+        transform: scale(0) rotate(-2deg);
+        transition: transform 0.4s cubic-bezier(.51,1.54,.78,.97) 8.5s;
+      }
+      .reveal__bonus-video {
+        display: block;
+        max-width: 40em;
+        max-height: 40em;
+      }
+      .reveal__bonus-video:focus {
+        outline: none;
+      }
+      .reveal--revealed.reveal--showBonus .reveal__bonus {
+        transform: scale(1) rotate(-2deg);
+      }
+      .reveal__bonus-text {
+        padding: 0.3em 0.6em;
+        position: absolute;
+        top: -0.6em;
+        right: -0.6em;
+        color: #ee3748;
+        background: #111;
+        font-size: 1.5em;
+      }
+
+      .arrows-icon {
+        display: block;
+        stroke: currentColor;
+        stroke-width: 2;
+        fill: none;
+      }
     </style>
   </head>
 
@@ -176,8 +218,33 @@
       </div>
 
       <div class="reveal__clues-container">
-        <ul class="reveal__clues"></ul>
+        <div class="reveal__clues">
+          <svg class="arrows-icon" width="40" height="40" viewBox="-20 -20 40 40">
+            <path d="M0 -12m-4.5 4.5l4.5 -4.5l4.5 4.5m-4.5 -4.5v24m-4.5 -4.5l4.5 4.5l4.5 -4.5"/>
+            <path d="M-12 0m4.5 -4.5l-4.5 4.5l4.5 4.5m-4.5 -4.5h24m-4.5 -4.5l4.5 4.5l-4.5 4.5"/>
+          </svg>
+
+          <ul class="reveal__clues-list"></ul>
+        </div>
         <div class="reveal__flag"></div>
+      </div>
+
+      <div class="reveal__bonus-container">
+        <div class="reveal__bonus">
+          <svg class="arrows-icon" width="40" height="40" viewBox="-20 -20 40 40">
+            <path d="M0 -12m-4.5 4.5l4.5 -4.5l4.5 4.5m-4.5 -4.5v24m-4.5 -4.5l4.5 4.5l4.5 -4.5"/>
+            <path d="M-12 0m4.5 -4.5l-4.5 4.5l4.5 4.5m-4.5 -4.5h24m-4.5 -4.5l4.5 4.5l-4.5 4.5"/>
+          </svg>
+
+          <video
+            class="reveal__bonus-video"
+            type="video/mp4"
+            loop
+            playsinline>
+          </video>
+
+          <span class="reveal__bonus-text">unrelated bonus!</span>
+        </div>
       </div>
     </div>
 
