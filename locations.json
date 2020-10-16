@@ -108,12 +108,26 @@
     "id": "965ad95",
     "name": "New York City",
     "flag": "🇺🇸",
-    "difficulty": 4,
+    "difficulty": 2,
     "latitude": 40.7196447,
     "longitude": -73.9962544,
     "clues": [
       "\"Mott NYC\" (north-northeast)",
       "\"NYC\" on the poster at 158 (southwest)",
+      "Fire escapes! 🔥",
+      "Chinatown in Manhattan"
+    ]
+  },
+  {
+    "id": "953faa7",
+    "name": "New York City",
+    "flag": "🇺🇸",
+    "difficulty": 4,
+    "latitude": 40.7189162,
+    "longitude": -73.9960397,
+    "clues": [
+      "\"Grand St. NYC\" (east)",
+      "American \"One Way\" signs",
       "Fire escapes! 🔥",
       "Chinatown in Manhattan"
     ]
@@ -136,12 +150,12 @@
     "id": "7630e90",
     "name": "Rio de Janeiro",
     "flag": "🇧🇷",
-    "difficulty": 7,
+    "difficulty": 8,
     "latitude": -22.9074212,
     "longitude": -43.1269323,
     "clues": [
       "Sugar Loaf mountain (south-southwest)",
-      "\".br\" website",
+      "\"/.com.br\" website",
       "No city name – psych!",
       "Canadian red herring"
     ],
