@@ -1,5 +1,47 @@
 [
   {
+    "id": "cc074b0",
+    "name": "Bangkok",
+    "flag": "🇹🇭",
+    "difficulty": 6,
+    "latitude": 34.6857177,
+    "longitude": 135.4852762,
+    "clues": [
+      "\"...angkok\" (west-northwest)",
+      "Flags and flags and flags",
+      "Driving on the left",
+      "Yellow and gren taxis",
+      "Thai script"
+    ]
+  },
+  {
+    "id": "c8d4977",
+    "name": "Bilbao",
+    "flag": "🇪🇸",
+    "difficulty": 8,
+    "latitude": 43.2562125,
+    "longitude": -2.9263058,
+    "clues": [
+      "\"..bao.es\" (north)",
+      "Sunny European city on a river",
+      "EU stripe on number plates"
+    ]
+  },
+  {
+    "id": "07291a3",
+    "name": "Busan",
+    "flag": "🇰🇷",
+    "difficulty": 5,
+    "latitude": 35.1536521,
+    "longitude": 129.029664,
+    "clues": [
+      "\"Busan World Expo\" (southwest)",
+      "\".co.kr\" website (north)",
+      "\"S-Oil\", South Korean state oil company (west)",
+      "Hangul writing system – the circles easily differentiate it from Chinese and Japanese"
+    ]
+  },
+  {
     "id": "1dccd87",
     "isUsed": true,
     "name": "Cape Town",
@@ -30,6 +72,20 @@
       "Driving on the left",
       "Sun in the north, therefore southern hemisphere",
       "Coastal"
+    ]
+  },
+  {
+    "id": "19c55eb",
+    "name": "Cork",
+    "flag": "🇮🇪",
+    "difficulty": 6,
+    "latitude": 51.8975254,
+    "longitude": -8.4648302,
+    "clues": [
+      "\"Cork Business Centre\" sign (southwest)",
+      "\"Ballincollig\" (town near Cork) (west)",
+      "Feels very British Isles",
+      "EU stripe on number plates"
     ]
   },
   {
@@ -74,6 +130,32 @@
       "\".ch\" website (northeast)",
       "Tidy Swiss opulence",
       "Jet d'Eau ⛲️"
+    ]
+  },
+  {
+    "id": "8fe96dd",
+    "name": "Istanbul",
+    "flag": "🇹🇷",
+    "difficulty": 5,
+    "latitude": 41.0232139,
+    "longitude": 28.977259,
+    "clues": [
+      "\"Instanbul\" (real small) (north)",
+      "Sun in the south, therefor nothern hemisphere"
+    ]
+  },
+  {
+    "id": "0045a50",
+    "name": "Istanbul",
+    "flag": "🇹🇷",
+    "difficulty": 7,
+    "latitude": 41.022803,
+    "longitude": 28.9769916,
+    "clues": [
+      "\"Instanbul Büyükşehir\" (east)",
+      "Kebap! 🥙 (southwest)",
+      "Flag! (south)",
+      "\".com.tr\" website (north-northwest)"
     ]
   },
   {
@@ -137,6 +219,21 @@
     ]
   },
   {
+    "id": "cc074b0",
+    "name": "Osaka",
+    "flag": "🇯🇵",
+    "difficulty": 6,
+    "latitude": 34.6857177,
+    "longitude": 135.4852762,
+    "clues": [
+      "\"Osaka Bus\" (southwest)",
+      "Street vending machines (south)",
+      "Katakana script (southeast, west)",
+      "Driving on the left",
+      "Cute little kei cars"
+    ]
+  },
+  {
     "id": "0a3c672",
     "name": "Reykjavik",
     "flag": "🇮🇸",
@@ -160,7 +257,7 @@
     "longitude": -43.1269323,
     "clues": [
       "Sugar Loaf mountain (south-southwest)",
-      "\"/.com.br\" website",
+      "\".com.br\" website",
       "No city name – psych!",
       "Canadian red herring"
     ],
