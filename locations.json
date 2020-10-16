@@ -1,6 +1,7 @@
 [
   {
     "id": "1dccd87",
+    "isUsed": true,
     "name": "Cape Town",
     "flag": "🇿🇦",
     "difficulty": 4,
@@ -16,6 +17,7 @@
   },
   {
     "id": "43ef3fd",
+    "isUsed": true,
     "name": "Cape Town",
     "flag": "🇿🇦",
     "difficulty": 8,
@@ -106,6 +108,7 @@
   },
   {
     "id": "965ad95",
+    "isUsed": true,
     "name": "New York City",
     "flag": "🇺🇸",
     "difficulty": 2,
@@ -120,6 +123,7 @@
   },
   {
     "id": "953faa7",
+    "isUsed": true,
     "name": "New York City",
     "flag": "🇺🇸",
     "difficulty": 4,
@@ -148,6 +152,7 @@
   },
   {
     "id": "7630e90",
+    "isUsed": true,
     "name": "Rio de Janeiro",
     "flag": "🇧🇷",
     "difficulty": 8,
