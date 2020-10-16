@@ -1,5 +1,36 @@
 [
   {
+    "id": "1dccd87",
+    "name": "Cape Town",
+    "flag": "🇿🇦",
+    "difficulty": 4,
+    "latitude": -33.9278746,
+    "longitude": 18.4091317,
+    "clues": [
+      "\"Cape\" hotel signs (north and east)",
+      "\"..pe Town\" on the bus (southeast)",
+      "Devil's Peak (southeast) and Table Mountain (south)",
+      "Sun in the north, therefore southern hemisphere",
+      "Driving on the left"
+    ]
+  },
+  {
+    "id": "43ef3fd",
+    "name": "Cape Town",
+    "flag": "🇿🇦",
+    "difficulty": 8,
+    "latitude": -33.9333995,
+    "longitude": 18.4472554,
+    "clues": [
+      "\"Cape\" sign (southwest)",
+      "\"Cape Town International\" sign (southeast)",
+      "Devil's Peak and Table Mountain (south)",
+      "Driving on the left",
+      "Sun in the north, therefore southern hemisphere",
+      "Coastal"
+    ]
+  },
+  {
     "id": "85aece2",
     "name": "Dakar",
     "flag": "🇸🇳",
