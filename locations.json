@@ -135,29 +135,30 @@
     ]
   },
   {
-    "id": "8fe96dd",
-    "name": "Istanbul",
-    "flag": "🇹🇷",
-    "difficulty": 5,
-    "latitude": 41.0232139,
-    "longitude": 28.977259,
-    "clues": [
-      "\"Instanbul\" (real small) (north)",
-      "Sun in the south, therefor nothern hemisphere"
-    ]
-  },
-  {
     "id": "0045a50",
     "name": "Istanbul",
     "flag": "🇹🇷",
-    "difficulty": 7,
-    "latitude": 41.022803,
-    "longitude": 28.9769916,
+    "difficulty": 5,
+    "latitude": 41.022858,
+    "longitude": 28.976975,
     "clues": [
-      "\"Instanbul Büyükşehir\" (east)",
+      "\"Instanbul Büyükşehir...\" on the pink sign (north)",
+      "Sun in the south, therefore nothern hemisphere",
+      "Flag! (southeast)"
+    ]
+  },
+  {
+    "id": "8fe96dd",
+    "name": "Istanbul",
+    "flag": "🇹🇷",
+    "difficulty": 6,
+    "latitude": 41.0232139,
+    "longitude": 28.977259,
+    "clues": [
+      "\"Instanbul Büyükşehir\" (bottom right) (east)",
+      "\".com.tr\" website (east)",
       "Kebap! 🥙 (southwest)",
-      "Flag! (south)",
-      "\".com.tr\" website (north-northwest)"
+      "Flag! (south)"
     ]
   },
   {
