@@ -237,6 +237,19 @@
     ]
   },
   {
+    "id": "7e902a5",
+    "name": "Reykjavik",
+    "flag": "🇮🇸",
+    "difficulty": 5,
+    "latitude": 64.145334,
+    "longitude": -21.927156,
+    "clues": [
+      "\"Reykjavik Water Utility\" (northwest)",
+      "\"Icelandic Design\" (south)",
+      "\"ð\" is almost unique to Icelandic"
+    ]
+  },
+  {
     "id": "0a3c672",
     "name": "Reykjavik",
     "flag": "🇮🇸",
@@ -246,7 +259,7 @@
     "clues": [
       "\"Reykjavikur\" (east) (try squinting)",
       "\".is\" website (northwest)",
-      "\"…nir\" and \"ð\" indicate Iceland",
+      "\"ð\" is almost unique to Icelandic",
       "Trendy concrete block architecture"
     ]
   },
