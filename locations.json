@@ -4,13 +4,13 @@
     "name": "Bangkok",
     "flag": "🇹🇭",
     "difficulty": 6,
-    "latitude": 34.6857177,
-    "longitude": 135.4852762,
+    "latitude": 13.757401,
+    "longitude": 100.4991,
     "clues": [
       "\"...angkok\" (west-northwest)",
       "Flags and flags and flags",
       "Driving on the left",
-      "Yellow and gren taxis",
+      "Yellow and green taxis",
       "Thai script"
     ]
   },
@@ -222,16 +222,16 @@
     ]
   },
   {
-    "id": "cc074b0",
+    "id": "f15dc58",
     "name": "Osaka",
     "flag": "🇯🇵",
     "difficulty": 6,
-    "latitude": 34.6857177,
-    "longitude": 135.4852762,
+    "latitude": 34.685667,
+    "longitude": 135.485113,
     "clues": [
-      "\"Osaka Bus\" (southwest)",
-      "Street vending machines (south)",
-      "Katakana script (southeast, west)",
+      "\"Osaka Bus\" (south)",
+      "Street vending machine (southeast)",
+      "Katakana script (southeast, northwest)",
       "Driving on the left",
       "Cute little kei cars"
     ]
