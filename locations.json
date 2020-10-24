@@ -30,6 +30,7 @@
   },
   {
     "id": "07291a3",
+    "isUsed": true,
     "name": "Busan",
     "flag": "🇰🇷",
     "difficulty": 5,
@@ -136,6 +137,7 @@
   },
   {
     "id": "0045a50",
+    "isUsed": true,
     "name": "Istanbul",
     "flag": "🇹🇷",
     "difficulty": 5,
@@ -149,6 +151,7 @@
   },
   {
     "id": "8fe96dd",
+    "isUsed": true,
     "name": "Istanbul",
     "flag": "🇹🇷",
     "difficulty": 6,
