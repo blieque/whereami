@@ -81,13 +81,13 @@ const initPanorama = (latitude, longitude) => {
         heading: 0,
         pitch: 0,
       },
-      zoom: 1,
+      zoom: 0,
       clickToGo: false,
       addressControl: false,
       linksControl: false,
       motionTrackingControl: false,
       // panControl: false,
-      zoomControl: false,
+      // zoomControl: false,
       showRoadLabels: false,
     },
   );
@@ -215,6 +215,14 @@ const reveal = ({name, flag, clues, bonus}, position) => {
 
   if (typeof flag === 'string') {
     elRevealFlag.innerText = flag;
+    // Fix idiot operating systems with no flag emoji using OpenMoji.
+    const codePoints = [0, 2]
+      .map(index => flag.codePointAt(index))
+      .map(codePoint => codePoint.toString(16))
+      .map(codePoint => codePoint.toUpperCase())
+      .join('-');
+    const imageURL = `https://openmoji.org/data/color/svg/${codePoints}.svg`;
+    elRevealFlag.innerHTML += `<img class="reveal__flag-image" src="${imageURL}"/>`;
   }
 
   if (

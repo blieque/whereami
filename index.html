@@ -145,15 +145,30 @@
 
       .reveal__flag {
         position: absolute;
-        top: 0.3em;
-        right: -0.4em;
-        line-height: 0;
-        font-size: 6em;
-        transform: scale(0) rotate(3deg);
+        top: -0.6em;
+        right: -0.6em;
+        width: 1.2em;
+        height: 1.2em;
+        font-size: 5em;
+        line-height: 1.2;
+        text-align: center;
+        transform: scale(0);
         transition: transform 0.4s cubic-bezier(.51,1.54,.78,.97) 7.5s;
       }
       .reveal--revealed.reveal--showClues .reveal__flag {
-        transform: scale(1) rotate(3deg);
+        transform: scale(1);
+      }
+      .reveal__flag-image {
+        position: absolute;
+        left: 0.1em;
+        top: 0.1em;
+        width: 1em;
+      }
+      body.os--windows .reveal__flag {
+        color: transparent
+      }
+      body:not(.os--windows) .reveal__flag-image {
+        display: none;
       }
 
       .reveal__bonus-container {
@@ -225,8 +240,9 @@
           </svg>
 
           <ul class="reveal__clues-list"></ul>
+
+          <div class="reveal__flag"></div>
         </div>
-        <div class="reveal__flag"></div>
       </div>
 
       <div class="reveal__bonus-container">
