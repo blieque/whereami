@@ -49,11 +49,11 @@ const makeElementDraggable = (el, elHandle) => {
 
     if (el.style.transform.includes('translate')) {
       initialElementMatch = el.style.transform
-        .match(/translate\(([-0-9.]+)px, ?([-0-9.]+)px\)/);
+        .match(/translate\(([-0-9.]+)px(?:, ?([-0-9.]+)px)?\)/);
 
       initialElementPosition = {
         x: parseFloat(initialElementMatch[1]),
-        y: parseFloat(initialElementMatch[2]),
+        y: parseFloat(initialElementMatch[2] || '0'),
       };
     }
 
