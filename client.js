@@ -210,7 +210,7 @@ const reveal = ({name, flag, clues, bonus}, position) => {
     .split(' ')
     .map(part => part.length)
     .reduce((a, b) => Math.max(a, b));
-  elRevealName.style.fontSize = `${100 / longestWordLength}vmin`;
+  elRevealName.style.fontSize = `${80 / longestWordLength}vmin`;
   splitSpanLetters(name);
 
   if (typeof flag === 'string') {
