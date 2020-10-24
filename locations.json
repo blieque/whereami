@@ -29,6 +29,20 @@
     "bonus": "02.mp4"
   },
   {
+    "id": "d817014",
+    "name": "Buenos Aires",
+    "flag": "🇦🇷",
+    "difficulty": 6,
+    "latitude": -34.6059969,
+    "longitude": -58.3737003,
+    "clues": [
+      "\"Vamos Buenos Aires\" (on the bin) (southeast)",
+      "\"Banco Patagonia\" (northeast)",
+      "Flags! (south-southeast)",
+      "\"Provincia de Buenos Aires\" up high in stone (south-southeast)"
+    ]
+  },
+  {
     "id": "07291a3",
     "isUsed": true,
     "name": "Busan",
@@ -195,6 +209,34 @@
     ]
   },
   {
+    "id": "c31b9db",
+    "name": "Mexico City",
+    "flag": "🇲🇽",
+    "difficulty": 4,
+    "latitude": 19.4332187,
+    "longitude": -99.1339275,
+    "clues": [
+      "\"Ciudad de México\" taxi (west)",
+      "\"Regalos de Mexico\" (west)",
+      "Flags on the roofs (southwest, west, north)"
+    ]
+  },
+  {
+    "id": "4f613ad",
+    "name": "Naples",
+    "flag": "🇮🇹",
+    "difficulty": 7,
+    "latitude": 40.8528805,
+    "longitude": 14.2691553,
+    "clues": [
+      "\"Viva Napoli\" (north)",
+      "\"Napoli Centrale\" (southeast)",
+      "\"Napoli\" football swag (west-northwest)",
+      "Flag! (north-northeast)",
+      "Mount Vesuvius (east)"
+    ]
+  },
+  {
     "id": "965ad95",
     "isUsed": true,
     "name": "New York City",
@@ -328,6 +370,46 @@
     ]
   },
   {
+    "id": "3ba9c7f",
+    "name": "Toronto",
+    "flag": "🇨🇦",
+    "difficulty": 6,
+    "latitude": 43.6473969,
+    "longitude": -79.3862092,
+    "clues": [
+      "\"Toronto Entertainment District\" (above \"King St W\") (northwest)",
+      "CN Tower, 7th tallest structure worldwide (south)",
+      "\"...Church in Canada\" (east)",
+      "\"Bank of Montreal\" (northeast)"
+    ]
+  },
+  {
+    "id": "10b051a",
+    "name": "Tunis",
+    "flag": "🇹🇳",
+    "difficulty": 8,
+    "latitude": 36.8036905,
+    "longitude": 10.1795451,
+    "clues": [
+      "\"Net Tunisie\" (north)",
+      "Primarily Arabic",
+      "Prevalent French – \"achetez\", \"pharmacie\", \"opticienne\""
+    ]
+  },
+  {
+    "id": "e4650bf",
+    "name": "Vancouver",
+    "flag": "🇨🇦",
+    "difficulty": 4,
+    "latitude": 49.3200353,
+    "longitude": -123.073303,
+    "clues": [
+      "\"North Vancouver City Hall\" (west)",
+      "Red and white flag 🍁 (north-northwest)",
+      "\"Petro-Canada\" (southeast)"
+    ]
+  },
+  {
     "id": "88376cd",
     "name": "Vienna",
     "flag": "🇦🇹",
@@ -336,6 +418,21 @@
     "longitude": 16.3977179,
     "clues": [
       "Zurich insurance trickery"
+    ]
+  },
+  {
+    "id": "81631a9",
+    "isEnabled": false,
+    "name": "Havana",
+    "flag": "🇨🇺",
+    "difficulty": 6,
+    "latitude": 23.135973,
+    "longitude": -82.3590622,
+    "clues": [
+      "\"...de la Habana\" (west)",
+      "Flag on the hotel (south)",
+      "Almost no cars from 1959–1990, result of Cold War embargo",
+      "User-uploaded image, not Google imagery"
     ]
   },
   {
