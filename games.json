@@ -1,5 +1,6 @@
 [
   {
+    "date": "2020-10-02",
     "__title": "Episode I: ",
     "locations": [
       "d282f31",
@@ -8,6 +9,7 @@
     ]
   },
   {
+    "date": "2020-10-09",
     "__title": "Episode II: ",
     "locations": [
       "7b9453e",
@@ -16,6 +18,7 @@
     ]
   },
   {
+    "date": "2020-10-16",
     "title": "Episode III: Revenge of the Cartographer",
     "locations": [
       ["965ad95", "953faa7"],
@@ -24,6 +27,7 @@
     ]
   },
   {
+    "date": "2020-10-23",
     "__title": "Episode IV:",
     "locations": [
       "07291a3",
@@ -32,6 +36,7 @@
     ]
   },
   {
+    "date": "2020-10-30",
     "title": "Episode V: The Equator Strikes Back",
     "locations": [
       "e4650bf",
@@ -40,6 +45,7 @@
     ]
   },
   {
+    "date": "2020-11-06",
     "__title": "Episode VI: Return of the _",
     "locations": [
       "c31b9db",
@@ -48,6 +54,7 @@
     ]
   },
   {
+    "date": "2020-11-13",
     "__title": "Episode VII: The _ Awakens",
     "locations": [
       "cc074b0",
@@ -57,6 +64,7 @@
   },
   {
     "isEnabled": false,
+    "date": "2020-11-20",
     "__title": "Episode VIII: The Last _",
     "locations": [
       "d817014",
