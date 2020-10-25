@@ -1,8 +1,8 @@
-const fs = require('fs');
-const http = require('http');
-const crypto = require('crypto');
+import { writeFile, readFileSync } from 'fs';
+import { createServer } from 'http';
+import { createHash } from 'crypto';
 
-const WebSocketServer = require('websocket').server;
+import websocket from 'websocket';
 
 // Utilities
 
@@ -104,7 +104,7 @@ const objectArrayToTable = (input, keys) => {
   ]
   ```
  */
-const locations = require('./locations.json');
+const locations = JSON.parse(readFileSync('./locations.json'));
 
 // Process locations
 
@@ -113,7 +113,7 @@ let modifiedLocations = 0;
 log(`Validating locations`);
 locations.forEach((location) => {
   if (typeof location.id === 'undefined') {
-    const hash = crypto.createHash('md5');
+    const hash = createHash('md5');
     hash.update(`${location.latitude},${location.longitude}`);
     location.id = hash.digest('hex').slice(0, 7);
     modifiedLocations += 1;
@@ -155,7 +155,7 @@ const locationsJSON = JSON.stringify(
   ],
   2,
 );
-fs.writeFile(
+writeFile(
   'locations.json',
   `${locationsJSON}\n`,
   'utf8',
@@ -177,7 +177,7 @@ console.log(objectArrayToTable(
 
 const connections = [];
 
-const server = http.createServer((request, response) => {
+const server = createServer((request, response) => {
   log(`Received request for ${request.url}`);
   response.writeHead(404);
   response.end();
@@ -190,7 +190,7 @@ server.listen(
   },
 );
 
-wsServer = new WebSocketServer({
+const wsServer = new websocket.server({
   httpServer: server,
   autoAcceptConnections: false,
 });
