@@ -285,7 +285,7 @@
     "id": "7e902a5",
     "name": "Reykjavik",
     "flag": "🇮🇸",
-    "difficulty": 5,
+    "difficulty": 6,
     "latitude": 64.145334,
     "longitude": -21.927156,
     "clues": [
@@ -298,7 +298,7 @@
     "id": "0a3c672",
     "name": "Reykjavik",
     "flag": "🇮🇸",
-    "difficulty": 7,
+    "difficulty": 9,
     "latitude": 64.1464321,
     "longitude": -21.9428643,
     "clues": [
