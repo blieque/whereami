@@ -282,6 +282,20 @@
     ]
   },
   {
+    "id": "fe2a89e",
+    "name": "Perth",
+    "flag": "🇦🇺",
+    "difficulty": 4,
+    "latitude": -31.9550747,
+    "longitude": 115.8616313,
+    "clues": [
+      "\"City of Perth\" (west)",
+      "Driving on the left",
+      "Sun in the north, therefore southern hemisphere",
+      "\"State Administrative Tribiunal\" with kangaroos (south-southwest)"
+    ]
+  },
+  {
     "id": "7e902a5",
     "name": "Reykjavik",
     "flag": "🇮🇸",
