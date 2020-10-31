@@ -16,6 +16,7 @@
   },
   {
     "id": "c8d4977",
+    "isUsed": true,
     "name": "Bilbao",
     "flag": "🇪🇸",
     "difficulty": 8,
@@ -92,6 +93,7 @@
   },
   {
     "id": "19c55eb",
+    "isUsed": true,
     "name": "Cork",
     "flag": "🇮🇪",
     "difficulty": 6,
@@ -283,6 +285,7 @@
   },
   {
     "id": "fe2a89e",
+    "isUsed": true,
     "name": "Perth",
     "flag": "🇦🇺",
     "difficulty": 4,
@@ -297,6 +300,7 @@
   },
   {
     "id": "7e902a5",
+    "isUsed": true,
     "name": "Reykjavik",
     "flag": "🇮🇸",
     "difficulty": 6,
@@ -310,6 +314,7 @@
   },
   {
     "id": "0a3c672",
+    "isUsed": true,
     "name": "Reykjavik",
     "flag": "🇮🇸",
     "difficulty": 9,
@@ -412,6 +417,7 @@
   },
   {
     "id": "e4650bf",
+    "isUsed": true,
     "name": "Vancouver",
     "flag": "🇨🇦",
     "difficulty": 4,
