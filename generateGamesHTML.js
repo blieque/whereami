@@ -9,6 +9,12 @@ import {
 const locations = JSON.parse(readFileSync('locations.json'));
 const games = JSON.parse(readFileSync('games.json'));
 
+const enabledGames = games.filter(game => game.isEnabled !== false);
+const allLocationIDs = locations.map(location => location.id);
+const gameLocationIDs = games.flatMap(game => game.locationIDs.flat());
+const unusedLocationIDs = allLocationIDs
+  .filter(locationID => !gameLocationIDs.includes(locationID));
+
 const h = (...args) => {
   const name = typeof args[0] === 'string' ? args[0] : null;
   const attributes = (
@@ -95,9 +101,27 @@ const DIFFICULTIES = [
 ];
 
 const STYLES = `
+*,
+*::before,
+*::after {
+  position: relative;
+  box-sizing: border-box;
+}
+
 body {
-  margin: 2em;
+  margin: 0;
+  padding: 2em 2em 2em 3em;
+  /*
+  background: linear-gradient(
+    0deg,
+    #eba 0.8px,
+    transparent 0.8px
+  );
+  background-size: 0.6em 1em;
+  */
+
   font-family:
+    'Inter',
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
@@ -107,54 +131,146 @@ body {
     sans-serif,
     Apple Color Emoji,
     Segoe UI Emoji;
+  line-height: 1;
+  font-size: 1em;
+  letter-spacing: 0.01em;
+}
+
+article {
+  margin-left: -1em;
+  padding-left: 1em;
+  position: relative;
+}
+article:not(:first-child) {
+  margin-top: 2em;
+}
+article.isToday {
+  color: #085b2c;
+}
+article.isToday::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.25em;
+  left: 0;
+  bottom: 0.05em;
+  width: 0.2em;
+  background: #168c49;
+}
+article.isInPast {
+  opacity: 0.7;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+h1 {
+  font-size: 1.1em;
+  line-height: calc(1 / 1.1);
+}
+h2 {
+  font-size: 1em;
 }
 
 p,
-ol {
+ol,
+ul {
   margin: 0;
-  line-height: 1;
 }
 
-p:not(:first-child) {
-  margin-top: 2em;
+article ::marker {
+  content: '';
 }
 
-ol {
-  padding-left: 2em;
+li {
+  display: flex;
+  align-items: baseline;
 }
 
-ol ol {
-  padding-left: 1.5em;
+ol,
+ul {
+  padding-left: 0;
+}
+
+article > ol {
+  counter-reset: listItems;
+}
+article ol ol {
+  counter-reset: subListItems;
+  flex-grow: 1;
   list-style: lower-alpha;
 }
 
-p + ol > li {
+article > ol > li {
+  counter-increment: listItems;
+}
+article ol ol li {
+  counter-increment: subListItems;
+}
+
+article > ol > li::before,
+article > ol ol li::before {
+  padding-right: 0.3em;
+  text-align: right;
+}
+article > ol > li::before {
+  content: counter(listItems) '.';
+  flex-basis: 2em;
+}
+article > ol ol li::before {
+  content: counter(subListItems, lower-alpha) '.';
+  flex-basis: 1.5em;
+}
+
+article > ol,
+article > ol > li:not(:first-child),
+h1 + ul,
+h1 + ul > li:not(:first-child) {
   margin-top: 0.5em;
 }
 
+article a,
+h1 + ul a {
+  margin-left: 0.3em;
+}
+
 time {
-  color: rgba(0, 0, 0, 0.5);
-  font-variant: small-caps;
+  opacity: 0.5;
+  font-size: 0.8em;
 }
 
-time.today,
-time.today ~ strong {
-  color: #4bb503;
+a {
+  /* Fix Firefox and Chrome leading */
+  line-height: 0.9;
 }
 
-strong {
-  font-weight: 600;
+code {
+  font-family:
+    Menlo,
+    Consolas,
+    monospace;
 }
 
 body:not(.show-secrets) hr,
 body:not(.show-secrets) hr ~ *,
-body:not(.show-secrets) li span {
+body:not(.show-secrets) li span,
+body:not(.show-secrets) article.isInFuture {
   display: none;
 }
 
+ul li::before {
+  content: '—';
+  flex-basis: 2em;
+  padding-right: 0.4em;
+  text-align: right;
+}
+
 li span {
-  float: right;
-  width: calc(100vw - 38em);
+  flex-grow: 1;
+  text-indent: calc(100% - 100vw + 38em);
   opacity: 0.7;
 }
 
@@ -164,24 +280,9 @@ li span.isUsed {
 }
 
 hr {
-  margin: 2em 0;
+  margin: 2em 0 1.875em;
   border: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.5);
-}
-
-hr ~ ul {
-  padding-left: 1.3em;
-}
-
-hr ~ ul li {
-  list-style: '— ';
-}
-
-code {
-  font-family:
-    Menlo,
-    Consolas,
-    monospace;
+  border-top: 0.125em solid rgba(0, 0, 0, 0.25);
 }
 `;
 
@@ -190,7 +291,7 @@ const locationAsHTML = (location) => {
   const difficulty = `${difficultyPair[1]} (${location.difficulty}/10)`;
 
   const url = `${URL_BASE}${location.id}`;
-  const link = h('a', { href: url }, url);
+  const link = h('a', { href: url }, h('code', location.id));
 
   const extra = h(
     'span',
@@ -200,7 +301,7 @@ const locationAsHTML = (location) => {
       location.bonus
         ? ` – ${h('a', { href: `${URL_BASE}bonus/${location.bonus}` }, location.bonus)}`
         : '',
-    ]
+    ],
   );
 
   return `${difficulty}: ${link}${extra}`;
@@ -220,40 +321,60 @@ const shorthandLocationAsHTML = (shorthandLocation) => {
   : locationAsHTML(getLocationByID(shorthandLocation));
 };
 
-const content = games
-  .filter(game => game.isEnabled !== false)
-  .map((game) => {
-    const title = h('p', [
-      game.date ? [
-        h('time', { datetime: game.date }, game.date),
-        h('br'),
-      ] : [],
-      h('strong', [
-        'Where Am I?',
-        game.title ? ` – ${game.title}` : '',
-      ]),
-    ]);
-    const list = h('ol',
-      game.locations
-        .map(shorthandLocationAsHTML)
-        .map(content => h('li', content))
-        .join('\n')
+const gameListHTML = h([
+  h('h1', 'Games'),
+
+  enabledGames.map((game) => {
+    return h(
+      'article',
+      { class: 'game' },
+      [
+        game.date
+          ? h('p', h('time', { datetime: game.date }, game.date))
+          : [],
+
+        h('h2', [
+          'Where Am I?',
+          game.title ? ` – ${game.title}` : '',
+        ]),
+
+        h('ol',
+          game.locationIDs
+            .map(shorthandLocationAsHTML)
+            .map(content => h('li', content))
+            .join('\n')
+        ),
+      ],
     );
-    return `${title}${list}`;
-  })
-  .join('\n');
+  }),
+]);
+
+const locatonListHTML = h([
+  h('h1', 'Unused locations'),
+  h('ul', unusedLocationIDs
+    .map(getLocationByID)
+    .map(locationAsHTML)
+    .map(wrapH('li', {}))
+  ),
+]);
 
 const html = `
 <!DOCTYPE html>
 <html>
   <head>
     <title>Geolite Games</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600" rel="stylesheet">
     <style>
       ${STYLES}
     </style>
   </head>
   <body>
-    ${content}
+    ${gameListHTML}
+
+    ${unusedLocationIDs.length > 0
+      ? `<hr>${locatonListHTML}`
+      : ''}
+
     <hr>
     <ul>
       ${readdirSync('.')
@@ -276,10 +397,15 @@ const html = `
       );
 
       const dateToday = (new Date()).toISOString();
-      Array.from(document.getElementsByTagName('time'))
-        .forEach(elTime => {
+      Array.from(document.querySelectorAll('article'))
+        .forEach(elArticle => {
+          const elTime = elArticle.querySelector('time');
           if (dateToday.startsWith(elTime.innerText)) {
-            elTime.classList.add('today');
+            elArticle.classList.add('isToday');
+          } else if (dateToday > elTime.innerText) {
+            elArticle.classList.add('isInPast');
+          } else {
+            elArticle.classList.add('isInFuture');
           }
         });
     </script>
