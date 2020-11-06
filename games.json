@@ -50,18 +50,19 @@
     "date": "2020-11-06",
     "title": "Episode VI: Return of the Jed-Ice Cap",
     "locationIDs": [
-      "c31b9db",
+      "cc074b0",
       "f15dc58",
-      "4f613ad"
+      "d817014",
+      "a6a8d7a"
     ]
   },
   {
     "date": "2020-11-13",
     "title": "Episode VII: The Shore Awakens",
     "locationIDs": [
-      "cc074b0",
+      "c31b9db",
       "3ba9c7f",
-      "10b051a"
+      "4f613ad"
     ]
   },
   {
@@ -69,9 +70,9 @@
     "date": "2020-11-20",
     "__title": "Episode VIII: The Last _",
     "locationIDs": [
-      "d817014",
       "_",
-      "85aece2"
+      "85aece2",
+      "10b051a"
     ]
   }
 ]
