@@ -3,7 +3,7 @@
     "id": "cc074b0",
     "name": "Bangkok",
     "flag": "🇹🇭",
-    "difficulty": 6,
+    "difficulty": 5,
     "latitude": 13.757401,
     "longitude": 100.4991,
     "clues": [
@@ -33,7 +33,7 @@
     "id": "d817014",
     "name": "Buenos Aires",
     "flag": "🇦🇷",
-    "difficulty": 6,
+    "difficulty": 7,
     "latitude": -34.6059969,
     "longitude": -58.3737003,
     "clues": [
@@ -41,7 +41,8 @@
       "\"Banco Patagonia\" (northeast)",
       "Flags! (south-southeast)",
       "\"Provincia de Buenos Aires\" up high in stone (south-southeast)"
-    ]
+    ],
+    "bonus": "04.mp4"
   },
   {
     "id": "07291a3",
@@ -56,6 +57,19 @@
       "\".co.kr\" website (north)",
       "\"S-Oil\", South Korean state oil company (west)",
       "Hangul writing system – the circles easily differentiate it from Chinese and Japanese"
+    ]
+  },
+  {
+    "id": "a6a8d7a",
+    "name": "Cairo",
+    "flag": "🇪🇬",
+    "difficulty": 9,
+    "latitude": 30.0072065,
+    "longitude": 31.2299804,
+    "clues": [
+      "\"Cairo Bazaar\" (south-southeast)",
+      "Arabic and English (west)",
+      "Sandstone? 🤷‍♂️"
     ]
   },
   {
