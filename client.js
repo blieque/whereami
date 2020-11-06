@@ -92,6 +92,26 @@ const initPanorama = (latitude, longitude) => {
     },
   );
 
+  // If Google Maps gets to expensive, there's also the predictably lacklustre
+  // Bing "Streetside".
+  // https://www.bing.com/api/maps/sdk/mapcontrol/isdk/setviewtostreetside#JS
+  /*
+  var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
+    // `credentials` if not passed in URL
+    mapTypeId: Microsoft.Maps.MapTypeId.road,
+    zoom: 18,
+    center: new Microsoft.Maps.Location(28.332823, -81.492279),
+    streetsideOptions: {
+      showCurrentAddress: false,
+      showExitButton: false,
+      showProblemReporting: false,
+      disablePanoramaNavigation: true,
+      overviewMapMode: Microsoft.Maps.OverviewMapMode.hidden,
+    },
+  });
+  map.setView({ mapTypeId: Microsoft.Maps.MapTypeId.streetside });
+  */
+
   // Move `.reveal` inside the maps panorama element so that the overlay still
   // shows when the panorama is made full-screen.
   setTimeout(
