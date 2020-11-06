@@ -1,6 +1,7 @@
 [
   {
     "id": "cc074b0",
+    "isUsed": true,
     "name": "Bangkok",
     "flag": "🇹🇭",
     "difficulty": 5,
@@ -31,6 +32,7 @@
   },
   {
     "id": "d817014",
+    "isUsed": true,
     "name": "Buenos Aires",
     "flag": "🇦🇷",
     "difficulty": 7,
@@ -285,6 +287,7 @@
   },
   {
     "id": "f15dc58",
+    "isUsed": true,
     "name": "Osaka",
     "flag": "🇯🇵",
     "difficulty": 6,
