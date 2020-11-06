@@ -11,7 +11,7 @@ const games = JSON.parse(readFileSync('games.json'));
 
 const enabledGames = games.filter(game => game.isEnabled !== false);
 const allLocationIDs = locations.map(location => location.id);
-const gameLocationIDs = games.flatMap(game => game.locationIDs.flat());
+const gameLocationIDs = enabledGames.flatMap(game => game.locationIDs.flat());
 const unusedLocationIDs = allLocationIDs
   .filter(locationID => !gameLocationIDs.includes(locationID));
 
@@ -232,7 +232,7 @@ h1 + ul > li:not(:first-child) {
   margin-top: 0.5em;
 }
 
-article a,
+article li > a,
 h1 + ul a {
   margin-left: 0.3em;
 }
