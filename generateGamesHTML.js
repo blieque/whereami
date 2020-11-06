@@ -31,7 +31,16 @@ const h = (...args) => {
   const attributeString = attributes != null
     ? Object.keys(attributes)
       .filter(key => attributes[key] !== false && attributes[key] != null)
-      .map(key => attributes[key] === true ? ` ${key}` : ` ${key}="${attributes[key]}"`)
+      .map((key) => {
+        const value = key === 'class' && Array.isArray(attributes[key])
+          ? attributes[key]
+            .filter(className => typeof className === 'string' && className.length > 0)
+            .join(' ')
+          : attributes[key];
+        return attributes[key] === true
+          ? ` ${key}`
+          : ` ${key}="${value}"`;
+      })
       .join('')
     : '';
 
@@ -189,6 +198,10 @@ li {
   display: flex;
   align-items: baseline;
 }
+li div {
+  display: flex;
+  flex-grow: 1;
+}
 
 ol,
 ul {
@@ -232,8 +245,8 @@ h1 + ul > li:not(:first-child) {
   margin-top: 0.5em;
 }
 
-article li > a,
-h1 + ul a {
+article div > a,
+h1 + ul div > a {
   margin-left: 0.3em;
 }
 
@@ -274,7 +287,11 @@ li span {
   opacity: 0.7;
 }
 
-li span.isUsed {
+div.isDisabled {
+  text-decoration: line-through;
+}
+
+div.isUsed span {
   opacity: 0.5;
   text-decoration: line-through;
 }
@@ -295,7 +312,6 @@ const locationAsHTML = (location) => {
 
   const extra = h(
     'span',
-    { class: location.isUsed ? 'isUsed' : '' },
     [
       `${location.flag} ${location.name}`,
       location.bonus
@@ -304,7 +320,16 @@ const locationAsHTML = (location) => {
     ],
   );
 
-  return `${difficulty}: ${link}${extra}`;
+  return h(
+    'div',
+    {
+      class: [
+        location.isUsed ? 'isUsed' : '',
+        location.isEnabled === false ? 'isDisabled' : '',
+      ],
+    },
+    `${difficulty}: ${link}${extra}`,
+  );
 };
 
 const getLocationByID = (locationID) => {
