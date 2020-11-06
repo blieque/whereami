@@ -16,6 +16,50 @@
     ]
   },
   {
+    "id": "72e89ec",
+    "name": "Bergen",
+    "flag": "🇳🇴",
+    "difficulty": 7,
+    "latitude": 60.3975635,
+    "longitude": 5.3217844,
+    "clues": [
+      "\"Port of Bergen\" (south)",
+      "Norwegian route sign (green, \"E<number>\") (north-northwest)",
+      "Tesla and BMW i3 – Norwegians dig electric cars (northwest)",
+      "Flags! (northeast, east, west)"
+    ]
+  },
+  {
+    "id": "655c7d5",
+    "name": "Bergen",
+    "flag": "🇳🇴",
+    "difficulty": 9,
+    "latitude": 60.398149,
+    "longitude": 5.320571,
+    "clues": [
+      "\"Opplev Bergen\" (south-southwest)",
+      "Ships including cruise liner (fjord tour, anyone?) (west-northwest)",
+      "Norwegian route sign (three digits, black on white) (southwest)",
+      "Flag! (ship mast) (west)",
+      "Flag! (east)"
+    ]
+  },
+  {
+    "id": "e554f58",
+    "name": "Berlin",
+    "flag": "🇩🇪",
+    "difficulty": 4,
+    "latitude": 52.5122746,
+    "longitude": 13.3916778,
+    "clues": [
+      "\"Kultur Berlin\" (orange sign) (south)",
+      "\"Deutscher Dom\" (north)",
+      "\"Mohrenstraße\" - eszett grapheme (ß) is unique to German",
+      "\"Wolfgang Bauer\" – just has to be German (north-northwest)",
+      "Flag! (west)"
+    ]
+  },
+  {
     "id": "c8d4977",
     "isUsed": true,
     "name": "Bilbao",
@@ -168,6 +212,48 @@
     ]
   },
   {
+    "id": "4d64950",
+    "name": "Glasgow",
+    "flag": "🇬🇧",
+    "difficulty": 8,
+    "latitude": 55.8548631,
+    "longitude": -4.2597811,
+    "clues": [
+      "\"Glasvegas\", \"Paisley\" (blue poster) (southeast)",
+      "\"River Clyde\" (north-northwest)",
+      "\"Strathclyde Demolition\" (south-southwest)",
+      "\".co.uk\" website (southwest)"
+    ]
+  },
+  {
+    "id": "c729ad5",
+    "name": "Helsinki",
+    "flag": "🇫🇮",
+    "difficulty": 6,
+    "latitude": 60.1698844,
+    "longitude": 24.9475805,
+    "clues": [
+      "\"Sokos Hotel Helsinki\" (west-southwest)",
+      "Finnish and Swedish, common in southern Finland (northwest)",
+      "Word ending in \"nen\", common in Finnish (south)",
+      "Lots of double letters, common in Finnish"
+    ]
+  },
+  {
+    "id": "de4e3d5",
+    "name": "Helsinki",
+    "flag": "🇫🇮",
+    "difficulty": 8,
+    "latitude": 60.1658593,
+    "longitude": 24.9439873,
+    "clues": [
+      "\"Helsinki Day Spa\" (northwest)",
+      "\"Helsinki\" (on the poster) (east)",
+      "Sign to Tampere (north)",
+      "Signs in Finnish and Swedish, common in southern Finland"
+    ]
+  },
+  {
     "id": "0045a50",
     "isUsed": true,
     "name": "Istanbul",
@@ -194,6 +280,21 @@
       "\".com.tr\" website (east)",
       "Kebap! 🥙 (southwest)",
       "Flag! (south)"
+    ]
+  },
+  {
+    "id": "4cb4391",
+    "name": "Los Angeles",
+    "flag": "🇺🇸",
+    "difficulty": 4,
+    "latitude": 33.9218226,
+    "longitude": -118.3264352,
+    "clues": [
+      "\"JedCenterLosAngeles\" (northwest)",
+      "\"Los Angeles County\" (west)",
+      "Flag! (northwest)",
+      "Wide roads, almost exclusively SUVs 🙄",
+      "SpaceX! (south)"
     ]
   },
   {
@@ -299,6 +400,20 @@
       "Katakana script (southeast, northwest)",
       "Driving on the left",
       "Cute little kei cars 🚗"
+    ]
+  },
+  {
+    "id": "e1ba0f6",
+    "name": "Paris",
+    "flag": "🇫🇷",
+    "difficulty": 5,
+    "latitude": 48.863932,
+    "longitude": 2.299289,
+    "clues": [
+      "\"de la Ville de Paris\" (west)",
+      "\".fr\" website (van) (west)",
+      "Blue Parisian street signs",
+      "That famous tower (south)"
     ]
   },
   {
@@ -457,6 +572,20 @@
     "longitude": 16.3977179,
     "clues": [
       "Zurich insurance trickery"
+    ]
+  },
+  {
+    "id": "73fb35d",
+    "name": "Wellington",
+    "flag": "🇳🇿",
+    "difficulty": 7,
+    "latitude": -41.285536,
+    "longitude": 174.777865,
+    "clues": [
+      "\"Wellington Museum\" (in reflection) (west)",
+      "\"Welli... Museum\" (east)",
+      "Driving on the left",
+      "Mostly Japanese cars, common in Aus. and NZ"
     ]
   },
   {
