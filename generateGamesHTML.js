@@ -308,7 +308,7 @@ const locationAsHTML = (location) => {
   const difficulty = `${difficultyPair[1]} (${location.difficulty}/10)`;
 
   const url = `${URL_BASE}${location.id}`;
-  const link = h('a', { href: url }, h('code', location.id));
+  const link = h('a', { href: url }, location.id);
 
   const extra = h(
     'span',
