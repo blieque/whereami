@@ -52,13 +52,12 @@
     "locationIDs": [
       "cc074b0",
       "f15dc58",
-      "d817014",
-      "a6a8d7a"
+      "d817014"
     ]
   },
   {
     "date": "2020-11-13",
-    "title": "Episode VII: The Shore Awakens",
+    "__title": "Episode VII: The Shore Awakens",
     "locationIDs": [
       "c31b9db",
       "3ba9c7f",

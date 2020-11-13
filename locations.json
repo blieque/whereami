@@ -178,8 +178,7 @@
       "\"Theis\" (third largest city) on the white lorry",
       "French and Arabic in Africa – usually Senegal",
       "Unique yellow and black taxis (north)"
-    ],
-    "bonus": "04.mp4"
+    ]
   },
   {
     "id": "83751fe",
@@ -329,6 +328,7 @@
   },
   {
     "id": "c31b9db",
+    "isUsed": true,
     "name": "Mexico City",
     "flag": "🇲🇽",
     "difficulty": 4,
@@ -342,6 +342,7 @@
   },
   {
     "id": "4f613ad",
+    "isUsed": true,
     "name": "Naples",
     "flag": "🇮🇹",
     "difficulty": 7,
@@ -523,6 +524,7 @@
   },
   {
     "id": "3ba9c7f",
+    "isUsed": true,
     "name": "Toronto",
     "flag": "🇨🇦",
     "difficulty": 6,
