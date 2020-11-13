@@ -215,7 +215,7 @@
     "id": "4d64950",
     "name": "Glasgow",
     "flag": "🇬🇧",
-    "difficulty": 8,
+    "difficulty": 7,
     "latitude": 55.8548631,
     "longitude": -4.2597811,
     "clues": [
@@ -229,7 +229,7 @@
     "id": "c729ad5",
     "name": "Helsinki",
     "flag": "🇫🇮",
-    "difficulty": 6,
+    "difficulty": 5,
     "latitude": 60.1698844,
     "longitude": 24.9475805,
     "clues": [
@@ -243,9 +243,9 @@
     "id": "de4e3d5",
     "name": "Helsinki",
     "flag": "🇫🇮",
-    "difficulty": 8,
-    "latitude": 60.1658593,
-    "longitude": 24.9439873,
+    "difficulty": 7,
+    "latitude": 60.165816,
+    "longitude": 24.943938,
     "clues": [
       "\"Helsinki Day Spa\" (northwest)",
       "\"Helsinki\" (on the poster) (east)",
