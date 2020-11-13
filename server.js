@@ -199,8 +199,8 @@ wsServer.on('request', (request) => {
   // Make sure we only accept requests from an allowed origin
   if (
     ![
-      'http://localhost:8000',
-      'http://192.168.1.1:8000',
+      'http://localhost:8080',
+      'http://192.168.1.1:8080',
       'https://geolite.blieque.co.uk',
     ].includes(request.origin)
   ) {
