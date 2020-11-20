@@ -222,7 +222,8 @@
       "\"River Clyde\" (north-northwest)",
       "\"Strathclyde Demolition\" (south-southwest)",
       "\".co.uk\" website (southwest)"
-    ]
+    ],
+    "bonus": "06.mp4"
   },
   {
     "id": "c729ad5",
@@ -541,7 +542,7 @@
     "id": "10b051a",
     "name": "Tunis",
     "flag": "🇹🇳",
-    "difficulty": 8,
+    "difficulty": 9,
     "latitude": 36.8036905,
     "longitude": 10.1795451,
     "clues": [

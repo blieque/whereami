@@ -65,13 +65,12 @@
     ]
   },
   {
-    "isEnabled": false,
     "date": "2020-11-20",
     "__title": "Episode VIII: The Last _",
     "locationIDs": [
-      "_",
-      "85aece2",
-      "10b051a"
+      "4cb4391",
+      ["72e89ec", "655c7d5"],
+      "4d64950"
     ]
   }
 ]
