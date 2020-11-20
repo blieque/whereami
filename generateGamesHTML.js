@@ -211,7 +211,7 @@ ul {
 article > ol {
   counter-reset: listItems;
 }
-article ol ol {
+article ol ul {
   counter-reset: subListItems;
   flex-grow: 1;
   list-style: lower-alpha;
@@ -220,12 +220,12 @@ article ol ol {
 article > ol > li {
   counter-increment: listItems;
 }
-article ol ol li {
+article ol ul li {
   counter-increment: subListItems;
 }
 
 article > ol > li::before,
-article > ol ol li::before {
+article > ol ul li::before {
   padding-right: 0.3em;
   text-align: right;
 }
@@ -233,7 +233,7 @@ article > ol > li::before {
   content: counter(listItems) '.';
   flex-basis: 2em;
 }
-article > ol ol li::before {
+article > ol ul li::before {
   content: counter(subListItems, lower-alpha) '.';
   flex-basis: 1.5em;
 }
@@ -338,12 +338,12 @@ const getLocationByID = (locationID) => {
 
 const shorthandLocationAsHTML = (shorthandLocation) => {
   return Array.isArray(shorthandLocation)
-  ? h('ol', shorthandLocation
-    .map(getLocationByID)
-    .map(locationAsHTML)
-    .map(content => h('li', content))
-    .join('\n'))
-  : locationAsHTML(getLocationByID(shorthandLocation));
+    ? h('ul', shorthandLocation
+      .map(getLocationByID)
+      .map(locationAsHTML)
+      .map(content => h('li', content))
+      .join('\n'))
+    : locationAsHTML(getLocationByID(shorthandLocation));
 };
 
 const gameListHTML = h([
