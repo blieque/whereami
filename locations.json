@@ -17,6 +17,7 @@
   },
   {
     "id": "72e89ec",
+    "isUsed": true,
     "name": "Bergen",
     "flag": "🇳🇴",
     "difficulty": 7,
@@ -31,6 +32,7 @@
   },
   {
     "id": "655c7d5",
+    "isUsed": true,
     "name": "Bergen",
     "flag": "🇳🇴",
     "difficulty": 9,
@@ -212,6 +214,7 @@
   },
   {
     "id": "4d64950",
+    "isUsed": true,
     "name": "Glasgow",
     "flag": "🇬🇧",
     "difficulty": 7,
@@ -284,6 +287,7 @@
   },
   {
     "id": "4cb4391",
+    "isUsed": true,
     "name": "Los Angeles",
     "flag": "🇺🇸",
     "difficulty": 4,
