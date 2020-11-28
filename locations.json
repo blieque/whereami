@@ -410,6 +410,7 @@
   },
   {
     "id": "e1ba0f6",
+    "isUsed": true,
     "name": "Paris",
     "flag": "🇫🇷",
     "difficulty": 5,
@@ -544,6 +545,7 @@
   },
   {
     "id": "10b051a",
+    "isUsed": true,
     "name": "Tunis",
     "flag": "🇹🇳",
     "difficulty": 9,
@@ -583,6 +585,7 @@
   },
   {
     "id": "73fb35d",
+    "isUsed": true,
     "name": "Wellington",
     "flag": "🇳🇿",
     "difficulty": 7,
