@@ -205,14 +205,25 @@ const setClues = (clues) => {
  */
 const splitSpanLetters = (name) => {
   elRevealName.innerHTML = '';
+
+  const delays = [...Array(name.length)].map(_ => Math.random());
+  const minDelay = delays.reduce((a, b) => Math.min(a, b), 1);
+  const scaleFactor = 1 / (
+    delays.reduce((a, b) => Math.max(a, b), 0) -
+    minDelay
+  );
+  // Offset and scale the delays so that the smallest is always 0 and the
+  // largest is always 1.
+  const offsetDelays = delays.map(delay => (delay - minDelay) * scaleFactor);
+
   name
     .split('')
-    .map(character => {
+    .map((character, i) => {
       const el = document.createElement(character !== ' ' ? 'span' : 'br');
       if (character !== ' ') {
         el.classList.add('reveal__character');
         el.innerText = character;
-        el.style.transitionDelay = `${Math.random() * 5}s`;
+        el.style.transitionDelay = `${offsetDelays[i] * 5}s`;
       }
       return el;
     })
