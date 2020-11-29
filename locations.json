@@ -174,7 +174,7 @@
     "latitude": 14.7056776,
     "longitude": -17.4353976,
     "flag": "🇸🇳",
-    "difficulty": 9,
+    "difficulty": 10,
     "clues": [
       "\"Dakar-Port\" on the sign (northeast)",
       "\"Theis\" (third largest city) on the white lorry",
@@ -412,15 +412,14 @@
     "id": "e1ba0f6",
     "isUsed": true,
     "name": "Paris",
-    "latitude": 48.863932,
-    "longitude": 2.299289,
+    "panoramaID": "TGUZrihJPE9GckNtQO5F_Q",
     "flag": "🇫🇷",
     "difficulty": 5,
     "clues": [
-      "\"de la Ville de Paris\" (west)",
-      "\".fr\" website (van) (west)",
-      "Blue Parisian street signs",
-      "That famous tower (south)"
+      "\"Ville de Paris\" (west)",
+      "Some famous tower (west, up high)",
+      "Abundence of French",
+      "Blue Parisian street signs on stone buildings"
     ]
   },
   {
@@ -587,15 +586,15 @@
     "id": "73fb35d",
     "isUsed": true,
     "name": "Wellington",
-    "latitude": -41.285536,
-    "longitude": 174.777865,
+    "panoramaID": "-nGbRxTJZ6q6MhxCqJXtSA",
     "flag": "🇳🇿",
-    "difficulty": 7,
+    "difficulty": 6,
     "clues": [
-      "\"Wellington Museum\" (in reflection) (west)",
-      "\"Welli... Museum\" (east)",
+      "\"Wellin...ton\" (east)",
+      "\"Wellington Museum\" flag (east-southeast)",
+      "\"New Zealand Academy of Fine Arts\" (northeast)",
       "Driving on the left",
-      "Mostly Japanese cars, common in Aus. and NZ"
+      "Lots of Japanese cars, common in Aus. and NZ"
     ]
   },
   {
