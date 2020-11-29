@@ -11,6 +11,8 @@ const elRevealBonusContainer = document.querySelector('.reveal__bonus-container'
 const elRevealBonus = document.querySelector('.reveal__bonus');
 const elRevealBonusVideo = document.querySelector('.reveal__bonus-video');
 
+let position;
+
 if (navigator.userAgent.includes('Windows')) {
   document.body.classList.add('os--windows');
 }
@@ -69,14 +71,20 @@ const makeElementDraggable = (el, elHandle) => {
   (elHandle || el).addEventListener('touchstart', pickUpElement);
 };
 
-const initPanorama = (latitude, longitude) => {
-  new google.maps.StreetViewPanorama(
+const initPanorama = (location) => {
+  const streetViewPanorama = new google.maps.StreetViewPanorama(
     elPanorama,
     {
-      position: {
-        lat: latitude,
-        lng: longitude,
-      },
+      ...(location.panoramaID != undefined
+        ? {
+          pano: location.panoramaID,
+        }
+        : {
+          position: {
+            lat: location.latitude,
+            lng: location.longitude,
+          },
+        }),
       pov: {
         heading: 0,
         pitch: 0,
@@ -90,6 +98,26 @@ const initPanorama = (latitude, longitude) => {
       // zoomControl: false,
       showRoadLabels: false,
     },
+  );
+
+  // Fetch the latitude and longitude from the Street View panorama instance and
+  // add them to the global `position` object if the current location has none.
+  setTimeout(
+    () => {
+      console.log(position.latitude);
+      const panoramaLocation = streetViewPanorama.getLocation();
+      if (
+        position != undefined &&
+        location.panoramaID != undefined &&
+        location.latitude != undefined &&
+        location.longitude != undefined &&
+        panoramaLocation.latLng != undefined
+      ) {
+        position.latitude = panoramaLocation.latLng.lat();
+        position.longitude = panoramaLocation.latLng.lng();
+      }
+    },
+    2000,
   );
 
   // If Google Maps gets to expensive, there's also the predictably lacklustre
@@ -122,7 +150,7 @@ const initPanorama = (latitude, longitude) => {
       }
     },
     1000,
-  )
+  );
 };
 
 const initConnection = (locationID) => {
@@ -132,8 +160,6 @@ const initConnection = (locationID) => {
     : `wss://${location.hostname}/socket`;
   console.log(`Opening WebSocket connection to ${url}`);
   const connection = new WebSocket(url, 'geo');
-
-  let position;
 
   connection.addEventListener(
     'open',
@@ -160,7 +186,7 @@ const initConnection = (locationID) => {
          */
         case 'position':
           position = payload;
-          initPanorama(payload.latitude, payload.longitude);
+          initPanorama(payload);
           break;
 
         /**
@@ -270,7 +296,11 @@ const reveal = ({name, flag, clues, bonus}, position) => {
     setTimeout(() => { elRevealBonusVideo.play() }, 8500);
   }
 
-  if (typeof position === 'object') {
+  if (
+    typeof position === 'object' &&
+    position.latitude != undefined &&
+    position.longitude != undefined
+  ) {
     elReveal.classList.add('reveal--showLink');
     elRevealLink.href =
       `https://www.google.co.uk/maps/@${position.latitude},${position.longitude},20z`;

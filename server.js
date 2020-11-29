@@ -80,6 +80,8 @@ const objectArrayToTable = (input, keys) => {
   Some properties are optional:
   - `isEnabled`, default `true`
   - `isUsed`, default `false`
+  - `latitude` and `longitude` if `panoramaID` is provided
+  - `panoramaID` if both `latitude` and `longitude` are provided
   - `flag`, default `undefined`
   - `bonus`, default `undefined`
 
@@ -92,13 +94,16 @@ const objectArrayToTable = (input, keys) => {
       "isEnabled": true,
       "isUsed": false,
       "name": "London",
-      "clues": [
-        "\"Royal Observatory\" the south-east",
-        "London skyline to the north-north-west"
-      ],
+      "panormaID": "AuEPJltHzwIzwxBBEDekQA",
+      "latitude": 51.4779302,
+      "longitude": -0.0014511,
       "difficulty": 2,
-      latitude: 51.4779733,
-      longitude: -0.0015356,
+      "flag": "🇬🇧",
+      "clues": [
+        "\"Royal Observatory\" the southeast",
+        "London skyline to the north-northwest"
+      ],
+      "bonus": "01.mp4"
     },
     ...
   ]
@@ -114,7 +119,10 @@ log(`Validating locations`);
 locations.forEach((location) => {
   if (typeof location.id === 'undefined') {
     const hash = createHash('md5');
-    hash.update(`${location.latitude},${location.longitude}`);
+    hash.update(
+      location.panoramaID ||
+      `${location.latitude},${location.longitude}`
+    );
     location.id = hash.digest('hex').slice(0, 7);
     modifiedLocations += 1;
   }
@@ -146,10 +154,11 @@ const locationsJSON = JSON.stringify(
     'isEnabled',
     'isUsed',
     'name',
-    'flag',
-    'difficulty',
+    'panoramaID',
     'latitude',
     'longitude',
+    'flag',
+    'difficulty',
     'clues',
     'bonus',
   ],
@@ -229,8 +238,9 @@ wsServer.on('request', (request) => {
 
         switch (payload.type) {
           /**
-           * Client requests that the server provide it the latitude and
-           * longitude of a specified location (by `locationID`).
+           * Client requests that the server provide it the `panoramaID` or
+           * `latitude` and `longitude` of a specified location (by
+           * `locationID`).
            */
           case 'getPosition':
             if (!(payload?.locationID?.length > 0)) {
@@ -248,11 +258,18 @@ wsServer.on('request', (request) => {
             }
 
             log(`Providing map position for location "${payload.locationID}" to ${connection.remoteAddress}`);
-            connection.sendUTF(JSON.stringify({
-              type: 'position',
-              latitude: location.latitude,
-              longitude: location.longitude,
-            }));
+            connection.sendUTF(JSON.stringify(
+              location.panoramaID !== undefined
+                ? {
+                  type: 'position',
+                  panoramaID: location.panoramaID,
+                }
+                : {
+                  type: 'position',
+                  latitude: location.latitude,
+                  longitude: location.longitude,
+                }
+            ));
 
             log(`Remembering location "${payload.locationID}" for ${connection.remoteAddress}`);
             connection._meta.locationID = payload.locationID;
