@@ -71,18 +71,18 @@ const makeElementDraggable = (el, elHandle) => {
   (elHandle || el).addEventListener('touchstart', pickUpElement);
 };
 
-const initPanorama = (location) => {
+const initPanorama = () => {
   const streetViewPanorama = new google.maps.StreetViewPanorama(
     elPanorama,
     {
-      ...(location.panoramaID != undefined
+      ...(position.panoramaID != undefined
         ? {
-          pano: location.panoramaID,
+          pano: position.panoramaID,
         }
         : {
           position: {
-            lat: location.latitude,
-            lng: location.longitude,
+            lat: position.latitude,
+            lng: position.longitude,
           },
         }),
       pov: {
@@ -104,15 +104,14 @@ const initPanorama = (location) => {
   // add them to the global `position` object if the current location has none.
   setTimeout(
     () => {
-      console.log(position.latitude);
       const panoramaLocation = streetViewPanorama.getLocation();
       if (
-        position != undefined &&
-        location.panoramaID != undefined &&
-        location.latitude != undefined &&
-        location.longitude != undefined &&
+        position.panoramaID != undefined &&
+        position.latitude == undefined &&
+        position.longitude == undefined &&
         panoramaLocation.latLng != undefined
       ) {
+        console.log('Using latitude and longitude from StreetViewPanorama');
         position.latitude = panoramaLocation.latLng.lat();
         position.longitude = panoramaLocation.latLng.lng();
       }
@@ -186,7 +185,7 @@ const initConnection = (locationID) => {
          */
         case 'position':
           position = payload;
-          initPanorama(payload);
+          initPanorama();
           break;
 
         /**
