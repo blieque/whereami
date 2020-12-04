@@ -1,5 +1,20 @@
 [
   {
+    "id": "46cadf8",
+    "name": "Athens",
+    "panoramaID": "5TSMP6Uz3sQGghliMlmCtg",
+    "flag": "🇬🇷",
+    "difficulty": 7,
+    "clues": [
+      "\"Athens\" (t-shirts)  (southeast)",
+      "The Parthenon (north-northeast)",
+      "Greek characters (blue sign) (northest)",
+      "White and pastel walls",
+      "Mediterranean vegetation and weather 🌿"
+    ],
+    "bonus": "07.mp4"
+  },
+  {
     "id": "cc074b0",
     "isUsed": true,
     "name": "Bangkok",
@@ -229,6 +244,19 @@
     "bonus": "06.mp4"
   },
   {
+    "id": "582f190",
+    "name": "Havana",
+    "latitude": 23.1374163,
+    "longitude": -82.3591161,
+    "flag": "🇨🇺",
+    "difficulty": 5,
+    "clues": [
+      "\"HabanaBusTour\" (southeast)",
+      "\"Hotel Inglaterra\" (Spanish) (south)",
+      "Almost no cars from 1959–1990, result of Cold War embargo"
+    ]
+  },
+  {
     "id": "c729ad5",
     "name": "Helsinki",
     "latitude": 60.1698844,
@@ -343,6 +371,18 @@
       "\"Ciudad de México\" taxi (west)",
       "\"Regalos de Mexico\" (west)",
       "Flags on the roofs (southwest, west, north)"
+    ]
+  },
+  {
+    "id": "c0b4bb8",
+    "name": "Nairobi",
+    "panoramaID": "p4BQOj5eKrCqULrXVhzqkw",
+    "flag": "🇰🇪",
+    "difficulty": 7,
+    "clues": [
+      "\"Nairobi Aviation College\" (south)",
+      "\"Kenya National Archives\" (east)",
+      "\".co.ke\" website (\"Betway\") (north-northwest)"
     ]
   },
   {
@@ -572,6 +612,19 @@
     ]
   },
   {
+    "id": "c62d66f",
+    "name": "Venice",
+    "panoramaID": "F8K0XpCEsKpaqGPzT-7McA",
+    "flag": "🇮🇹",
+    "difficulty": 7,
+    "clues": [
+      "\"Venezia Terraferma\" (red sign) (northwest)",
+      "\"Commune di Venezia\" (look up) (east)",
+      "\"Rialto\" (east)",
+      "Tourists, tiny streets, tourists, old buildings, tourists"
+    ]
+  },
+  {
     "id": "88376cd",
     "name": "Vienna",
     "latitude": 48.22213,
@@ -595,21 +648,6 @@
       "\"New Zealand Academy of Fine Arts\" (northeast)",
       "Driving on the left",
       "Lots of Japanese cars, common in Aus. and NZ"
-    ]
-  },
-  {
-    "id": "81631a9",
-    "isEnabled": false,
-    "name": "Havana",
-    "latitude": 23.135973,
-    "longitude": -82.3590622,
-    "flag": "🇨🇺",
-    "difficulty": 6,
-    "clues": [
-      "\"...de la Habana\" (west)",
-      "Flag on the hotel (south)",
-      "Almost no cars from 1959–1990, result of Cold War embargo",
-      "User-uploaded image, not Google imagery"
     ]
   },
   {
