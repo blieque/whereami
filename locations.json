@@ -1,6 +1,7 @@
 [
   {
     "id": "46cadf8",
+    "isUsed": true,
     "name": "Athens",
     "panoramaID": "5TSMP6Uz3sQGghliMlmCtg",
     "flag": "🇬🇷",
@@ -245,6 +246,7 @@
   },
   {
     "id": "582f190",
+    "isUsed": true,
     "name": "Havana",
     "latitude": 23.1374163,
     "longitude": -82.3591161,
@@ -613,6 +615,7 @@
   },
   {
     "id": "c62d66f",
+    "isUsed": true,
     "name": "Venice",
     "panoramaID": "F8K0XpCEsKpaqGPzT-7McA",
     "flag": "🇮🇹",
