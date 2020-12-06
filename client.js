@@ -14,11 +14,10 @@ const elRevealBonusContainer = document.querySelector('.reveal__bonus-container'
 const elRevealBonus = document.querySelector('.reveal__bonus');
 const elRevealBonusVideo = document.querySelector('.reveal__bonus-video');
 
-let position;
+const timestamps = {};
+timestamps.init = performance.now();
 
-if (navigator.userAgent.includes('Windows')) {
-  document.body.classList.add('os--windows');
-}
+let position;
 
 const makeElementDraggable = (el, elHandle) => {
   let initialMousePosition = null;
@@ -103,6 +102,11 @@ const initPanorama = () => {
     },
   );
 
+  streetViewPanorama.addListener(
+    'status_changed',
+    () => timestamps.panoramaStatusChanged = performance.now(),
+  );
+
   // Fetch the latitude and longitude from the Street View panorama instance and
   // add them to the global `position` object if the current location has none.
   setTimeout(
@@ -120,6 +124,18 @@ const initPanorama = () => {
       }
     },
     2000,
+  );
+
+  // Move `.reveal` inside the maps panorama element so that the overlay still
+  // shows when the panorama is made full-screen.
+  setTimeout(
+    () => {
+      const elGMStyle = document.querySelector('.panorama > .gm-style');
+      if (elGMStyle !== null) {
+        elGMStyle.appendChild(elReveal);
+      }
+    },
+    1000,
   );
 
   // If Google Maps gets to expensive, there's also the predictably lacklustre
@@ -141,18 +157,6 @@ const initPanorama = () => {
   });
   map.setView({ mapTypeId: Microsoft.Maps.MapTypeId.streetside });
   */
-
-  // Move `.reveal` inside the maps panorama element so that the overlay still
-  // shows when the panorama is made full-screen.
-  setTimeout(
-    () => {
-      const elGMStyle = document.querySelector('.panorama > .gm-style');
-      if (elGMStyle !== null) {
-        elGMStyle.appendChild(elReveal);
-      }
-    },
-    1000,
-  );
 };
 
 const createUpdateCountdown = (hideCoverAt) => {
@@ -194,6 +198,8 @@ const initConnection = (locationID, silent) => {
   connection.addEventListener(
     'open',
     () => {
+      timestamps.socketConnectionOpen = performance.now();
+
       console.log(`Reqesting position for location "${locationID}"`);
       connection.send(JSON.stringify({
         type: 'getPosition',
@@ -216,6 +222,8 @@ const initConnection = (locationID, silent) => {
          * to the Street View API.
          */
         case 'position':
+          timestamps.locationReceived = performance.now();
+
           position = payload;
           initPanorama();
           if (typeof payload.startRoundAt === 'number') {
@@ -232,6 +240,10 @@ const initConnection = (locationID, silent) => {
             console.warn('Received reveal request before receiving a position');
           } else {
             reveal(payload, position);
+            connection.send(JSON.stringify({
+              type: 'logTimestamps',
+              ...timestamps,
+            }));
           }
           break;
 
@@ -358,6 +370,10 @@ const config = {
 };
 
 // Initialisation
+if (navigator.userAgent.includes('Windows')) {
+  document.body.classList.add('os--windows');
+}
+
 if (
   typeof config.locationID === 'string' &&
   config.locationID.length > 0

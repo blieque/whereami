@@ -314,6 +314,10 @@ wsServer.on('request', (request) => {
             });
             break;
 
+          case 'logTimestamps':
+            // Prevent connection drop.
+            break;
+
           default:
             // Drop connection on unexpected payload type.
             warn(`Unrecognised payload type "${payload.type}"; dropping connection to ${connection.remoteAddress}`);
