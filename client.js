@@ -1,3 +1,6 @@
+const elCover = document.querySelector('.cover');
+const elCoverCountdown = document.querySelector('.cover__countdown');
+
 const elPanorama = document.querySelector('.panorama');
 
 const elReveal = document.querySelector('.reveal');
@@ -152,7 +155,35 @@ const initPanorama = () => {
   );
 };
 
-const initConnection = (locationID) => {
+const createUpdateCountdown = (hideCoverAt) => {
+  return () => {
+    const msUntilStart = hideCoverAt - Date.now();
+    const secUntilStart = Math.ceil(msUntilStart / 1000);
+    elCoverCountdown.innerText = secUntilStart;
+  };
+};
+
+const showAndHideCover = (hideCoverAt) => {
+  const now = Date.now();
+
+  if (hideCoverAt > now) {
+    elCover.classList.add('cover--show');
+
+    const updateCountdown = createUpdateCountdown(hideCoverAt);
+    updateCountdown();
+    const intervalID = setInterval(updateCountdown, 100);
+
+    setTimeout(
+      () => {
+        setTimeout(() => clearInterval(intervalID), 150);
+        elCover.classList.remove('cover--show');
+      },
+      hideCoverAt - now,
+    );
+  }
+};
+
+const initConnection = (locationID, silent) => {
   // HTTP implies development server, HTTPS implies production
   const url = location.protocol === 'http:'
     ? `ws://${location.hostname}:9000`
@@ -167,6 +198,7 @@ const initConnection = (locationID) => {
       connection.send(JSON.stringify({
         type: 'getPosition',
         locationID,
+        silent,
       }));
     },
   );
@@ -186,6 +218,9 @@ const initConnection = (locationID) => {
         case 'position':
           position = payload;
           initPanorama();
+          if (typeof payload.startRoundAt === 'number') {
+            showAndHideCover(payload.startRoundAt);
+          }
           break;
 
         /**
@@ -314,16 +349,23 @@ const reveal = ({name, flag, clues, bonus}, position) => {
   );
 };
 
+// Parse config from URL
+const configString = location.pathname.slice(1) || location.hash.slice(1);
+const configArray = configString.split('!');
+const config = {
+  locationID: configArray[0],
+  silent: configArray.includes('silent'),
+};
+
 // Initialisation
-const locationID = location.pathname.slice(1) || location.hash.slice(1);
 if (
-  typeof locationID === 'string' &&
-  locationID.length > 0
+  typeof config.locationID === 'string' &&
+  config.locationID.length > 0
 ) {
   elReveal.style.display = 'none';
   makeElementDraggable(elRevealCluesContainer, elRevealClues);
   makeElementDraggable(elRevealBonusContainer, elRevealBonus);
-  initConnection(locationID);
+  initConnection(config.locationID, config.silent);
 } else {
   console.error('No `locationID` found in `location.pathname` or `location.hash`');
 }

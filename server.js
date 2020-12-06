@@ -185,6 +185,7 @@ console.log(objectArrayToTable(
 // Initialise server
 
 const connections = [];
+let startRoundAt = 0;
 
 const server = createServer((request, response) => {
   log(`Received request for ${request.url}`);
@@ -248,6 +249,16 @@ wsServer.on('request', (request) => {
               break;
             }
 
+            if (!payload?.silent) {
+              const now = Date.now();
+              // Wait 15 seconds after the round starts before starting another
+              // countdown to allow for late arrivals
+              if (now - startRoundAt > 15000) {
+                log('Setting round start time to 10 seconds in the future');
+                startRoundAt = now + 10000;
+              }
+            }
+
             const location = getLocationByID(payload.locationID);
             if (
               location === undefined ||
@@ -258,18 +269,23 @@ wsServer.on('request', (request) => {
             }
 
             log(`Providing map position for location "${payload.locationID}" to ${connection.remoteAddress}`);
-            connection.sendUTF(JSON.stringify(
-              location.panoramaID !== undefined
+            connection.sendUTF(JSON.stringify({
+              type: 'position',
+
+              ...(!payload?.silent
+                ? { startRoundAt }
+                : null),
+
+              ...(location.panoramaID !== undefined
                 ? {
-                  type: 'position',
                   panoramaID: location.panoramaID,
                 }
                 : {
-                  type: 'position',
                   latitude: location.latitude,
                   longitude: location.longitude,
                 }
-            ));
+              ),
+            }));
 
             log(`Remembering location "${payload.locationID}" for ${connection.remoteAddress}`);
             connection._meta.locationID = payload.locationID;

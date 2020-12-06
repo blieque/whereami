@@ -22,6 +22,12 @@
         overflow: hidden;
       }
 
+      body {
+        --color-white: hsl(0deg, 0%, 100%);
+        --color-red: hsl(354deg, 84%, 57%);
+        --color-gray: hsl(354deg, 10%, 7%);
+      }
+
       .panorama {
         width: 100%;
         height: 100%;
@@ -31,6 +37,61 @@
       .gm-compass {
         transform-origin: bottom right;
         transform: translateY(12px) scale(1.8);
+      }
+
+      .cover {
+        padding: 2em;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(131, 122, 122, 0.2);
+        box-sizing: border-box;
+        font-size: 1.5em;
+        line-height: 1;
+        pointer-events: none;
+        user-select: none;
+
+        transform-origin: bottom;
+        transform:
+          perspective(200rem)
+          translate3d(0, 20vh, -15vh)
+          rotate3d(1, 0, 0, 85deg);
+        transition: transform 1.8s cubic-bezier(0.35, 0, 0.65, 0.25);
+      }
+      .cover--show {
+        opacity: 1;
+        transition: none;
+        pointer-events: initial;
+
+        transform:
+          perspective(200rem)
+          translate3d(0, 0, 0)
+          rotate3d(1, 0, 0, 0deg);
+      }
+
+      .cover__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: var(--color-white);
+        background: var(--color-gray);
+      }
+
+      .cover__text {
+        padding: 1.8rem 2rem 1.9rem;
+        border: 1px solid currentColor;
+      }
+
+      .cover__countdown {
+        padding: 1.05rem 1.1rem 1.15rem;
+        margin-left: -1px;
+        font-size: 2em;
+        width: 1em;
+        text-align: center;
       }
 
       .reveal {
@@ -44,7 +105,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        color: #fff;
+        color: var(--color-white);
         font-family: 'Poppins', sans-serif;
         pointer-events: none;
       }
@@ -82,9 +143,9 @@
       .reveal__link {
         display: block;
         padding: 0.3em 1em 0.36em;
-        background: #ee3748;
+        background: var(--color-red);
         font-size: 1.2rem;
-        color: #fff;
+        color: var(--color-white);
         text-decoration: none;
         pointer-events: initial;
         transform: scaleX(0);
@@ -107,7 +168,7 @@
       .reveal__clues-container {
         position: absolute;
         top: 55%;
-        left: 65%;
+        right: 20%;
       }
       .reveal__clues {
         color: black;
@@ -143,7 +204,7 @@
         position: absolute;
         top: 0.6em;
         left: 0.8em;
-        color: #ee3748;
+        color: var(--color-red);
       }
       .reveal__clues-list {
         padding: 3.6em 1.6em 1.1em 2.4em;
@@ -192,7 +253,7 @@
         position: absolute;
         top: 0.8em;
         left: 0.8em;
-        color: #fff;
+        color: var(--color-white);
       }
       .reveal__bonus {
         box-shadow:
@@ -220,8 +281,8 @@
         position: absolute;
         top: -0.6em;
         right: -0.6em;
-        color: #ee3748;
-        background: #111;
+        color: var(--color-red);
+        background: var(--color-gray);
         font-size: 1.5em;
       }
 
@@ -235,6 +296,16 @@
   </head>
 
   <body>
+    <div class="cover">
+      <div class="cover__inner">
+        <div class="cover__text">
+          waiting for others
+        </div>
+
+        <div class="cover__text cover__countdown"></div>
+      </div>
+    </div>
+
     <div class="panorama"></div>
 
     <div class="reveal">
