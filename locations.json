@@ -170,6 +170,19 @@
     ]
   },
   {
+    "id": "a4af483",
+    "name": "Copenhagen",
+    "panoramaID": "Wj6x6JKKdcjKCrPt7hTsmA",
+    "flag": "🇩🇰",
+    "difficulty": 6,
+    "clues": [
+      "\"Danhostel Copenhagen City\" (south)",
+      "Green \"E20\" road means Norway, Sweden or Denmark (northwest)",
+      "Bikes! 🚴‍♀️",
+      "Only Danish, Norwegian, and Southern Sami have both \"ø\" and \"å\" characters (north)"
+    ]
+  },
+  {
     "id": "19c55eb",
     "isUsed": true,
     "name": "Cork",
@@ -478,6 +491,21 @@
       "Sun in the north, therefore southern hemisphere",
       "\"State Administrative Tribiunal\" with kangaroos (south-southwest)"
     ]
+  },
+  {
+    "id": "8637c75",
+    "name": "Prague",
+    "panoramaID": "OXgMYLuYb5z37O3rTbzslA",
+    "flag": "🇨🇿",
+    "difficulty": 8,
+    "clues": [
+      "\"Praha 1\" (red street sign) (east)",
+      "\"Prahy\", \"Praze\", \"Praha\" (sign, poster) (north-northeast)",
+      "\"Your Prague Hotels\" (small, vertical) (north)",
+      "Retro trams 🚋",
+      "Square cobbled pavements"
+    ],
+    "bonus": "08.mp4"
   },
   {
     "id": "7e902a5",
