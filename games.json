@@ -91,11 +91,18 @@
     ]
   },
   {
-    "isEnabled": false,
     "date": "2020-12-11",
     "locationIDs": [
-      ["c729ad5", "de4e3d5"],
-      "c0b4bb8"
+      "e554f58",
+      "c0b4bb8",
+      "8637c75"
+    ]
+  },
+  {
+    "isEnabled": false,
+    "date": "2020-12-18",
+    "locationIDs": [
+      ["c729ad5", "de4e3d5"]
     ]
   }
 ]
