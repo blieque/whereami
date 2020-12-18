@@ -64,6 +64,7 @@
   },
   {
     "id": "e554f58",
+    "isUsed": true,
     "name": "Berlin",
     "latitude": 52.5122746,
     "longitude": 13.3916778,
@@ -390,6 +391,7 @@
   },
   {
     "id": "c0b4bb8",
+    "isUsed": true,
     "name": "Nairobi",
     "panoramaID": "p4BQOj5eKrCqULrXVhzqkw",
     "flag": "🇰🇪",
@@ -494,6 +496,7 @@
   },
   {
     "id": "8637c75",
+    "isUsed": true,
     "name": "Prague",
     "panoramaID": "OXgMYLuYb5z37O3rTbzslA",
     "flag": "🇨🇿",
