@@ -284,7 +284,8 @@
       "Finnish and Swedish, common in southern Finland (northwest)",
       "Word ending in \"nen\", common in Finnish (south)",
       "Lots of double letters, common in Finnish"
-    ]
+    ],
+    "bonus": "13.mp4"
   },
   {
     "id": "de4e3d5",
@@ -298,7 +299,8 @@
       "\"Helsinki\" (on the poster) (east)",
       "Sign to Tampere (north)",
       "Signs in Finnish and Swedish, common in southern Finland"
-    ]
+    ],
+    "bonus": "13.mp4"
   },
   {
     "id": "0045a50",
@@ -572,6 +574,20 @@
     ]
   },
   {
+    "id": "9373e83",
+    "name": "San Francisco",
+    "panoramaID": "x169ql-G0ArL8q8MLMWmBg",
+    "flag": "🇺🇸",
+    "difficulty": 4,
+    "clues": [
+      "\"Francisco Park\" (northwest)",
+      "\"898Francisco.com\" (east-northeast)",
+      "Steep!",
+      "Tram lines 🚋",
+      "The Bay (north)"
+    ]
+  },
+  {
     "id": "cf3ff15",
     "isUsed": true,
     "name": "Sofia",
@@ -598,6 +614,19 @@
       "\"Bondi Surf Seafood: Sydney's Best Fish and Chips\" 🏄‍♂️ (east)",
       "Sun in the north, therefore southern hemisphere",
       "Driving on the left"
+    ]
+  },
+  {
+    "id": "6ab0003",
+    "name": "Tokyo",
+    "panoramaID": "bq-EMqNLyCcW9qs4EA0g8A",
+    "flag": "🇯🇵",
+    "difficulty": 5,
+    "clues": [
+      "\"...of Modern Art, Tokyo\" (vertical) (west)",
+      "Hiragana script (south)",
+      "Driving on the left",
+      "Cute little kei cars 🚗"
     ]
   },
   {
@@ -682,6 +711,19 @@
       "\"New Zealand Academy of Fine Arts\" (northeast)",
       "Driving on the left",
       "Lots of Japanese cars, common in Aus. and NZ"
+    ]
+  },
+  {
+    "id": "e96d6b8",
+    "name": "Zagreb",
+    "panoramaID": "aKBxsEU_827dg60cePBsAQ",
+    "flag": "🇭🇷",
+    "difficulty": 7,
+    "clues": [
+      "\"Zagreb Festival\" (west)",
+      "\"Croatia Airlines\" (southwest)",
+      "Slavic-looking language",
+      "Old european city"
     ]
   },
   {
