@@ -99,10 +99,12 @@
     ]
   },
   {
-    "isEnabled": false,
     "date": "2020-12-18",
     "locationIDs": [
-      ["c729ad5", "de4e3d5"]
+      "9373e83",
+      "6ab0003",
+      ["c729ad5", "de4e3d5"],
+      "85aece2"
     ]
   }
 ]
