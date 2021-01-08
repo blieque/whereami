@@ -14,9 +14,6 @@ const elRevealBonusContainer = document.querySelector('.reveal__bonus-container'
 const elRevealBonus = document.querySelector('.reveal__bonus');
 const elRevealBonusVideo = document.querySelector('.reveal__bonus-video');
 
-const timestamps = {};
-timestamps.init = performance.now();
-
 let position;
 
 const makeElementDraggable = (el, elHandle) => {
@@ -100,11 +97,6 @@ const initPanorama = () => {
       // zoomControl: false,
       showRoadLabels: false,
     },
-  );
-
-  streetViewPanorama.addListener(
-    'status_changed',
-    () => timestamps.panoramaStatusChanged = performance.now(),
   );
 
   // Fetch the latitude and longitude from the Street View panorama instance and
@@ -198,8 +190,6 @@ const initConnection = (locationID, silent) => {
   connection.addEventListener(
     'open',
     () => {
-      timestamps.socketConnectionOpen = performance.now();
-
       console.log(`Reqesting position for location "${locationID}"`);
       connection.send(JSON.stringify({
         type: 'getPosition',
@@ -222,8 +212,6 @@ const initConnection = (locationID, silent) => {
          * to the Street View API.
          */
         case 'position':
-          timestamps.locationReceived = performance.now();
-
           position = payload;
           initPanorama();
           if (typeof payload.startRoundAt === 'number') {
@@ -240,10 +228,6 @@ const initConnection = (locationID, silent) => {
             console.warn('Received reveal request before receiving a position');
           } else {
             reveal(payload, position);
-            connection.send(JSON.stringify({
-              type: 'logTimestamps',
-              ...timestamps,
-            }));
           }
           break;
 
