@@ -16,6 +16,21 @@
     "bonus": "07.mp4"
   },
   {
+    "id": "f2e8771",
+    "name": "Baghdad",
+    "latitude": 33.328171,
+    "longitude": 44.409052,
+    "flag": "🇮🇶",
+    "difficulty": 8,
+    "clues": [
+      "Flag! (south)",
+      "Freedom Monument in Tahrir Square (southwest)",
+      "Women wearing hijabs",
+      "Arabic text"
+    ],
+    "bonus": "09.mp4"
+  },
+  {
     "id": "cc074b0",
     "isUsed": true,
     "name": "Bangkok",
@@ -135,7 +150,8 @@
       "\"Cairo Bazaar\" (south-southeast)",
       "Arabic and English (west)",
       "Sandstone? 🤷‍♂️"
-    ]
+    ],
+    "bonus": "14.mp4"
   },
   {
     "id": "1dccd87",
@@ -211,6 +227,21 @@
       "\"Theis\" (third largest city) on the white lorry",
       "French and Arabic in Africa – usually Senegal",
       "Unique yellow and black taxis (north)"
+    ]
+  },
+  {
+    "id": "b73eb32",
+    "name": "Dublin",
+    "panoramaID": "-oQdDZGoWn5Io87O4szHmA",
+    "flag": "🇮🇪",
+    "difficulty": 5,
+    "clues": [
+      "\"Irish Independent\" (northeast)",
+      "\".ie\" websites (south)",
+      "Mostly English speaking",
+      "\"Uair, Hour\" on parking sign (west-southwest)",
+      "Prices in Euros 🇪🇺",
+      "Driving on the left"
     ]
   },
   {
@@ -332,6 +363,19 @@
       "\".com.tr\" website (east)",
       "Kebap! 🥙 (southwest)",
       "Flag! (south)"
+    ]
+  },
+  {
+    "id": "514a10e",
+    "name": "Las Palmas",
+    "panoramaID": "GhyPykvAZFk9JhderIpaxA",
+    "flag": "🇪🇸",
+    "difficulty": 7,
+    "clues": [
+      "\"Casitas Canarias\" (north)",
+      "\"Calle Tenerife\" (blue street sign) (north)",
+      "Palm trees! 🌴",
+      "Some very British-looking tourists"
     ]
   },
   {
