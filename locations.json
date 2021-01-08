@@ -200,6 +200,7 @@
   },
   {
     "id": "85aece2",
+    "isUsed": true,
     "name": "Dakar",
     "latitude": 14.7056776,
     "longitude": -17.4353976,
@@ -274,6 +275,7 @@
   },
   {
     "id": "c729ad5",
+    "isUsed": true,
     "name": "Helsinki",
     "latitude": 60.1698844,
     "longitude": 24.9475805,
@@ -289,6 +291,7 @@
   },
   {
     "id": "de4e3d5",
+    "isUsed": true,
     "name": "Helsinki",
     "latitude": 60.165816,
     "longitude": 24.943938,
@@ -575,6 +578,7 @@
   },
   {
     "id": "9373e83",
+    "isUsed": true,
     "name": "San Francisco",
     "panoramaID": "x169ql-G0ArL8q8MLMWmBg",
     "flag": "🇺🇸",
@@ -618,6 +622,7 @@
   },
   {
     "id": "6ab0003",
+    "isUsed": true,
     "name": "Tokyo",
     "panoramaID": "bq-EMqNLyCcW9qs4EA0g8A",
     "flag": "🇯🇵",
