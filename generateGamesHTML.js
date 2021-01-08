@@ -267,10 +267,10 @@ code {
     monospace;
 }
 
-body:not(.show-secrets) hr,
-body:not(.show-secrets) hr ~ *,
-body:not(.show-secrets) li span,
-body:not(.show-secrets) article.isInFuture {
+body:not(.showLocations) li span,
+body:not(.showSecrets) hr,
+body:not(.showSecrets) hr ~ *,
+body:not(.showSecrets) article.isInFuture {
   display: none;
 }
 
@@ -415,9 +415,17 @@ const html = `
         'keydown',
         (event) => {
           if (
-            event.key === 'S' &&
-            event.shiftKey
-          ) document.body.classList.toggle('show-secrets');
+            event.key.toLowerCase() === 's' &&
+            !event.metaKey &&
+            !event.altKey &&
+            !event.ctrlKey
+          ) {
+            document.body.classList.toggle(
+              event.shiftKey
+                ? 'showSecrets'
+                : 'showLocations'
+            );
+          };
         }
       );
 
