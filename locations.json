@@ -21,7 +21,7 @@
     "latitude": 33.328171,
     "longitude": 44.409052,
     "flag": "🇮🇶",
-    "difficulty": 8,
+    "difficulty": 10,
     "clues": [
       "Flag! (south)",
       "Freedom Monument in Tahrir Square (southwest)",
@@ -512,6 +512,18 @@
       "Katakana script (southeast, northwest)",
       "Driving on the left",
       "Cute little kei cars 🚗"
+    ]
+  },
+  {
+    "id": "385d786",
+    "name": "Ottawa",
+    "panoramaID": "ichrLd_zHLY3XBv8kX9pXw",
+    "flag": "🇨🇦",
+    "difficulty": 8,
+    "clues": [
+      "\"Canada's Parliament\" (east)",
+      "Flags! (southwest, northeast)",
+      "French and English language"
     ]
   },
   {
