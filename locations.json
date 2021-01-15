@@ -17,6 +17,7 @@
   },
   {
     "id": "f2e8771",
+    "isUsed": true,
     "name": "Baghdad",
     "latitude": 33.328171,
     "longitude": 44.409052,
@@ -141,6 +142,7 @@
   },
   {
     "id": "a6a8d7a",
+    "isUsed": true,
     "name": "Cairo",
     "latitude": 30.0072065,
     "longitude": 31.2299804,
@@ -188,6 +190,7 @@
   },
   {
     "id": "a4af483",
+    "isUsed": true,
     "name": "Copenhagen",
     "panoramaID": "Wj6x6JKKdcjKCrPt7hTsmA",
     "flag": "🇩🇰",
@@ -367,6 +370,7 @@
   },
   {
     "id": "514a10e",
+    "isUsed": true,
     "name": "Las Palmas",
     "panoramaID": "GhyPykvAZFk9JhderIpaxA",
     "flag": "🇪🇸",
@@ -516,6 +520,7 @@
   },
   {
     "id": "385d786",
+    "isUsed": true,
     "name": "Ottawa",
     "panoramaID": "ichrLd_zHLY3XBv8kX9pXw",
     "flag": "🇨🇦",
@@ -776,6 +781,7 @@
   },
   {
     "id": "e96d6b8",
+    "isUsed": true,
     "name": "Zagreb",
     "panoramaID": "aKBxsEU_827dg60cePBsAQ",
     "flag": "🇭🇷",
