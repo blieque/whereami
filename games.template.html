@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Geolite Games</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600" rel="stylesheet">
+    <style>
+      *,
+      *::before,
+      *::after {
+        position: relative;
+        box-sizing: border-box;
+      }
+
+      body {
+        --blue: #0644ff;
+
+        margin: 0;
+        padding: 2em 2em 2em 6em;
+        /*
+        background: linear-gradient(
+          0deg,
+          #eba 0.8px,
+          transparent 0.8px
+        );
+        background-size: 0.6em 1em;
+        */
+
+        font-family:
+          'Inter',
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          Helvetica Neue,
+          Helvetica,
+          Segoe UI,
+          sans-serif,
+          Apple Color Emoji,
+          Segoe UI Emoji;
+        line-height: 1;
+        font-size: 1em;
+        letter-spacing: 0.01em;
+      }
+
+      article {
+        margin-left: -2em;
+        padding-left: 2em;
+        position: relative;
+      }
+      article:not(:first-child) {
+        margin-top: 2em;
+      }
+      article.isToday {
+        color: #085b2c;
+      }
+      article.isToday::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0.25em;
+        left: 0;
+        bottom: 0.05em;
+        width: 0.2em;
+        background: #168c49;
+      }
+      article.isInPast {
+        opacity: 0.7;
+      }
+
+      h1,
+      h2 {
+        margin: 0;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+      h1 {
+        font-size: 1.1em;
+        line-height: calc(1 / 1.1);
+      }
+      h2 {
+        font-size: 1em;
+      }
+
+      p,
+      ol,
+      ul {
+        margin: 0;
+      }
+
+      article ::marker {
+        content: '';
+      }
+
+      li {
+        display: flex;
+        align-items: baseline;
+      }
+      li div {
+        display: flex;
+        flex-grow: 1;
+      }
+
+      ol,
+      ul {
+        padding-left: 0;
+      }
+
+      article > ol {
+        counter-reset: listItems;
+      }
+      article ol ul {
+        counter-reset: subListItems;
+        flex-grow: 1;
+        list-style: lower-alpha;
+      }
+
+      article > ol > li {
+        counter-increment: listItems;
+      }
+      article ol ul li {
+        counter-increment: subListItems;
+      }
+
+      article > ol > li::before,
+      article > ol ul li::before {
+        padding-right: 0.3em;
+        text-align: right;
+      }
+      article > ol > li::before {
+        content: counter(listItems) '.';
+        flex-basis: 2em;
+      }
+      article > ol ul li::before {
+        content: counter(subListItems, lower-alpha) '.';
+        flex-basis: 1.5em;
+      }
+
+      article > ol,
+      article > ol > li:not(:first-child),
+      h1 + ul,
+      h1 + ul > li:not(:first-child) {
+        margin-top: 0.5em;
+      }
+
+      article div > a,
+      h1 + ul div > a {
+        margin-left: 0.3em;
+      }
+
+      time {
+        opacity: 0.5;
+        font-size: 0.8em;
+      }
+
+      a:not(:visited) {
+        color: var(--blue);
+      }
+
+      code {
+        font-family:
+          Menlo,
+          Consolas,
+          monospace;
+      }
+
+      body.copyingMarkup li button,
+      body.copyingMarkup li span {
+        user-select: none;
+      }
+
+      body:not(.showLocations) li span,
+      body:not(.showSecrets) hr,
+      body:not(.showSecrets) hr ~ *,
+      body:not(.showSecrets) article.isInFuture {
+        display: none;
+      }
+
+      ul li::before {
+        content: '—';
+        flex-basis: 2em;
+        padding-right: 0.4em;
+        text-align: right;
+      }
+
+      li button {
+        position: absolute;
+        left: 28em;
+        transform: translateX(-100%);
+        appearance: none;
+        margin: -0.4em 0 -0.4em 0.2em;
+        padding: 0.4em;
+        border: none;
+        background: none;
+        color: var(--blue);
+        font: inherit;
+        cursor: pointer;
+      }
+      li button span {
+        font-size: 0.78em;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      li:not(:hover) button {
+        visibility: hidden;
+      }
+
+      li span {
+        flex-grow: 1;
+        text-indent: calc(100% - 100vw + 38em);
+        opacity: 0.7;
+      }
+
+      div.isDisabled {
+        text-decoration: line-through;
+      }
+
+      hr {
+        margin: 2em 0 1.875em;
+        border: none;
+        border-top: 0.125em solid rgba(0, 0, 0, 0.25);
+      }
+    </style>
+  </head>
+  <body>
+    {content}
+
+    <script>
+      window.addEventListener(
+        'keydown',
+        (event) => {
+          if (
+            event.key.toLowerCase() === 's' &&
+            !event.metaKey &&
+            !event.altKey &&
+            !event.ctrlKey
+          ) {
+            document.body.classList.toggle(
+              event.shiftKey
+                ? 'showSecrets'
+                : 'showLocations'
+            );
+          };
+        }
+      );
+
+      const copyMarkup = (event) => {
+        const elButton = event.currentTarget;
+        const elRound = elButton.parentElement;
+        const elHeading = elRound.parentElement.parentElement.querySelector('h2');
+
+        const roundRange = document.createRange();
+        roundRange.setStartBefore(elHeading);
+        roundRange.setEnd(elRound, 0);
+
+        const selection = document.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(roundRange);
+
+        document.body.classList.add('copyingMarkup');
+        document.execCommand('copy');
+        document.body.classList.remove('copyingMarkup');
+
+        selection.removeAllRanges();
+
+        elButton.disabled = true;
+        elButton.innerHTML = '<span>Copied!</span>';
+        setTimeout(() => {
+          elButton.disabled = false;
+          elButton.innerHTML = '<span>Copy</span>';
+        }, 3000);
+      };
+
+      Array.from(document.querySelectorAll('button'))
+        .forEach(elButton => elButton.addEventListener('click', copyMarkup));
+
+      const dateToday = (new Date()).toISOString();
+      Array.from(document.querySelectorAll('article'))
+        .forEach((elArticle) => {
+          const elTime = elArticle.querySelector('time');
+          if (dateToday.startsWith(elTime.innerText)) {
+            elArticle.classList.add('isToday');
+          } else if (dateToday > elTime.innerText) {
+            elArticle.classList.add('isInPast');
+          } else {
+            elArticle.classList.add('isInFuture');
+          }
+        });
+    </script>
+  </body>
+</html>
