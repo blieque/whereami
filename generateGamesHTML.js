@@ -291,11 +291,6 @@ div.isDisabled {
   text-decoration: line-through;
 }
 
-div.isUsed span {
-  opacity: 0.5;
-  text-decoration: line-through;
-}
-
 hr {
   margin: 2em 0 1.875em;
   border: none;
@@ -324,7 +319,6 @@ const locationAsHTML = (location) => {
     'div',
     {
       class: [
-        location.isUsed ? 'isUsed' : '',
         location.isEnabled === false ? 'isDisabled' : '',
       ],
     },

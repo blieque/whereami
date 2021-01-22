@@ -79,7 +79,6 @@ const objectArrayToTable = (input, keys) => {
 
   Some properties are optional:
   - `isEnabled`, default `true`
-  - `isUsed`, default `false`
   - `latitude` and `longitude` if `panoramaID` is provided
   - `panoramaID` if both `latitude` and `longitude` are provided
   - `flag`, default `undefined`
@@ -92,7 +91,6 @@ const objectArrayToTable = (input, keys) => {
     {
       "id": "231b158",
       "isEnabled": true,
-      "isUsed": false,
       "name": "London",
       "panormaID": "AuEPJltHzwIzwxBBEDekQA",
       "latitude": 51.4779302,
@@ -152,7 +150,6 @@ const locationsJSON = JSON.stringify(
   [
     'id',
     'isEnabled',
-    'isUsed',
     'name',
     'panoramaID',
     'latitude',
@@ -179,7 +176,7 @@ writeFile(
 log(`Loaded ${locations.length} locations:`);
 console.log(objectArrayToTable(
   locations,
-  ['id', 'name', 'difficulty', 'isEnabled', 'isUsed'],
+  ['id', 'name', 'difficulty', 'isEnabled'],
 ));
 
 // Initialise server

@@ -1,7 +1,6 @@
 [
   {
     "id": "46cadf8",
-    "isUsed": true,
     "name": "Athens",
     "panoramaID": "5TSMP6Uz3sQGghliMlmCtg",
     "flag": "🇬🇷",
@@ -30,7 +29,6 @@
   },
   {
     "id": "f2e8771",
-    "isUsed": true,
     "name": "Baghdad",
     "latitude": 33.328171,
     "longitude": 44.409052,
@@ -46,7 +44,6 @@
   },
   {
     "id": "cc074b0",
-    "isUsed": true,
     "name": "Bangkok",
     "latitude": 13.757401,
     "longitude": 100.4991,
@@ -62,7 +59,6 @@
   },
   {
     "id": "72e89ec",
-    "isUsed": true,
     "name": "Bergen",
     "latitude": 60.3975635,
     "longitude": 5.3217844,
@@ -77,7 +73,6 @@
   },
   {
     "id": "655c7d5",
-    "isUsed": true,
     "name": "Bergen",
     "latitude": 60.398149,
     "longitude": 5.320571,
@@ -93,7 +88,6 @@
   },
   {
     "id": "e554f58",
-    "isUsed": true,
     "name": "Berlin",
     "latitude": 52.5122746,
     "longitude": 13.3916778,
@@ -109,7 +103,6 @@
   },
   {
     "id": "c8d4977",
-    "isUsed": true,
     "name": "Bilbao",
     "latitude": 43.2562125,
     "longitude": -2.9263058,
@@ -137,7 +130,6 @@
   },
   {
     "id": "d817014",
-    "isUsed": true,
     "name": "Buenos Aires",
     "latitude": -34.6059969,
     "longitude": -58.3737003,
@@ -153,7 +145,6 @@
   },
   {
     "id": "07291a3",
-    "isUsed": true,
     "name": "Busan",
     "latitude": 35.1536521,
     "longitude": 129.029664,
@@ -168,7 +159,6 @@
   },
   {
     "id": "a6a8d7a",
-    "isUsed": true,
     "name": "Cairo",
     "latitude": 30.0072065,
     "longitude": 31.2299804,
@@ -183,7 +173,6 @@
   },
   {
     "id": "1dccd87",
-    "isUsed": true,
     "name": "Cape Town",
     "latitude": -33.9278746,
     "longitude": 18.4091317,
@@ -199,7 +188,6 @@
   },
   {
     "id": "43ef3fd",
-    "isUsed": true,
     "name": "Cape Town",
     "latitude": -33.9333995,
     "longitude": 18.4472554,
@@ -216,7 +204,6 @@
   },
   {
     "id": "a4af483",
-    "isUsed": true,
     "name": "Copenhagen",
     "panoramaID": "Wj6x6JKKdcjKCrPt7hTsmA",
     "flag": "🇩🇰",
@@ -230,7 +217,6 @@
   },
   {
     "id": "19c55eb",
-    "isUsed": true,
     "name": "Cork",
     "latitude": 51.8975254,
     "longitude": -8.4648302,
@@ -245,7 +231,6 @@
   },
   {
     "id": "85aece2",
-    "isUsed": true,
     "name": "Dakar",
     "latitude": 14.7056776,
     "longitude": -17.4353976,
@@ -275,7 +260,6 @@
   },
   {
     "id": "83751fe",
-    "isUsed": true,
     "name": "Geneva",
     "latitude": 46.2079471,
     "longitude": 6.14877,
@@ -290,7 +274,6 @@
   },
   {
     "id": "b0a8a17",
-    "isUsed": true,
     "name": "Geneva",
     "latitude": 46.2113501,
     "longitude": 6.1525779,
@@ -305,7 +288,6 @@
   },
   {
     "id": "4d64950",
-    "isUsed": true,
     "name": "Glasgow",
     "latitude": 55.8548631,
     "longitude": -4.2597811,
@@ -321,7 +303,6 @@
   },
   {
     "id": "582f190",
-    "isUsed": true,
     "name": "Havana",
     "latitude": 23.1374163,
     "longitude": -82.3591161,
@@ -335,7 +316,6 @@
   },
   {
     "id": "c729ad5",
-    "isUsed": true,
     "name": "Helsinki",
     "latitude": 60.1698844,
     "longitude": 24.9475805,
@@ -351,7 +331,6 @@
   },
   {
     "id": "de4e3d5",
-    "isUsed": true,
     "name": "Helsinki",
     "latitude": 60.165816,
     "longitude": 24.943938,
@@ -367,7 +346,6 @@
   },
   {
     "id": "0045a50",
-    "isUsed": true,
     "name": "Istanbul",
     "latitude": 41.022858,
     "longitude": 28.976975,
@@ -381,7 +359,6 @@
   },
   {
     "id": "8fe96dd",
-    "isUsed": true,
     "name": "Istanbul",
     "latitude": 41.0232139,
     "longitude": 28.977259,
@@ -396,7 +373,6 @@
   },
   {
     "id": "514a10e",
-    "isUsed": true,
     "name": "Las Palmas",
     "panoramaID": "GhyPykvAZFk9JhderIpaxA",
     "flag": "🇪🇸",
@@ -410,7 +386,6 @@
   },
   {
     "id": "4cb4391",
-    "isUsed": true,
     "name": "Los Angeles",
     "latitude": 33.9218226,
     "longitude": -118.3264352,
@@ -439,7 +414,6 @@
   },
   {
     "id": "99b5ff7",
-    "isUsed": true,
     "name": "Macau",
     "latitude": 22.1896926,
     "longitude": 113.5472438,
@@ -454,7 +428,6 @@
   },
   {
     "id": "723431c",
-    "isUsed": true,
     "name": "Marseille",
     "latitude": 43.3051315,
     "longitude": 5.3806031,
@@ -469,7 +442,6 @@
   },
   {
     "id": "c31b9db",
-    "isUsed": true,
     "name": "Mexico City",
     "latitude": 19.4332187,
     "longitude": -99.1339275,
@@ -498,7 +470,6 @@
   },
   {
     "id": "c0b4bb8",
-    "isUsed": true,
     "name": "Nairobi",
     "panoramaID": "p4BQOj5eKrCqULrXVhzqkw",
     "flag": "🇰🇪",
@@ -511,7 +482,6 @@
   },
   {
     "id": "4f613ad",
-    "isUsed": true,
     "name": "Naples",
     "latitude": 40.8528805,
     "longitude": 14.2691553,
@@ -528,7 +498,6 @@
   },
   {
     "id": "965ad95",
-    "isUsed": true,
     "name": "New York City",
     "latitude": 40.7196447,
     "longitude": -73.9962544,
@@ -543,7 +512,6 @@
   },
   {
     "id": "953faa7",
-    "isUsed": true,
     "name": "New York City",
     "latitude": 40.7189162,
     "longitude": -73.9960397,
@@ -558,7 +526,6 @@
   },
   {
     "id": "f15dc58",
-    "isUsed": true,
     "name": "Osaka",
     "latitude": 34.685667,
     "longitude": 135.485113,
@@ -574,7 +541,6 @@
   },
   {
     "id": "385d786",
-    "isUsed": true,
     "name": "Ottawa",
     "panoramaID": "ichrLd_zHLY3XBv8kX9pXw",
     "flag": "🇨🇦",
@@ -587,7 +553,6 @@
   },
   {
     "id": "e1ba0f6",
-    "isUsed": true,
     "name": "Paris",
     "panoramaID": "TGUZrihJPE9GckNtQO5F_Q",
     "flag": "🇫🇷",
@@ -601,7 +566,6 @@
   },
   {
     "id": "fe2a89e",
-    "isUsed": true,
     "name": "Perth",
     "latitude": -31.9550747,
     "longitude": 115.8616313,
@@ -616,7 +580,6 @@
   },
   {
     "id": "8637c75",
-    "isUsed": true,
     "name": "Prague",
     "panoramaID": "OXgMYLuYb5z37O3rTbzslA",
     "flag": "🇨🇿",
@@ -632,7 +595,6 @@
   },
   {
     "id": "7e902a5",
-    "isUsed": true,
     "name": "Reykjavik",
     "latitude": 64.145334,
     "longitude": -21.927156,
@@ -646,7 +608,6 @@
   },
   {
     "id": "0a3c672",
-    "isUsed": true,
     "name": "Reykjavik",
     "latitude": 64.1464321,
     "longitude": -21.9428643,
@@ -661,7 +622,6 @@
   },
   {
     "id": "7630e90",
-    "isUsed": true,
     "name": "Rio de Janeiro",
     "latitude": -22.9074212,
     "longitude": -43.1269323,
@@ -677,7 +637,6 @@
   },
   {
     "id": "7b9453e",
-    "isUsed": true,
     "name": "Rotterdam",
     "latitude": 51.9123495,
     "longitude": 4.4830536,
@@ -693,7 +652,6 @@
   },
   {
     "id": "9373e83",
-    "isUsed": true,
     "name": "San Francisco",
     "panoramaID": "x169ql-G0ArL8q8MLMWmBg",
     "flag": "🇺🇸",
@@ -708,7 +666,6 @@
   },
   {
     "id": "cf3ff15",
-    "isUsed": true,
     "name": "Sofia",
     "latitude": 42.6979111,
     "longitude": 23.3218663,
@@ -723,7 +680,6 @@
   },
   {
     "id": "d282f31",
-    "isUsed": true,
     "name": "Sydney",
     "latitude": -33.891112,
     "longitude": 151.2743281,
@@ -737,7 +693,6 @@
   },
   {
     "id": "6ab0003",
-    "isUsed": true,
     "name": "Tokyo",
     "panoramaID": "bq-EMqNLyCcW9qs4EA0g8A",
     "flag": "🇯🇵",
@@ -751,7 +706,6 @@
   },
   {
     "id": "3ba9c7f",
-    "isUsed": true,
     "name": "Toronto",
     "latitude": 43.6473969,
     "longitude": -79.3862092,
@@ -766,7 +720,6 @@
   },
   {
     "id": "10b051a",
-    "isUsed": true,
     "name": "Tunis",
     "latitude": 36.8036905,
     "longitude": 10.1795451,
@@ -794,7 +747,6 @@
   },
   {
     "id": "e4650bf",
-    "isUsed": true,
     "name": "Vancouver",
     "latitude": 49.3200353,
     "longitude": -123.073303,
@@ -808,7 +760,6 @@
   },
   {
     "id": "c62d66f",
-    "isUsed": true,
     "name": "Venice",
     "panoramaID": "F8K0XpCEsKpaqGPzT-7McA",
     "flag": "🇮🇹",
@@ -833,7 +784,6 @@
   },
   {
     "id": "73fb35d",
-    "isUsed": true,
     "name": "Wellington",
     "panoramaID": "-nGbRxTJZ6q6MhxCqJXtSA",
     "flag": "🇳🇿",
@@ -848,7 +798,6 @@
   },
   {
     "id": "e96d6b8",
-    "isUsed": true,
     "name": "Zagreb",
     "panoramaID": "aKBxsEU_827dg60cePBsAQ",
     "flag": "🇭🇷",
