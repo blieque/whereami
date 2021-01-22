@@ -16,6 +16,19 @@
     "bonus": "07.mp4"
   },
   {
+    "id": "172d42c",
+    "name": "Auckland",
+    "panoramaID": "2zb-nhXDNVmvRZpN-Mlmgg",
+    "flag": "🇳🇿",
+    "difficulty": 7,
+    "clues": [
+      "\".co.nz\" website (van) (northeast)",
+      "Driving on the left",
+      "The (sixty-storey) Sky Tower (north-northeast)",
+      "Mix of English- and Māori-/Polynesian-origin city names (south-southwest)"
+    ]
+  },
+  {
     "id": "f2e8771",
     "isUsed": true,
     "name": "Baghdad",
@@ -108,6 +121,19 @@
       "EU stripe on number plates"
     ],
     "bonus": "02.mp4"
+  },
+  {
+    "id": "9fe4416",
+    "name": "Brussels",
+    "panoramaID": "eHE-MvS1QUUeas0NFZdAoQ",
+    "flag": "🇧🇪",
+    "difficulty": 5,
+    "clues": [
+      "\"In Brussels\" (above yellow blocks) (southwest)",
+      "European Committee of the Regions and European Economic and Social Committee (southwest)",
+      "Clean city, some old European architecture",
+      "Spot the Merced– found one! Spot the Aud– found one!"
+    ]
   },
   {
     "id": "d817014",
@@ -399,6 +425,19 @@
     ]
   },
   {
+    "id": "a122ea6",
+    "name": "Luxembourg",
+    "panoramaID": "kBsCJV35P9aTgc0T0ikU8w",
+    "flag": "🇱🇺",
+    "difficulty": 7,
+    "clues": [
+      "Flag! (west)",
+      "French and German city names (northeast)",
+      "\".lu\" website (pink bus) (east-northeast)",
+      "Yellow number plates front and rear – must be Netherlands or Luxembourg"
+    ]
+  },
+  {
     "id": "99b5ff7",
     "isUsed": true,
     "name": "Macau",
@@ -441,6 +480,21 @@
       "\"Regalos de Mexico\" (west)",
       "Flags on the roofs (southwest, west, north)"
     ]
+  },
+  {
+    "id": "dab7f1e",
+    "name": "Mumbai",
+    "latitude": 19.0673905,
+    "longitude": 72.8541741,
+    "flag": "🇮🇳",
+    "difficulty": 9,
+    "clues": [
+      "Black and yellow auto rickshaws –  likely India",
+      "Black and yellow central reservation",
+      "Street View camera on a scooter (see shadow)",
+      "Clothing"
+    ],
+    "bonus": "10.mp4"
   },
   {
     "id": "c0b4bb8",
@@ -724,6 +778,19 @@
       "Prevalent French – \"achetez\", \"pharmacie\", \"opticienne\""
     ],
     "bonus": "05.mp4"
+  },
+  {
+    "id": "4159eb7",
+    "name": "Vaduz",
+    "latitude": 47.1374041,
+    "longitude": 9.5224499,
+    "flag": "🇱🇮",
+    "difficulty": 10,
+    "clues": [
+      "Flag! (north)",
+      "Dusk, therefore user-uploaded, therefore probably a country with no Google Street View",
+      "Architecture of the Alps and big mountains"
+    ]
   },
   {
     "id": "e4650bf",
