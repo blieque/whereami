@@ -28,6 +28,31 @@
     ]
   },
   {
+    "id": "d81bd86",
+    "name": "Austin",
+    "panoramaID": "akjUZKXa5pmT8jJh_pGpuQ",
+    "flag": "🇺🇸",
+    "difficulty": 5,
+    "clues": [
+      "\"University of Texas at Austin\" (southwest)",
+      "\"UTHealth\" (University of Texas) (north-northeast)",
+      "Flags! (south-southwest)",
+      "Wide American roads, American road signs"
+    ]
+  },
+  {
+    "id": "8c02c71",
+    "name": "Austin",
+    "panoramaID": "Lw_fR1UbzoHcRYi1fe9BDg",
+    "flag": "🇺🇸",
+    "difficulty": 8,
+    "clues": [
+      "Flags! (west-southwest)",
+      "The big boot looks quite Texan 👢",
+      "Wide American roads, American road signs"
+    ]
+  },
+  {
     "id": "f2e8771",
     "name": "Baghdad",
     "latitude": 33.328171,
@@ -170,6 +195,22 @@
       "Sandstone? 🤷‍♂️"
     ],
     "bonus": "14.mp4"
+  },
+  {
+    "id": "1dffa56",
+    "name": "Canberra",
+    "panoramaID": "4mV3Jm58vJ5Wu7EzWcQ8Lg",
+    "flag": "🇦🇺",
+    "difficulty": 8,
+    "clues": [
+      "\"Parliament Drive\" (on the wall) (south)",
+      "Flag! (west)",
+      "Eucalyptus trees 🐨",
+      "Loooads of space – Canberra is a bit odd",
+      "Sun slightly to the north, therefore southern hemisphere",
+      "Driving on the left (we're on a one-way system)"
+    ],
+    "bonus": "11.mp4"
   },
   {
     "id": "1dccd87",
