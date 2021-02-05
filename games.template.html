@@ -16,7 +16,7 @@
         --blue: #0644ff;
 
         margin: 0;
-        padding: 2em 2em 2em 6em;
+        padding: 2em;
         /*
         background: linear-gradient(
           0deg,
@@ -43,8 +43,8 @@
       }
 
       article {
-        margin-left: -2em;
-        padding-left: 2em;
+        margin-left: -1em;
+        padding-left: 1em;
         position: relative;
       }
       article:not(:first-child) {
@@ -184,7 +184,7 @@
 
       li button {
         position: absolute;
-        left: 28em;
+        left: 22em;
         transform: translateX(-100%);
         appearance: none;
         margin: -0.4em 0 -0.4em 0.2em;
@@ -207,7 +207,7 @@
 
       li span {
         flex-grow: 1;
-        text-indent: calc(100% - 100vw + 38em);
+        text-indent: calc(100% - 100vw + 28em);
         opacity: 0.7;
       }
 
@@ -222,28 +222,11 @@
       }
     </style>
   </head>
+
   <body>
     {content}
 
     <script>
-      window.addEventListener(
-        'keydown',
-        (event) => {
-          if (
-            event.key.toLowerCase() === 's' &&
-            !event.metaKey &&
-            !event.altKey &&
-            !event.ctrlKey
-          ) {
-            document.body.classList.toggle(
-              event.shiftKey
-                ? 'showSecrets'
-                : 'showLocations'
-            );
-          };
-        }
-      );
-
       const copyMarkup = (event) => {
         const elButton = event.currentTarget;
         const elRound = elButton.parentElement;
@@ -274,18 +257,61 @@
       Array.from(document.querySelectorAll('button'))
         .forEach(elButton => elButton.addEventListener('click', copyMarkup));
 
-      const dateToday = (new Date()).toISOString();
+      const dateToday = new Date();
+      const dateTodayStr = (dateToday).toISOString();
       Array.from(document.querySelectorAll('article'))
         .forEach((elArticle) => {
           const elTime = elArticle.querySelector('time');
-          if (dateToday.startsWith(elTime.innerText)) {
+          if (dateTodayStr.startsWith(elTime.innerText)) {
             elArticle.classList.add('isToday');
-          } else if (dateToday > elTime.innerText) {
+          } else if (dateTodayStr > elTime.innerText) {
             elArticle.classList.add('isInPast');
           } else {
             elArticle.classList.add('isInFuture');
           }
         });
+
+      const elPastLinks = [
+        ...document.querySelectorAll('.game.isInPast div > a'),
+        ...((
+          dateToday.getHours() >= 16 &&
+          dateToday.getMinutes() >= 20 && false
+        )
+          ? document.querySelectorAll('.game.isToday div > a')
+          : []),
+      ];
+      const toggleSinglePlayerLinks = () => {
+        const urlSuffix = '!solo';
+        const togglingToSinglePlayer = !elPastLinks[0].href.endsWith(urlSuffix);
+        elPastLinks.forEach((elPastLink) => {
+          elPastLink.href = togglingToSinglePlayer
+            ? `${elPastLink.href}${urlSuffix}`
+            : elPastLink.href.slice(0, -urlSuffix.length);
+        });
+      };
+      toggleSinglePlayerLinks();
+
+      window.addEventListener(
+        'keydown',
+        (event) => {
+          if (
+            event.key.toLowerCase() === 's' &&
+            !event.metaKey &&
+            !event.altKey &&
+            !event.ctrlKey
+          ) {
+            document.body.classList.toggle(
+              event.shiftKey
+                ? 'showSecrets'
+                : 'showLocations'
+            );
+
+            if (!event.shiftKey) {
+              toggleSinglePlayerLinks();
+            }
+          };
+        }
+      );
     </script>
   </body>
 </html>

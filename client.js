@@ -1,7 +1,9 @@
+const elPanorama = document.querySelector('.panorama');
+
 const elCover = document.querySelector('.cover');
 const elCoverCountdown = document.querySelector('.cover__countdown');
 
-const elPanorama = document.querySelector('.panorama');
+const elRevealer = document.querySelector('.revealer');
 
 const elReveal = document.querySelector('.reveal');
 const elRevealName = document.querySelector('.reveal__name');
@@ -179,7 +181,11 @@ const showAndHideCover = (hideCoverAt) => {
   }
 };
 
-const initConnection = (locationID, silent) => {
+const initConnection = ({
+  locationID,
+  silent,
+  solo,
+}) => {
   // HTTP implies development server, HTTPS implies production
   const url = location.protocol === 'http:'
     ? `ws://${location.hostname}:9000`
@@ -195,6 +201,7 @@ const initConnection = (locationID, silent) => {
         type: 'getPosition',
         locationID,
         silent,
+        solo,
       }));
     },
   );
@@ -293,6 +300,8 @@ const splitSpanLetters = (name) => {
  * the name of the location, all smooth like.
  */
 const reveal = ({name, flag, clues, bonus}, position) => {
+  elRevealer.classList.add('revealer--hidden');
+
   const longestWordLength = name
     .split(' ')
     .map(part => part.length)
@@ -350,7 +359,8 @@ const configString = location.pathname.slice(1) || location.hash.slice(1);
 const configArray = configString.split('!');
 const config = {
   locationID: configArray[0],
-  silent: configArray.includes('silent'),
+  silent: configArray.includes('silent') || configArray.includes('solo'),
+  solo: configArray.includes('solo'),
 };
 
 // Initialisation
@@ -373,6 +383,14 @@ window.addEventListener(
   { capture: true },
 );
 
+if (config.solo) {
+  elRevealer.classList.remove('revealer--hidden');
+  elRevealer.addEventListener('click', () => {
+    console.log(window.sendRevealMessage);
+    window.sendRevealMessage();
+  });
+}
+
 if (
   typeof config.locationID === 'string' &&
   config.locationID.length > 0
@@ -380,7 +398,7 @@ if (
   elReveal.style.display = 'none';
   makeElementDraggable(elRevealCluesContainer, elRevealClues);
   makeElementDraggable(elRevealBonusContainer, elRevealBonus);
-  initConnection(config.locationID, config.silent);
+  initConnection(config);
 } else {
   console.error('No `locationID` found in `location.pathname` or `location.hash`');
 }

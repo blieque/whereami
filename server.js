@@ -289,6 +289,7 @@ wsServer.on('request', (request) => {
 
             log(`Remembering location "${payload.locationID}" for ${connection.remoteAddress}`);
             connection._meta.locationID = payload.locationID;
+            connection._meta.solo = payload.solo;
 
             break;
 
@@ -297,8 +298,11 @@ wsServer.on('request', (request) => {
            * reveal their respective locations.
            */
           case 'reveal':
-            log(`Sending solutions`);
-            connections.forEach((connection) => {
+            const connectionsToReveal = connection._meta.solo
+              ? [connection]
+              : connections.filter(connection => !connection._meta.solo);
+            log(`Sending solution to ${connectionsToReveal.length}${payload.solo ? ' solo' : ''} ${connectionsToReveal.length === 1 ? 'client' : 'clients'}`);
+            connectionsToReveal.forEach((connection) => {
               const location = getLocationByID(connection._meta.locationID);
               if (location === undefined) {
                 warn(`Couldn't find location "${connection._meta.locationID}" for ${connection.remoteAddress}`);

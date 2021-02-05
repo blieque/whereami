@@ -95,6 +95,27 @@
         text-align: center;
       }
 
+      .revealer {
+        padding: 0.3em 1em 0.36em;
+        position: absolute;
+        z-index: 10;
+        bottom: 2em;
+        left: 50%;
+        appearance: none;
+        border: none;
+        background: var(--color-red);
+        color: var(--color-white);
+        font: inherit;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transform: translateX(-50%) scale(1) rotate(0deg);
+        transition: transform 0.2s ease-out 2s;
+      }
+      .revealer--hidden {
+        transform: translateX(-50%) scale(0) rotate(15deg);
+        transition: transform 0.4s ease-in;
+      }
+
       .reveal {
         display: flex;
         padding: 3rem;
@@ -145,8 +166,8 @@
         display: block;
         padding: 0.3em 1em 0.36em;
         background: var(--color-red);
-        font-size: 1.2rem;
         color: var(--color-white);
+        font-size: 1.2rem;
         text-decoration: none;
         pointer-events: initial;
         transform: scaleX(0);
@@ -297,6 +318,8 @@
   </head>
 
   <body>
+    <div class="panorama"></div>
+
     <div class="cover">
       <div class="cover__inner">
         <div class="cover__text">
@@ -307,7 +330,9 @@
       </div>
     </div>
 
-    <div class="panorama"></div>
+    <button class="revealer revealer--hidden">
+      reveal
+    </button>
 
     <div class="reveal">
       <span class="reveal__name"></span>
