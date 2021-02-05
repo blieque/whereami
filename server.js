@@ -115,7 +115,10 @@ let modifiedLocations = 0;
 
 log(`Validating locations`);
 locations.forEach((location) => {
-  if (typeof location.id === 'undefined') {
+  if (
+    location.isEnabled !== false &&
+    typeof location.id === 'undefined'
+  ) {
     const hash = createHash('md5');
     hash.update(
       location.panoramaID ||

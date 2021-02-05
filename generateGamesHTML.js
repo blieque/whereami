@@ -11,7 +11,7 @@ const games = JSON.parse(readFileSync('games.json', 'utf8'));
 const gamesTemplateHTML = readFileSync('games.template.html', 'utf8');
 
 const enabledGames = games.filter(game => game.isEnabled !== false);
-const allLocationIDs = locations.map(location => location.id);
+const allLocationIDs = locations.map(location => location.id || location.name);
 const gameLocationIDs = enabledGames.flatMap(game => game.locationIDs.flat());
 const unusedLocationIDs = allLocationIDs
   .filter(locationID => !gameLocationIDs.includes(locationID));
@@ -138,8 +138,11 @@ const locationAsHTML = (location) => {
   );
 };
 
-const getLocationByID = (locationID) => {
-  return locations.find(location => location.id === locationID);
+const getLocationByID = (locationIDOrName) => {
+  return locations.find(location => (
+    location.id === locationIDOrName ||
+    location.name === locationIDOrName
+  ));
 };
 
 const shorthandLocationAsHTML = (shorthandLocation) => {
