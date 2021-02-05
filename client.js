@@ -89,8 +89,8 @@ const initPanorama = () => {
         pitch: 0,
       },
       zoom: 0,
-      clickToGo: false,
       addressControl: false,
+      clickToGo: false,
       linksControl: false,
       motionTrackingControl: false,
       // panControl: false,
@@ -130,7 +130,7 @@ const initPanorama = () => {
     1000,
   );
 
-  // If Google Maps gets to expensive, there's also the predictably lacklustre
+  // If Google Maps gets too expensive, there's also the predictably lacklustre
   // Bing "Streetside".
   // https://www.bing.com/api/maps/sdk/mapcontrol/isdk/setviewtostreetside#JS
   /*
@@ -357,6 +357,21 @@ const config = {
 if (navigator.userAgent.includes('Windows')) {
   document.body.classList.add('os--windows');
 }
+
+window.addEventListener(
+  'keydown',
+  (event) => {
+    if (
+      ['ArrowUp', 'ArrowDown'].includes(event.key) &&
+      !event.metaKey &&
+      !event.altKey &&
+      !event.ctrlKey
+    ) {
+      event.stopPropagation()
+    };
+  },
+  { capture: true },
+);
 
 if (
   typeof config.locationID === 'string' &&
