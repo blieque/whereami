@@ -244,6 +244,19 @@
     ]
   },
   {
+    "id": "bc37c63",
+    "name": "Colombo",
+    "panoramaID": "VvxKEKl6Gp7PHqDq1lAtCA",
+    "flag": "🇱🇰",
+    "difficulty": 5,
+    "clues": [
+      "\"Colombo-10\" (southwest)",
+      "\"Lanka Ashok Leyland\" (on the bus) (southeast)",
+      "Sinhala and Latin characters on signs",
+      "Auto rickshaws"
+    ]
+  },
+  {
     "id": "a4af483",
     "name": "Copenhagen",
     "panoramaID": "Wj6x6JKKdcjKCrPt7hTsmA",
@@ -341,6 +354,20 @@
       "\".co.uk\" website (southwest)"
     ],
     "bonus": "06.mp4"
+  },
+  {
+    "id": "58be67f",
+    "name": "Gothenburg",
+    "panoramaID": "pyY99AmmZUmAZy-I82PaBw",
+    "flag": "🇸🇪",
+    "difficulty": 6,
+    "clues": [
+      "\"Göteborg\" (east)",
+      "\"Gretas Nightclub\" – home of positively tectonic enviro-bass",
+      "Mix of English and something Germanic",
+      "Blue EU strip on the number plate – not Norway",
+      "Lobster van – maybe coastal"
+    ]
   },
   {
     "id": "582f190",
@@ -706,6 +733,19 @@
     ]
   },
   {
+    "id": "8364cd7",
+    "name": "Singapore",
+    "panoramaID": "mW2BpBzmMmlw-ABokVIfKA",
+    "flag": "🇸🇬",
+    "difficulty": 8,
+    "clues": [
+      "\"Tannery Lane\" sounds a bit colonial",
+      "Primarily English (Hong Kong has bilingual road markings)",
+      "Highly developed",
+      "Driving on the left"
+    ]
+  },
+  {
     "id": "cf3ff15",
     "name": "Sofia",
     "latitude": 42.6979111,
@@ -851,6 +891,48 @@
     ]
   },
   {
+    "isEnabled": false,
+    "name": "Amsterdam",
+    "flag": "🇳🇱",
+    "difficulty": 1,
+    "clues": []
+  },
+  {
+    "isEnabled": false,
+    "name": "Belfast",
+    "flag": "🇬🇧",
+    "difficulty": 1,
+    "clues": []
+  },
+  {
+    "isEnabled": false,
+    "name": "Budapest",
+    "flag": "🇳🇱",
+    "difficulty": 1,
+    "clues": []
+  },
+  {
+    "isEnabled": false,
+    "name": "Edinburgh",
+    "flag": "🇬🇧",
+    "difficulty": 1,
+    "clues": []
+  },
+  {
+    "isEnabled": false,
+    "name": "Hong Kong",
+    "flag": "🇭🇰",
+    "difficulty": 1,
+    "clues": []
+  },
+  {
+    "isEnabled": false,
+    "name": "Kuala Lumpur",
+    "flag": "🇲🇾",
+    "difficulty": 1,
+    "clues": []
+  },
+  {
     "id": "0cf9997",
     "isEnabled": false,
     "name": "Sofia",
@@ -863,5 +945,19 @@
       "Flag",
       "Cyrillic and Latin characters"
     ]
+  },
+  {
+    "isEnabled": false,
+    "name": "Stockholm",
+    "flag": "🇸🇪",
+    "difficulty": 1,
+    "clues": []
+  },
+  {
+    "isEnabled": false,
+    "name": "Warsaw",
+    "flag": "🇵🇱",
+    "difficulty": 1,
+    "clues": []
   }
 ]
