@@ -154,6 +154,20 @@
     ]
   },
   {
+    "id": "2ceea39",
+    "name": "Budapest",
+    "panoramaID": "3ROVkG6ydS4qaUFcgiml0Q",
+    "flag": "🇭🇺",
+    "difficulty": 6,
+    "clues": [
+      "\"Budapest\" (bus, tram) (west-northwest, southeast)",
+      "Accented Latin characters suggest eastern Europe",
+      "Old trams and European architecture",
+      "Hungarian Parliament Building (east)",
+      "Danube River flowing to the Black Sea (east)"
+    ]
+  },
+  {
     "id": "d817014",
     "name": "Buenos Aires",
     "latitude": -34.6059969,
@@ -313,6 +327,21 @@
     ]
   },
   {
+    "id": "86a98d1",
+    "name": "Edinburgh",
+    "panoramaID": "nOSGQSBRPZFkwv9Jgv2sng",
+    "flag": "🇬🇧",
+    "difficulty": 4,
+    "clues": [
+      "\"to Edinbu...h\" (east)",
+      "\"to Edinburgh\" (phone box) (west)",
+      "\"St. Andrew Street\" (southwest)",
+      "Scott Monument (southwest)",
+      "2,467 out of 3,882 (63.5%) global Costa Coffee locations are in the UK ☕️",
+      "Salisbury Crags in the distance (east-southeast)"
+    ]
+  },
+  {
     "id": "83751fe",
     "name": "Geneva",
     "latitude": 46.2079471,
@@ -411,6 +440,18 @@
       "Signs in Finnish and Swedish, common in southern Finland"
     ],
     "bonus": "13.mp4"
+  },
+  {
+    "id": "6c543f6",
+    "name": "Ho Chi Minh City",
+    "panoramaID": "RjDro8_IO3TkcmG6X6waZw",
+    "flag": "🇻🇳",
+    "difficulty": 8,
+    "clues": [
+      "\"Vietbank\" (west-northwest)",
+      "\"Ph\", \"ong\", lots of accents common in Vietnamese, Khmer (Cambodia)",
+      "Cambodia tends to have less Latin script"
+    ]
   },
   {
     "id": "0045a50",
@@ -773,6 +814,19 @@
     ]
   },
   {
+    "id": "093c614",
+    "name": "São Paulo",
+    "panoramaID": "bxkCJ9FVvxRcWe7xTLJUuA",
+    "flag": "🇧🇷",
+    "difficulty": 7,
+    "clues": [
+      "\"Documentos de São Paulo\" (by \"CDT\") (south-southwest)",
+      "Flags! (Stripey one is the city flag) (north, south)",
+      "\"Ç\" rules out Spanish",
+      "Sun in the north, therefore southern hemisphere"
+    ]
+  },
+  {
     "id": "6ab0003",
     "name": "Tokyo",
     "panoramaID": "bq-EMqNLyCcW9qs4EA0g8A",
@@ -901,20 +955,6 @@
   {
     "isEnabled": false,
     "name": "Belfast",
-    "flag": "🇬🇧",
-    "difficulty": 1,
-    "clues": []
-  },
-  {
-    "isEnabled": false,
-    "name": "Budapest",
-    "flag": "🇳🇱",
-    "difficulty": 1,
-    "clues": []
-  },
-  {
-    "isEnabled": false,
-    "name": "Edinburgh",
     "flag": "🇬🇧",
     "difficulty": 1,
     "clues": []
