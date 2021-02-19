@@ -1,5 +1,19 @@
 [
   {
+    "id": "5b5eec7",
+    "name": "Amsterdam",
+    "panoramaID": "GUQinCz7woAicpxrLmaMHQ",
+    "flag": "🇳🇱",
+    "difficulty": 2,
+    "clues": [
+      "Canals with trees and roads either side",
+      "Rijksmuseum (south-southwest)",
+      "Rijksmuseum tote-bag swag (north)",
+      "Buildings with flat façade, beams and hooks for lifting, and big windows",
+      "🚴‍♂️ 🚴‍♀️ 🚴‍♂️ 🚴‍♀️ 🚴‍♂️ 🚴‍♀️ 🚴‍♂️ 🚴‍♀️"
+    ]
+  },
+  {
     "id": "46cadf8",
     "name": "Athens",
     "panoramaID": "5TSMP6Uz3sQGghliMlmCtg",
@@ -828,6 +842,21 @@
     ]
   },
   {
+    "id": "2c8bed4",
+    "name": "Tbilisi",
+    "latitude": 41.6919835,
+    "longitude": 44.8067441,
+    "flag": "🇬🇪",
+    "difficulty": 8,
+    "clues": [
+      "\"Tbilisi History Museum\" (west-southwest)",
+      "\"Rare Georgian Wines\" (north)",
+      "\"Drink wine\" – Georgia has a long history of wine making",
+      "Modern cars and old buildings (some unloved)",
+      "Georgian script and English"
+    ]
+  },
+  {
     "id": "6ab0003",
     "name": "Tokyo",
     "panoramaID": "bq-EMqNLyCcW9qs4EA0g8A",
@@ -945,13 +974,6 @@
       "Slavic-looking language",
       "Old european city"
     ]
-  },
-  {
-    "isEnabled": false,
-    "name": "Amsterdam",
-    "flag": "🇳🇱",
-    "difficulty": 1,
-    "clues": []
   },
   {
     "isEnabled": false,
