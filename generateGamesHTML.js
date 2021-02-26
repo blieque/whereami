@@ -85,7 +85,7 @@ const wrapH = function (defaultName, defaultAttributes, defaultChildren) {
   }
 };
 
-const URL_BASE = 'https://geolite.blieque.co.uk/';
+const URL_BASE = 'https://whereami.blieque.co.uk/';
 
 const DIFFICULTIES = [
   // 1

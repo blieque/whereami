@@ -191,7 +191,7 @@ const initConnection = ({
     ? `ws://${location.hostname}:9000`
     : `wss://${location.hostname}/socket`;
   console.log(`Opening WebSocket connection to ${url}`);
-  const connection = new WebSocket(url, 'geo');
+  const connection = new WebSocket(url, 'whoami');
 
   connection.addEventListener(
     'open',

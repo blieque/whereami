@@ -211,7 +211,7 @@ wsServer.on('request', (request) => {
     ![
       'http://localhost:8080',
       'http://192.168.1.1:8080',
-      'https://geolite.blieque.co.uk',
+      'https://whereami.blieque.co.uk',
     ].includes(request.origin)
   ) {
     request.reject();
@@ -219,7 +219,7 @@ wsServer.on('request', (request) => {
     return;
   }
 
-  const connection = request.accept('geo', request.origin);
+  const connection = request.accept('whoami', request.origin);
   connections.push(connection);
   log(`Connection from ${connection.remoteAddress} accepted`);
   log(` └ current connections: ${connections.length}`);
