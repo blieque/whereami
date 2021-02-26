@@ -272,6 +272,19 @@
     ]
   },
   {
+    "id": "dc5f66a",
+    "name": "Cardiff",
+    "panoramaID": "5HCvvRSMa7Hmw83a_9vZ6g",
+    "flag": "🇬🇧",
+    "difficulty": 4,
+    "clues": [
+      "\"Cardiff Stopover\" (banner) (east)",
+      "\"Shop 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales\" (northwest)",
+      "Mix of Welsh and English",
+      "St John The Baptist City Parish Church (south)"
+    ]
+  },
+  {
     "id": "bc37c63",
     "name": "Colombo",
     "panoramaID": "VvxKEKl6Gp7PHqDq1lAtCA",
@@ -775,6 +788,19 @@
     ]
   },
   {
+    "id": "b31d91a",
+    "name": "Saint Petersburg",
+    "panoramaID": "iCz86nJFGht7ByJXlfwwrQ",
+    "flag": "🇷🇺",
+    "difficulty": 5,
+    "clues": [
+      "\"Sightseeing St Petersburg\" (west)",
+      "Saint Isaac's Cathedral (west)",
+      "Mix of Cyrillic script and English language",
+      "European street signs and cars"
+    ]
+  },
+  {
     "id": "9373e83",
     "name": "San Francisco",
     "panoramaID": "x169ql-G0ArL8q8MLMWmBg",
@@ -801,6 +827,20 @@
       "Driving on the left"
     ],
     "bonus": "15.mp4"
+  },
+  {
+    "id": "2a984b4",
+    "name": "Sint Maarten",
+    "latitude": 18.038782,
+    "longitude": -63.120206,
+    "flag": "🇳🇱",
+    "difficulty": 9,
+    "clues": [
+      "\"...on SXM\" (southeast)",
+      "\"on\" implies an island",
+      "Plane flying over Maho beach to land at Princess Juliana International Airport",
+      "That Caribbean-blue water"
+    ]
   },
   {
     "id": "cf3ff15",
