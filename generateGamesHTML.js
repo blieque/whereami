@@ -170,6 +170,18 @@ const gameListHTML = h([
         h('h2', [
           'Where Am I?',
           game.title ? ` – ${game.title}` : '',
+          h(
+            'small',
+            { style: 'font-weight: 400' },
+            [
+              ' – ',
+              h(
+                'a',
+                { href: 'https://geolite.blieque.co.uk/games.html' },
+                'Play previous games',
+              ),
+            ],
+          ),
         ]),
 
         h('ol',

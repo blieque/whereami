@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>Geolite Games</title>
@@ -166,6 +166,10 @@
       body.copyingMarkup li button,
       body.copyingMarkup li span {
         user-select: none;
+      }
+
+      body:not(.copyingMarkup) article small {
+        display: none;
       }
 
       body:not(.showLocations) li span,
