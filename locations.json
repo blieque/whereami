@@ -520,7 +520,8 @@
       "Flags! (southeast, north-northeast)",
       "Vegetation and the stripy kerb suggest Asia",
       "Half of Tower 1 of the Petronas Towers, former joint tallest towers in the world (north)"
-    ]
+    ],
+    "bonus": "18.mp4"
   },
   {
     "id": "514a10e",
@@ -819,7 +820,7 @@
     "name": "Saint Petersburg",
     "panoramaID": "iCz86nJFGht7ByJXlfwwrQ",
     "flag": "🇷🇺",
-    "difficulty": 5,
+    "difficulty": 6,
     "clues": [
       "\"Sightseeing St Petersburg\" (west)",
       "Saint Isaac's Cathedral (west)",
