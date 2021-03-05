@@ -509,6 +509,20 @@
     ]
   },
   {
+    "id": "2075f56",
+    "name": "Kuala Lumpur",
+    "panoramaID": "ldNEGpmX-tUKWcjrV0uGRg",
+    "flag": "🇲🇾",
+    "difficulty": 8,
+    "clues": [
+      "\"KLCC\", \"Kuala Lumpur\" (road sign) (north-northeast)",
+      "\"Ascott Kuala Lumpur\" (just about) (southwest)",
+      "Flags! (southeast, north-northeast)",
+      "Vegetation and the stripy kerb suggest Asia",
+      "Half of Tower 1 of the Petronas Towers, former joint tallest towers in the world (north)"
+    ]
+  },
+  {
     "id": "514a10e",
     "name": "Las Palmas",
     "panoramaID": "GhyPykvAZFk9JhderIpaxA",
@@ -674,6 +688,19 @@
       "Katakana script (southeast, northwest)",
       "Driving on the left",
       "Cute little kei cars 🚗"
+    ]
+  },
+  {
+    "id": "642a963",
+    "name": "Oslo",
+    "panoramaID": "FmL088Y0YT-bA6DBdcOnuQ",
+    "flag": "🇳🇴",
+    "difficulty": 5,
+    "clues": [
+      "\"Oslo Sentralstasjon\" (east)",
+      "\"Oslo Citycard\" (bus) (south)",
+      "\"Ø\" (black tank top) – Swedish usually uses \"Ö\" instead (east)",
+      "\"å\" in \"Gågate\" indicates Scandinavia (west)"
     ]
   },
   {
@@ -1028,13 +1055,6 @@
     "isEnabled": false,
     "name": "Hong Kong",
     "flag": "🇭🇰",
-    "difficulty": 1,
-    "clues": []
-  },
-  {
-    "isEnabled": false,
-    "name": "Kuala Lumpur",
-    "flag": "🇲🇾",
     "difficulty": 1,
     "clues": []
   },
