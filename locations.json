@@ -97,6 +97,22 @@
     ]
   },
   {
+    "id": "658558e",
+    "name": "Beirut",
+    "panoramaID": "W92LsTVDQGBNn6PXDs3ehA",
+    "flag": "🇱🇧",
+    "difficulty": 8,
+    "clues": [
+      "\"Hotel Riviera Beirut\" (east)",
+      "Mostly English, with some Arabic (northeast)",
+      "Some headscarves, but mostly western clothing",
+      "No Greek or Hebrew – Greece and Israel unlikely",
+      "Feels Middle Eastern but the foliage and grass makes Arabian peninsula unlikely",
+      "Modern vehicles make north Africa unlikely"
+    ],
+    "bonus": "20.mp4"
+  },
+  {
     "id": "72e89ec",
     "name": "Bergen",
     "latitude": 60.3975635,
@@ -621,6 +637,20 @@
     "bonus": "10.mp4"
   },
   {
+    "id": "933f7ac",
+    "name": "Munich",
+    "panoramaID": "XD6r04UC8nd0Of6xpVUouQ",
+    "flag": "🇩🇪",
+    "difficulty": 5,
+    "clues": [
+      "\"Augustiner Bräu München\" (southwest)",
+      "Blackletter typography (southwest)",
+      "Flag! (west)",
+      "\"Neuturmstraße\" - eszett grapheme (ß) is unique to German",
+      "Image quality, cars, and clothing seem a little outdated – a lot of German imagery is from ~2008"
+    ]
+  },
+  {
     "id": "c0b4bb8",
     "name": "Nairobi",
     "panoramaID": "p4BQOj5eKrCqULrXVhzqkw",
@@ -843,6 +873,46 @@
     ]
   },
   {
+    "id": "a511f95",
+    "name": "Santiago",
+    "panoramaID": "z5nk3TJWZD8U_RBy5SZSeg",
+    "flag": "🇨🇱",
+    "difficulty": 7,
+    "clues": [
+      "\"bikesantiago.cl\" (east-northeast)",
+      "Flag! (west)",
+      "\"Plaza de Armas\" – most South American cities have a main square with this name (south)",
+      "Conquistador Pedro de Valdivia looking all imperial (southwest)",
+      "Signs and traffic lights don't feel European"
+    ]
+  },
+  {
+    "id": "1eecb48",
+    "name": "Seattle",
+    "panoramaID": "Z10vsA6KJ-FaytHhuzgHZg",
+    "flag": "🇺🇸",
+    "difficulty": 3,
+    "clues": [
+      "\"Seattle Storm Wy.\" (southwest)",
+      "Seattle Space Needle! (184 m) (east)",
+      "East–west and north–south grid system, common in the US",
+      "English is primary language (northeast)"
+    ]
+  },
+  {
+    "id": "5b943bb",
+    "name": "Seattle",
+    "panoramaID": "f1jCZD-Vytuus9QkVRqXoA",
+    "flag": "🇺🇸",
+    "difficulty": 7,
+    "clues": [
+      "Seattle Space Needle! (184 m) (southeast)",
+      "East–west and north–south grid system, common in the US",
+      "\"Warren Ave N\" – clear US road sign design (west)",
+      "English is primary language (south-southeast)"
+    ]
+  },
+  {
     "id": "8364cd7",
     "name": "Singapore",
     "panoramaID": "mW2BpBzmMmlw-ABokVIfKA",
@@ -909,6 +979,21 @@
       "Flags! (Stripey one is the city flag) (north, south)",
       "\"Ç\" rules out Spanish",
       "Sun in the north, therefore southern hemisphere"
+    ]
+  },
+  {
+    "id": "bac35db",
+    "name": "Taipei",
+    "panoramaID": "LwzkKVBmq9N0pPFtLMgkrw",
+    "flag": "🇹🇼",
+    "difficulty": 6,
+    "clues": [
+      "\"Taipei City Hall\" (west)",
+      "\"Taipei City Fire Department\" (southeast)",
+      "Top of Taipei 101 tower (509 m) (south-southwest)",
+      "Mix of Chinese and English",
+      "Too much space for it to be for Hong Kong",
+      "Driving on the right – not Hong Kong, Macau, Japan, or Singapore"
     ]
   },
   {
@@ -1016,6 +1101,19 @@
     "difficulty": 9,
     "clues": [
       "Zurich insurance trickery"
+    ]
+  },
+  {
+    "id": "04fac91",
+    "name": "Warsaw",
+    "panoramaID": "HWL9IkLGYXDdc_VCxNRHQw",
+    "flag": "🇵🇱",
+    "difficulty": 6,
+    "clues": [
+      "\".pl\" website (southwest)",
+      "\"ł\" character, lots of \"z\", \"ka\", \"wa\" – indicates Polish",
+      "Flag! (south-southeast)",
+      "Reasonably old European buildings (northeast)"
     ]
   },
   {
