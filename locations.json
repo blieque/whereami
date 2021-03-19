@@ -20,11 +20,10 @@
     "flag": "🇬🇷",
     "difficulty": 7,
     "clues": [
-      "\"Athens\" (t-shirts)  (southeast)",
+      "\"Athens\" (t-shirts) (southeast)",
       "The Parthenon (north-northeast)",
       "Greek characters (blue sign) (northest)",
-      "White and pastel walls",
-      "Mediterranean vegetation and weather 🌿"
+      "Mediterranean vegetation, pastel colours and weather 🌿"
     ],
     "bonus": "07.mp4"
   },
@@ -38,7 +37,8 @@
       "\".co.nz\" website (van) (northeast)",
       "Driving on the left",
       "The (sixty-storey) Sky Tower (north-northeast)",
-      "Mix of English- and Māori-/Polynesian-origin city names (south-southwest)"
+      "Mix of English- and Māori-/Polynesian-origin city names (south-southwest)",
+      "Not many hatchbacks like in Europe, but also not many trucks like in North America."
     ]
   },
   {
@@ -89,8 +89,8 @@
     "flag": "🇹🇭",
     "difficulty": 5,
     "clues": [
-      "\"...angkok\" (west-northwest)",
-      "Flags and flags and flags",
+      "\"...gkok\" (west-northwest)",
+      "Flags and flags and flags!",
       "Driving on the left",
       "Yellow and green taxis",
       "Thai script"
@@ -134,11 +134,11 @@
     "flag": "🇳🇴",
     "difficulty": 9,
     "clues": [
-      "\"Opplev Bergen\" (south-southwest)",
+      "\"Opplev Bergen\" (southwest)",
       "Ships including cruise liner (fjord tour, anyone?) (west-northwest)",
       "Norwegian route sign (three digits, black on white) (southwest)",
       "Flag! (ship mast) (west)",
-      "Flag! (east)"
+      "Flag! (tiny) (east)"
     ]
   },
   {
@@ -159,12 +159,11 @@
   {
     "id": "c8d4977",
     "name": "Bilbao",
-    "latitude": 43.2562125,
-    "longitude": -2.9263058,
+    "panoramaID": "KB52Hjfjouqp99uOtouJkw",
     "flag": "🇪🇸",
     "difficulty": 8,
     "clues": [
-      "\"..bao.es\" (north)",
+      "\"..lbao.es\" (above the van) (south)",
       "Sunny European city on a river",
       "EU stripe on number plates"
     ],
@@ -223,7 +222,7 @@
       "\"Busan World Expo\" (southwest)",
       "\".co.kr\" website (north)",
       "\"S-Oil\", South Korean state oil company (west)",
-      "Hangul writing system – the circles easily differentiate it from Chinese and Japanese"
+      "Hangul script – the circles easily differentiate it from Chinese and Japanese"
     ]
   },
   {
@@ -262,9 +261,9 @@
     "latitude": -33.9278746,
     "longitude": 18.4091317,
     "flag": "🇿🇦",
-    "difficulty": 4,
+    "difficulty": 5,
     "clues": [
-      "\"Cape\" hotel signs (north and east)",
+      "\"Cape Milner\" hotel signs (north and east)",
       "\"..pe Town\" on the bus (southeast)",
       "Devil's Peak (southeast) and Table Mountain (south)",
       "Sun in the north, therefore southern hemisphere",
@@ -321,7 +320,7 @@
     "difficulty": 6,
     "clues": [
       "\"Danhostel Copenhagen City\" (south)",
-      "Green \"E20\" road means Norway, Sweden or Denmark (northwest)",
+      "Green \"E20\" road means Norway, Sweden, Denmark or Finland (northwest)",
       "Bikes! 🚴‍♀️",
       "Only Danish, Norwegian, and Southern Sami have both \"ø\" and \"å\" characters (north)"
     ]
@@ -415,14 +414,13 @@
   {
     "id": "4d64950",
     "name": "Glasgow",
-    "latitude": 55.8548631,
-    "longitude": -4.2597811,
+    "panoramaID": "4lmd1ohZhB3qDQvzMReHXw",
     "flag": "🇬🇧",
     "difficulty": 7,
     "clues": [
       "\"Glasvegas\", \"Paisley\" (blue poster) (southeast)",
       "\"River Clyde\" (north-northwest)",
-      "\"Strathclyde Demolition\" (south-southwest)",
+      "\"Strathclyde Demolition\" (southwest)",
       "\".co.uk\" website (southwest)"
     ],
     "bonus": "06.mp4"
@@ -498,19 +496,6 @@
     "bonus": "12.mp4"
   },
   {
-    "id": "0045a50",
-    "name": "Istanbul",
-    "latitude": 41.022858,
-    "longitude": 28.976975,
-    "flag": "🇹🇷",
-    "difficulty": 5,
-    "clues": [
-      "\"Instanbul Büyükşehir...\" on the pink sign (north)",
-      "Sun in the south, therefore nothern hemisphere",
-      "Flag! (southeast)"
-    ]
-  },
-  {
     "id": "8fe96dd",
     "name": "Istanbul",
     "latitude": 41.0232139,
@@ -519,9 +504,22 @@
     "difficulty": 6,
     "clues": [
       "\"Instanbul Büyükşehir\" (bottom right) (east)",
-      "\".com.tr\" website (east)",
+      "\"Türkiye\" (north)",
       "Kebap! 🥙 (southwest)",
-      "Flag! (south)"
+      "Flags! (southwest, south-southwest)"
+    ]
+  },
+  {
+    "id": "0045a50",
+    "name": "Istanbul",
+    "latitude": 41.022858,
+    "longitude": 28.976975,
+    "flag": "🇹🇷",
+    "difficulty": 9,
+    "clues": [
+      "\"Instanbul Büyükşehir...\" on the pink sign (north)",
+      "Sun in the south, therefore nothern hemisphere",
+      "Language with accented Latin characters"
     ]
   },
   {
@@ -560,7 +558,7 @@
     "flag": "🇺🇸",
     "difficulty": 4,
     "clues": [
-      "\"JedCenterLosAngeles\" (northwest)",
+      "\"JetCenterLosAngeles\" (northwest)",
       "\"Los Angeles County\" (west)",
       "Flag! (northwest)",
       "Wide roads, almost exclusively SUVs 🙄",
@@ -589,9 +587,9 @@
     "difficulty": 6,
     "clues": [
       "Canadian College of Macau (north-northeast)",
-      "\"Macau\" on the taxi (northeast)",
+      "\"Macao\" (both spellings are used) on the taxi (northeast)",
       "Casinos!",
-      "Portugese and Chinese"
+      "Mix of Portugese and Chinese"
     ]
   },
   {
@@ -600,12 +598,12 @@
     "latitude": 43.3051315,
     "longitude": 5.3806031,
     "flag": "🇫🇷",
-    "difficulty": 4,
+    "difficulty": 8,
     "clues": [
       "\"Aix-Marseille Université\" sign (east-northeast)",
       "Abundence of French",
-      "Coastal feel ⛱",
-      "Sunny South of France"
+      "Little blue French street signs",
+      "Sunny South of France ⛱"
     ]
   },
   {
@@ -672,7 +670,6 @@
     "clues": [
       "\"Viva Napoli\" (north)",
       "\"Napoli Centrale\" (southeast)",
-      "\"Napoli\" football swag ⚽️ (west-northwest)",
       "Flag! (north-northeast)",
       "Mount Vesuvius 🌋 (east)"
     ],
@@ -709,13 +706,12 @@
   {
     "id": "f15dc58",
     "name": "Osaka",
-    "latitude": 34.685667,
-    "longitude": 135.485113,
+    "panoramaID": "2wWDP4VwT7iB3bDoQBpcqw",
     "flag": "🇯🇵",
     "difficulty": 6,
     "clues": [
-      "\"Osaka Bus\" (south)",
-      "Street vending machine (southeast)",
+      "\"Osaka Bus\" (southwest)",
+      "Street vending machine (south)",
       "Katakana script (southeast, northwest)",
       "Driving on the left",
       "Cute little kei cars 🚗"
@@ -753,24 +749,23 @@
     "flag": "🇫🇷",
     "difficulty": 5,
     "clues": [
-      "\"Ville de Paris\" (west)",
+      "\"Ville de Paris\" (west-northwest)",
       "Some famous tower (west, up high)",
       "Abundence of French",
-      "Blue Parisian street signs on stone buildings"
+      "Blue, French street signs on stone buildings"
     ]
   },
   {
     "id": "fe2a89e",
     "name": "Perth",
-    "latitude": -31.9550747,
-    "longitude": 115.8616313,
+    "panoramaID": "TLSjD2JxVuwMmeE2bbbN-w",
     "flag": "🇦🇺",
-    "difficulty": 4,
+    "difficulty": 3,
     "clues": [
-      "\"City of Perth\" (west)",
+      "\"City of Perth Library\" (west)",
       "Driving on the left",
       "Sun in the north, therefore southern hemisphere",
-      "\"State Administrative Tribiunal\" with kangaroos (south-southwest)"
+      "\"State Administrative Tribunal\" – N.Z. has regions, South Africa has provinces (south-southwest)"
     ]
   },
   {
@@ -780,7 +775,7 @@
     "flag": "🇨🇿",
     "difficulty": 8,
     "clues": [
-      "\"Praha 1\" (red street sign) (east)",
+      "\"Praha 1\" (red street sign) (east-southeast)",
       "\"Prahy\", \"Praze\", \"Praha\" (sign, poster) (north-northeast)",
       "\"Your Prague Hotels\" (small, vertical) (north)",
       "Retro trams 🚋",
@@ -839,7 +834,7 @@
     "difficulty": 7,
     "clues": [
       "\"Rotterdamsch\" on building (north-northeast)",
-      "Yellow front plates – classic Netherlands",
+      "Almost all front number plates yellow – classic Netherlands",
       "Driving on the right",
       "Bikes! 🚴‍♀️",
       "Canals!"
@@ -868,8 +863,9 @@
       "\"Francisco Park\" (northwest)",
       "\"898Francisco.com\" (east-northeast)",
       "Steep!",
-      "Tram lines 🚋",
-      "The Bay (north)"
+      "Tram lines in America 🚋",
+      "The Bay (north)",
+      "South tower of the Golden Gate Bridge (west)"
     ]
   },
   {
@@ -950,8 +946,8 @@
     "difficulty": 7,
     "clues": [
       "\"Sofia Hotel Balkan\" on the roof (south-southwest)",
-      "\"Bulbank\" and \".bg\" website",
-      "Flag",
+      "Flag! (just about) (south-southwest)",
+      "\"Bulbank\" (southwest)",
       "Cyrillic and Latin characters"
     ]
   },
@@ -1009,7 +1005,8 @@
       "\"Drink wine\" – Georgia has a long history of wine making",
       "Modern cars and old buildings (some unloved)",
       "Georgian script and English"
-    ]
+    ],
+    "bonus": "19.mp4"
   },
   {
     "id": "6ab0003",
@@ -1027,15 +1024,13 @@
   {
     "id": "3ba9c7f",
     "name": "Toronto",
-    "latitude": 43.6473969,
-    "longitude": -79.3862092,
+    "panoramaID": "GiFUIk5qpGYChohOCzVe3Q",
     "flag": "🇨🇦",
     "difficulty": 6,
     "clues": [
-      "\"Toronto Entertainment District\" (above \"King St W\") (northwest)",
+      "\"torontoed.com\" (purple banner) (northwest)",
       "CN Tower, 7th tallest structure worldwide (south)",
-      "\"...Church in Canada\" (east)",
-      "\"Bank of Montreal\" (northeast)"
+      "\"Bank of Montreal\" (east)"
     ]
   },
   {
@@ -1076,7 +1071,7 @@
     "clues": [
       "\"North Vancouver City Hall\" (west)",
       "Red and white flag 🍁 (north-northwest)",
-      "\"Petro-Canada\" (southeast)"
+      "\"Petro-Canada\" (and acompanying maple leaf) (southeast)"
     ]
   },
   {
@@ -1087,7 +1082,7 @@
     "difficulty": 7,
     "clues": [
       "\"Venezia Terraferma\" (red sign) (northwest)",
-      "\"Commune di Venezia\" (look up) (east)",
+      "\"Comune di Venezia\" (look up) (east)",
       "\"Rialto\" (east)",
       "Tourists, tiny streets, tourists, old buildings, tourists"
     ]
@@ -1140,7 +1135,7 @@
       "\"Zagreb Festival\" (west)",
       "\"Croatia Airlines\" (southwest)",
       "Slavic-looking language",
-      "Old european city"
+      "Old European city"
     ]
   },
   {
@@ -1158,30 +1153,9 @@
     "clues": []
   },
   {
-    "id": "0cf9997",
-    "isEnabled": false,
-    "name": "Sofia",
-    "latitude": 42.6974833,
-    "longitude": 23.3220823,
-    "flag": "🇧🇬",
-    "difficulty": 8,
-    "clues": [
-      "Name on barrier, right of Jesus",
-      "Flag",
-      "Cyrillic and Latin characters"
-    ]
-  },
-  {
     "isEnabled": false,
     "name": "Stockholm",
     "flag": "🇸🇪",
-    "difficulty": 1,
-    "clues": []
-  },
-  {
-    "isEnabled": false,
-    "name": "Warsaw",
-    "flag": "🇵🇱",
     "difficulty": 1,
     "clues": []
   }
