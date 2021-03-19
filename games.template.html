@@ -14,20 +14,10 @@
         box-sizing: border-box;
       }
 
-      body {
-        --blue: #0644ff;
+      /* LAYOUT */
 
-        margin: 0;
-        padding: 2em;
-        /*
-        background: linear-gradient(
-          0deg,
-          #eba 0.8px,
-          transparent 0.8px
-        );
-        background-size: 0.6em 1em;
-        */
-
+      :root {
+        font-size: 1.25em;
         font-family:
           system-ui,
           -apple-system,
@@ -38,123 +28,31 @@
           sans-serif,
           'Apple Color Emoji',
           'Segoe UI Emoji';
-        line-height: 1;
-        font-size: 1em;
+        line-height: 1em;
         letter-spacing: 0.01em;
       }
 
-      article {
-        margin-left: -1em;
-        padding-left: 1em;
-        position: relative;
-      }
-      article:not(:first-child) {
-        margin-top: 2em;
-      }
-      article.isToday {
-        color: #085b2c;
-      }
-      article.isToday::before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0.25em;
-        left: 0;
-        bottom: 0.05em;
-        width: 0.2em;
-        background: #168c49;
-      }
-      article.isInPast {
-        opacity: 0.7;
-      }
+      body {
+        --color-blue: #0644ff;
+        --color-white: #fff;
 
-      h1,
-      h2 {
         margin: 0;
-        font-weight: 600;
-        letter-spacing: 0.02em;
+        padding: 2em;
       }
-      h1 {
-        font-size: 1.1em;
-        line-height: calc(1 / 1.1);
-      }
-      h2 {
-        font-size: 1em;
-      }
-
-      p,
-      ol,
-      ul {
-        margin: 0;
+      body.showLines {
+        background: linear-gradient(
+          0deg,
+          #eba 0.8px,
+          transparent 0.8px
+        );
+        background-size: 100% 0.5rem;
+        background-position-y: -0.12em;
       }
 
-      article ::marker {
-        content: '';
-      }
-
-      li {
-        display: flex;
-        align-items: baseline;
-      }
-      li div {
-        display: flex;
-        flex-grow: 1;
-      }
-
-      ol,
-      ul {
-        padding-left: 0;
-      }
-
-      article > ol {
-        counter-reset: listItems;
-      }
-      article ol ul {
-        counter-reset: subListItems;
-        flex-grow: 1;
-        list-style: lower-alpha;
-      }
-
-      article > ol > li {
-        counter-increment: listItems;
-      }
-      article ol ul li {
-        counter-increment: subListItems;
-      }
-
-      article > ol > li::before,
-      article > ol ul li::before {
-        padding-right: 0.3em;
-        text-align: right;
-      }
-      article > ol > li::before {
-        content: counter(listItems) '.';
-        flex-basis: 2em;
-      }
-      article > ol ul li::before {
-        content: counter(subListItems, lower-alpha) '.';
-        flex-basis: 1.5em;
-      }
-
-      article > ol,
-      article > ol > li:not(:first-child),
-      h1 + ul,
-      h1 + ul > li:not(:first-child) {
-        margin-top: 0.5em;
-      }
-
-      article div > a,
-      h1 + ul div > a {
-        margin-left: 0.3em;
-      }
-
-      time {
-        opacity: 0.5;
-        font-size: 0.8em;
-      }
+      /* GENERAL */
 
       a:not(:visited) {
-        color: var(--blue);
+        color: var(--color-blue);
       }
 
       code {
@@ -164,60 +62,65 @@
           monospace;
       }
 
-      body.copyingMarkup li button,
-      body.copyingMarkup li span {
-        user-select: none;
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        line-height: 1rem;
+        letter-spacing: 0.02em;
       }
 
-      body:not(.copyingMarkup) article small {
-        display: none;
+      h1 {
+        font-size: 1.3em;
+        font-weight: 800;
+        top: -0.12rem;
       }
-
-      body:not(.showLocations) li span,
-      body:not(.showSecrets) hr,
-      body:not(.showSecrets) hr ~ *,
-      body:not(.showSecrets) article.isInFuture {
-        display: none;
+      h2 {
+        font-size: 1.15em;
+        top: -0.06rem;
       }
-
-      ul li::before {
-        content: '—';
-        flex-basis: 2em;
-        padding-right: 0.4em;
-        text-align: right;
-      }
-
-      li button {
-        position: absolute;
-        left: 22em;
-        transform: translateX(-100%);
-        appearance: none;
-        margin: -0.4em 0 -0.4em 0.2em;
-        padding: 0.4em;
-        border: none;
-        background: none;
-        color: var(--blue);
-        font: inherit;
-        cursor: pointer;
-      }
-      li button span {
-        font-size: 0.78em;
+      h3 {
+        font-size: 1em;
         font-weight: 600;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-      }
-      li:not(:hover) button {
-        visibility: hidden;
       }
 
-      li span {
-        flex-grow: 1;
-        text-indent: calc(100% - 100vw + 28em);
-        opacity: 0.7;
+      p,
+      ol,
+      ul {
+        margin: 0;
       }
 
-      div.isDisabled {
-        text-decoration: line-through;
+      /* Work around Firefox line-height bug */
+      a,
+      small,
+      code {
+        line-height: 0;
+      }
+
+      /* Work around Firefox line-height bug */
+      /* https://bugzilla.mozilla.org/show_bug.cgi?id=1695533 */
+      ol > li::marker {
+        content: '';
+      }
+      ol > li::before {
+        content: counter(list-item) '.';
+        position: absolute;
+        right: calc(100% + 0.24em);
+        font-variant-numeric: tabular-nums;
+      }
+
+      ul > li::marker {
+        content: '';
+      }
+      ul > li::before {
+        content: '—';
+        position: absolute;
+        right: calc(100% + 0.24em);
+      }
+
+      ol,
+      ul {
+        padding-left: 2em;
       }
 
       hr {
@@ -225,17 +128,261 @@
         border: none;
         border-top: 0.125em solid rgba(0, 0, 0, 0.25);
       }
+
+      /* SECTION blocks */
+
+      section.intro {
+        max-width: 36em;
+      }
+      section.intro ol,
+      section.intro ul {
+        margin-top: 0.5rem;
+      }
+      section.intro h2 {
+        margin-top: 1rem;
+      }
+      section.intro li {
+        margin-top: 0.5rem;
+      }
+
+      body:not(.showSecrets) section.gameList ~ * {
+        display: none;
+      }
+
+      section.unusedLocationList ul {
+        margin-top: 1rem;
+      }
+      section.unusedLocationList ul li {
+        margin-top: 0.5rem;
+      }
+
+      section.fileList ul li {
+        margin-top: 0.5rem;
+      }
+
+      /* GAME block */
+
+      .game {
+        position: relative;
+      }
+      .game:not(:first-child) {
+        margin-top: 2em;
+      }
+      .game.game--isToday {
+        color: #085b2c;
+      }
+      .game.game--isToday::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0.25em;
+        left: -1em;
+        bottom: 0.05em;
+        width: 0.2em;
+        background: #168c49;
+      }
+      body:not(.showSecrets) .game--isInFuture {
+        display: none;
+      }
+
+      body:not(.copyingMarkup) .game small {
+        display: none;
+      }
+
+      .game h2 {
+        margin-top: 0.5rem;
+      }
+
+      .game ol {
+        margin-top: 1em;
+      }
+
+      .game ol ul {
+        list-style: lower-alpha;
+        padding-left: 1.5em;
+      }
+
+      .game ol > li:not(:first-child),
+      h1 + ul > li:not(:first-child) {
+        margin-top: 0.5em;
+      }
+
+      .game time {
+        /* Work around Firefox line-height bug */
+        display: block;
+        opacity: 0.6;
+        font-size: 0.85em;
+        top: 0.08rem;
+      }
+
+      /* ROUND block */
+
+      @media (min-width: 44rem) {
+        .round {
+          display: flex;
+          align-items: baseline;
+        }
+      }
+      .round ul,
+      .round > .location {
+        flex-basis: 15em;
+      }
+      .round button {
+        appearance: none;
+        margin: -0.1em 0 -0.2em -0.3em;
+        padding: 0.1em 0.3em 0.2em;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        height: 1em;
+        box-sizing: content-box;
+        border: none;
+        background: var(--color-blue);
+        color: var(--color-white);
+        font: inherit;
+        text-align: right;
+      }
+      body.copyingMarkup .round button {
+        user-select: none;
+      }
+      body:not(.showLocations) .round button {
+        display: none;
+      }
+      .round button span {
+        font-size: 0.78em;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+      .round:not(:hover) button {
+        visibility: hidden;
+      }
+      .round__locationName {
+        opacity: 0.6;
+      }
+      body.copyingMarkup .round__locationName {
+        user-select: none;
+      }
+      body:not(.showLocations) .round__locationName {
+        display: none;
+      }
+
+      /* LOCATION block */
+
+      .location.isDisabled {
+        text-decoration: line-through;
+      }
     </style>
   </head>
 
   <body>
+    <section class="intro">
+      <h1>Where Am I?</h1>
+
+      <ol>
+        <li>
+          Click one of the links below.
+        </li>
+
+        <li>
+          Look around, zoom in, and try to guess the <strong>city</strong>
+          you're in.
+        </li>
+
+        <li>
+          Once you've made your guess, click <cite>reveal</cite> at the bottom.
+        </li>
+      </ol>
+
+      <h2>Notes</h2>
+
+      <ul>
+        <li>
+          No changing your mind after you've clicked the button! Not only will
+          you let me down, not only will you let your team down, but worst of
+          all you'll let yourself down.
+        </li>
+
+        <li>
+          Where multiple links of differing difficulty are shown, all locations
+          will always be in the same city. Players can choose a difficulty
+          themselves.
+        </li>
+
+        <li>
+          Almost all locations from 2020 include the name of the city somewhere
+          in the scene. After 2020, no promises.
+        </li>
+
+        <li>
+          The difficulty of each location is estimated with a British audience
+          in mind.
+        </li>
+
+        <li>
+          Yes – this is a lot like
+          <a href="https://www.geoguessr.com/">GeoGuessr</a> in no-moving mode.
+        </li>
+      </ul>
+    </section>
+
+    <hr>
+
     {content}
 
     <script>
+      let connection;
+
+      const initConnection = () => {
+        if (
+          typeof connection === 'object' ||
+          location.protocol === 'file:'
+        ) return;
+
+        // HTTP implies development server, HTTPS implies production
+        const url = location.protocol === 'http:'
+          ? `ws://${location.hostname}:9000`
+          : `wss://${location.hostname}/socket`;
+        console.log(`Opening WebSocket connection to ${url}`);
+        connection = new WebSocket(url, 'whoami');
+      };
+
+      const sendRevealMessage = () => {
+        if (typeof connection !== 'object') return;
+
+        const sendMessage = () => {
+          console.log(`Reqesting position for location "${locationID}"`);
+          connection.send(JSON.stringify({
+            type: 'getPosition',
+            locationID,
+            silent,
+            solo,
+          }));
+        };
+
+        switch (connection.readyState) {
+          case WebSocket.CONNECTING:
+            connection.addEventListener('open', sendMessage);
+            break;
+          case WebSocket.OPEN:
+            sendMessage();
+            break;
+        }
+      };
+
+      /**
+       * Copy an HTML list of links to the clipboard based on the target element
+       * of the passed event.
+       */
       const copyMarkup = (event) => {
         const elButton = event.currentTarget;
         const elRound = elButton.parentElement;
-        const elHeading = elRound.parentElement.parentElement.querySelector('h2');
+        const elHeading = elRound
+          .parentElement
+          .parentElement
+          .parentElement
+          .querySelector('h2');
 
         const roundRange = document.createRange();
         roundRange.setStartBefore(elHeading);
@@ -259,30 +406,33 @@
         }, 3000);
       };
 
+      // Attach events to `<button>`s.
       Array.from(document.querySelectorAll('button'))
         .forEach(elButton => elButton.addEventListener('click', copyMarkup));
 
+      // Mark each game as in the past, today, or in the future.
       const dateToday = new Date();
       const dateTodayStr = (dateToday).toISOString();
-      Array.from(document.querySelectorAll('article'))
-        .forEach((elArticle) => {
-          const elTime = elArticle.querySelector('time');
+      Array.from(document.querySelectorAll('.game'))
+        .forEach((elGame) => {
+          const elTime = elGame.querySelector('time');
           if (dateTodayStr.startsWith(elTime.innerText)) {
-            elArticle.classList.add('isToday');
+            elGame.classList.add('game--isToday');
           } else if (dateTodayStr > elTime.innerText) {
-            elArticle.classList.add('isInPast');
+            elGame.classList.add('game--isInPast');
           } else {
-            elArticle.classList.add('isInFuture');
+            elGame.classList.add('game--isInFuture');
           }
         });
 
+      // Determine which links should have solo URL suffix toggled.
       const elPastLinks = [
-        ...document.querySelectorAll('.game.isInPast div > a'),
+        ...document.querySelectorAll('.game--isInPast div > a'),
         ...((
           dateToday.getHours() >= 16 &&
           dateToday.getMinutes() >= 20 && false
         )
-          ? document.querySelectorAll('.game.isToday div > a')
+          ? document.querySelectorAll('.game--isToday div > a')
           : []),
       ];
       const toggleSinglePlayerLinks = () => {
@@ -296,22 +446,27 @@
       };
       toggleSinglePlayerLinks();
 
+      // Show location names when pressing 's' and unused locations when
+      // pressing Shift+'s'.
       window.addEventListener(
         'keydown',
         (event) => {
           if (
-            event.key.toLowerCase() === 's' &&
             !event.metaKey &&
             !event.altKey &&
             !event.ctrlKey
           ) {
-            document.body.classList.toggle(
-              event.shiftKey
-                ? 'showSecrets'
-                : 'showLocations'
-            );
+            const className = {
+              's': 'showLocations',
+              'S': 'showSecrets',
+              'l': 'showLines',
+            }[event.key];
 
-            if (!event.shiftKey) {
+            if (className !== undefined) {
+              document.body.classList.toggle(className);
+            }
+
+            if (className === 'showLocations') {
               toggleSinglePlayerLinks();
             }
           };
