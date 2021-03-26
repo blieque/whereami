@@ -97,6 +97,33 @@
     ]
   },
   {
+    "id": "57a3a53",
+    "name": "Barcelona",
+    "panoramaID": "zuWoalBpYQ1tg8ZOh1MXPQ",
+    "flag": "🇪🇸",
+    "difficulty": 4,
+    "clues": [
+      "\"Barcelona\" (top of the sign) (south)",
+      "La Sagrada Família (south-southwest)",
+      "Octagonal cross-roads in a grid system",
+      "No \"ç\" characters – not Portugese",
+      "🎶 Sun is shining, the weather is sweet 🎵"
+    ]
+  },
+  {
+    "id": "afd885a",
+    "name": "Barcelona",
+    "panoramaID": "b0BxciwWhiiOLCVAhDVClA",
+    "flag": "🇪🇸",
+    "difficulty": 7,
+    "clues": [
+      "Octagonal cross-roads in a grid system",
+      "Two branches of Santander within 50 m of each other",
+      "Spanish language",
+      "🎶 Sun is shining, the weather is sweet 🎵"
+    ]
+  },
+  {
     "id": "658558e",
     "name": "Beirut",
     "panoramaID": "W92LsTVDQGBNn6PXDs3ehA",
@@ -168,6 +195,19 @@
       "EU stripe on number plates"
     ],
     "bonus": "02.mp4"
+  },
+  {
+    "id": "534f6bd",
+    "name": "Bogotá",
+    "panoramaID": "oSpaGs5iDVtaN32DuYrZfQ",
+    "flag": "🇨🇴",
+    "difficulty": 9,
+    "clues": [
+      "\"Banco Agrario de Colombia\" (east-northeast)",
+      "Mountains in the distance – Bogota lies at ~2600 m elevation (southwest)",
+      "Spanish language",
+      "Not clean enough for Europe, therefore South America"
+    ]
   },
   {
     "id": "9fe4416",
@@ -494,6 +534,19 @@
       "Cambodia tends to have less Latin script"
     ],
     "bonus": "12.mp4"
+  },
+  {
+    "id": "6465b4b",
+    "name": "Hong Kong",
+    "panoramaID": "TGqtolCyWxvhEeqy1kIxIg",
+    "flag": "🇭🇰",
+    "difficulty": 6,
+    "clues": [
+      "Mostly Chinese, English prevalent",
+      "Name like \"Pilkem St.\", \"Watsons\", \"Mannings\"",
+      "Price in dollars – mainland China use renminbi (yuan, CN¥) (west-southwest)",
+      "British street sign design and typography (Transport font)"
+    ]
   },
   {
     "id": "8fe96dd",
@@ -952,6 +1005,20 @@
     ]
   },
   {
+    "id": "c897bcc",
+    "name": "Stockholm",
+    "panoramaID": "s-tNRr0F05jphEwfZybs2w",
+    "flag": "🇸🇪",
+    "difficulty": 8,
+    "clues": [
+      "Flags! – Sweden raised higher than the rest (east-northeast)",
+      "Green \"E<number>\" roads (north)",
+      "Clean roads, modern cars",
+      "Modern architecture and old brick buildings",
+      "Scandinavian-sounding place names"
+    ]
+  },
+  {
     "id": "d282f31",
     "name": "Sydney",
     "latitude": -33.891112,
@@ -1142,20 +1209,6 @@
     "isEnabled": false,
     "name": "Belfast",
     "flag": "🇬🇧",
-    "difficulty": 1,
-    "clues": []
-  },
-  {
-    "isEnabled": false,
-    "name": "Hong Kong",
-    "flag": "🇭🇰",
-    "difficulty": 1,
-    "clues": []
-  },
-  {
-    "isEnabled": false,
-    "name": "Stockholm",
-    "flag": "🇸🇪",
     "difficulty": 1,
     "clues": []
   }
