@@ -140,6 +140,19 @@
     "bonus": "20.mp4"
   },
   {
+    "id": "5841941",
+    "name": "Belfast",
+    "panoramaID": "TWUFbGTuCLU5rFwWn0dZbQ",
+    "flag": "🇬🇧",
+    "difficulty": 8,
+    "clues": [
+      "\"Titanic Quarter\" (south)",
+      "\"H & W\" gantry crane – Harland and Wolff",
+      "Sign to Bangor and Holywood (south)",
+      "British road signs, driving on the left, no Irish – has to be UK"
+    ]
+  },
+  {
     "id": "72e89ec",
     "name": "Bergen",
     "latitude": 60.3975635,
@@ -204,7 +217,7 @@
     "difficulty": 9,
     "clues": [
       "\"Banco Agrario de Colombia\" (east-northeast)",
-      "Mountains in the distance – Bogota lies at ~2600 m elevation (southwest)",
+      "Mountains in the distance – Bogotá lies at ~2600 m elevation (southwest)",
       "Spanish language",
       "Not clean enough for Europe, therefore South America"
     ]
@@ -643,6 +656,19 @@
       "\"Macao\" (both spellings are used) on the taxi (northeast)",
       "Casinos!",
       "Mix of Portugese and Chinese"
+    ]
+  },
+  {
+    "id": "7ab74e3",
+    "name": "Madrid",
+    "panoramaID": "-oZGv4qbAXfuJ4vbcvSRsw",
+    "flag": "🇪🇸",
+    "difficulty": 5,
+    "clues": [
+      "\"www.legomadrid.com\" (yellow banner) (southwest)",
+      "\"¡Madrid!\" (black box) (north)",
+      "Flag! (west-northwest)",
+      "Spanish language"
     ]
   },
   {
@@ -1102,6 +1128,31 @@
     ]
   },
   {
+    "id": "e8fc30d",
+    "name": "Toulouse",
+    "panoramaID": "SIiGEL__2IW3LdWyKPrqog",
+    "flag": "🇫🇷",
+    "difficulty": 3,
+    "clues": [
+      "\"Mairie de Toulouse\" (concrete dividers) (east)",
+      "\"Mairie de Toulouse\" (banners) (south)",
+      "French language",
+      "Old European architecture"
+    ]
+  },
+  {
+    "id": "ab3bb17",
+    "name": "Toulouse",
+    "panoramaID": "8uy9Qmr6tkxdo979eK8NbQ",
+    "flag": "🇫🇷",
+    "difficulty": 7,
+    "clues": [
+      "\"Mairie de Toulouse\" (parking sign) (southeast)",
+      "French road signs",
+      "Old European architecture"
+    ]
+  },
+  {
     "id": "10b051a",
     "name": "Tunis",
     "latitude": 36.8036905,
@@ -1156,14 +1207,16 @@
     ]
   },
   {
-    "id": "88376cd",
+    "id": "c04fe2c",
     "name": "Vienna",
-    "latitude": 48.22213,
-    "longitude": 16.3977179,
+    "panoramaID": "cGeMu9oYF9vByIsZ_El4rQ",
     "flag": "🇦🇹",
-    "difficulty": 9,
+    "difficulty": 5,
     "clues": [
-      "Zurich insurance trickery"
+      "\"Radio Wien\" (orange sign) (east)",
+      "\"Vienna\" (window) (south)",
+      "\".at\" website (north-northeast)",
+      "Flags! (north-northeast)"
     ]
   },
   {
@@ -1205,12 +1258,5 @@
       "Slavic-looking language",
       "Old European city"
     ]
-  },
-  {
-    "isEnabled": false,
-    "name": "Belfast",
-    "flag": "🇬🇧",
-    "difficulty": 1,
-    "clues": []
   }
 ]
