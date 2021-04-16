@@ -1104,6 +1104,19 @@
     "bonus": "19.mp4"
   },
   {
+    "id": "818fd17",
+    "name": "Tel Aviv-Yafo",
+    "panoramaID": "rpj99LQ1d8lA8fkBXS0Y1Q",
+    "flag": "🇮🇱",
+    "difficulty": 4,
+    "clues": [
+      "Hebrew language",
+      "Number plates – Palestinian plates are white, not yellow",
+      "Modern cars and well developed buildings",
+      "Middle Eastern climate"
+    ]
+  },
+  {
     "id": "6ab0003",
     "name": "Tokyo",
     "panoramaID": "bq-EMqNLyCcW9qs4EA0g8A",
