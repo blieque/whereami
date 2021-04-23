@@ -409,6 +409,33 @@
     ]
   },
   {
+    "id": "7d785f1",
+    "name": "Dubai",
+    "panoramaID": "wseuVQXfRiXdmnlAOq_QxQ",
+    "flag": "🇦🇪",
+    "difficulty": 6,
+    "clues": [
+      "\"dubai festival of lights\" (northeast)",
+      "Mix of English and Arabic",
+      "Burj Khalifa (830 m) (east)",
+      "Loads of towers, loads of sun",
+      "Immaculate pavements, hedges, and trees, but no pedestrians to use them"
+    ]
+  },
+  {
+    "id": "d3293fb",
+    "name": "Dubai",
+    "panoramaID": "T5zlFOfot7_Pw2E8UfzCyw",
+    "flag": "🇦🇪",
+    "difficulty": 8,
+    "clues": [
+      "Flags! (east, west)",
+      "Mix of English and Arabic",
+      "Loads of towers, loads of sun",
+      "Immaculate pavements, hedges, and trees, but no pedestrians to use them"
+    ]
+  },
+  {
     "id": "b73eb32",
     "name": "Dublin",
     "panoramaID": "-oQdDZGoWn5Io87O4szHmA",
@@ -588,6 +615,21 @@
       "\"Instanbul Büyükşehir...\" on the pink sign (north)",
       "Sun in the south, therefore nothern hemisphere",
       "Language with accented Latin characters"
+    ]
+  },
+  {
+    "id": "f087248",
+    "name": "Jakarta",
+    "panoramaID": "QLfAkPAJ9wHI7BbKQEoqDA",
+    "flag": "🇮🇩",
+    "difficulty": 5,
+    "clues": [
+      "\"Distribusi Jakarta Raya\" (east)",
+      "\"Republik Indonesia\" (southeast)",
+      "Flag! (just about) (east)",
+      "Lack of non-Latin script rules out Myanmar, Thailand, Laos, and Cambodia",
+      "Lack of accented characters rules out Vietnam",
+      "Lack of Chinese script makes Singapore unlikely"
     ]
   },
   {
@@ -1180,6 +1222,30 @@
       "Prevalent French – \"achetez\", \"pharmacie\", \"opticienne\""
     ],
     "bonus": "05.mp4"
+  },
+  {
+    "id": "16b75f5",
+    "name": "Ulaanbaatar",
+    "panoramaID": "P9Sw2x-XaaxGqkdPEdz8oA",
+    "flag": "🇲🇳",
+    "difficulty": 5,
+    "clues": [
+      "\"Ulaanbaatar Properties\" (north-northeast)",
+      "\"Mongolian Cachmere\" (north-northeast)",
+      "\"Grand Khaan\" – \"Khan\" is a central Asian title (south-southwest)"
+    ]
+  },
+  {
+    "id": "802d969",
+    "name": "Ulaanbaatar",
+    "panoramaID": "v52GCha74h4g9vtZwocWjw",
+    "flag": "🇲🇳",
+    "difficulty": 9,
+    "clues": [
+      "\"Aero Mongolia\" (up high) (northwest)",
+      "\"Mongol Post, Telecom Mongolia\" (northwest)",
+      "\".mn\" website (north-northwest)"
+    ]
   },
   {
     "id": "4159eb7",
