@@ -743,6 +743,33 @@
     ]
   },
   {
+    "id": "aaa0444",
+    "name": "Monaco",
+    "panoramaID": "o2ciooAD-qQRZFAntCBtgA",
+    "flag": "🇲🇨",
+    "difficulty": 6,
+    "clues": [
+      "Sculpture of racecar – this is Turn 1 of the Monaco GP (west)",
+      "European road signs",
+      "French language",
+      "Casinos signposted (east)",
+      "A marina's worth of yachts"
+    ]
+  },
+  {
+    "id": "ccac46c",
+    "name": "Monaco",
+    "panoramaID": "GzhzWXow4Awj0AKEKhYE-w",
+    "flag": "🇲🇨",
+    "difficulty": 8,
+    "clues": [
+      "\"Societé Monégasque Électronique\" (on the van) (west)",
+      "Red and white ripple strip on the inside of the corner – this is Turn 6 of the Monaco GP (south-west)",
+      "Ocean to the east",
+      "European feel"
+    ]
+  },
+  {
     "id": "dab7f1e",
     "name": "Mumbai",
     "latitude": 19.0673905,
@@ -1029,6 +1056,18 @@
       "East–west and north–south grid system, common in the US",
       "\"Warren Ave N\" – clear US road sign design (west)",
       "English is primary language (south-southeast)"
+    ]
+  },
+  {
+    "id": "0e8843d",
+    "name": "Seoul",
+    "panoramaID": "17atrZW62UXQ6tXQYXiGww",
+    "flag": "🇰🇷",
+    "difficulty": 5,
+    "clues": [
+      "\"Koreana Hotel\"",
+      "Billboard for Korean unity (east)",
+      "Korean script (Hangul), identifiable by the frequent circles and ovals"
     ]
   },
   {
@@ -1340,6 +1379,20 @@
       "\"Croatia Airlines\" (southwest)",
       "Slavic-looking language",
       "Old European city"
+    ]
+  },
+  {
+    "id": "a5c8278",
+    "name": "Zürich",
+    "panoramaID": "KYmYqv7dHRSdalAGHlb59A",
+    "flag": "🇨🇭",
+    "difficulty": 6,
+    "clues": [
+      "\"Zurich\" (look up) (south)",
+      "\".ch\" website (side of lorry) (northeast)",
+      "Flag! (north-northwest)",
+      "Old European architecture",
+      "Trams"
     ]
   }
 ]
