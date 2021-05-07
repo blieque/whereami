@@ -355,6 +355,22 @@
     ]
   },
   {
+    "id": "68c036a",
+    "name": "Cologne",
+    "panoramaID": "4DUx3Zttf58LQQ18lG2Dvg",
+    "flag": "🇩🇪",
+    "difficulty": 6,
+    "clues": [
+      "\"Gilton Cologne\" (west-northwest)",
+      "\"Köln\" (look up) (south)",
+      "\".de\" website (back of lorry) (west)",
+      "Cologne Cathedral (east)",
+      "Old imagery (2008) due to German privacy laws",
+      "Audi... Porsche... Mercedes-Benz... Audi... BMW... Audi...",
+      "\"Hauptbahnhof\" sounds pretty German"
+    ]
+  },
+  {
     "id": "bc37c63",
     "name": "Colombo",
     "panoramaID": "VvxKEKl6Gp7PHqDq1lAtCA",
@@ -718,6 +734,20 @@
     ]
   },
   {
+    "id": "853f76b",
+    "name": "Manila",
+    "panoramaID": "UZJMoil2qR6vthFRwPTrkw",
+    "flag": "🇵🇭",
+    "difficulty": 5,
+    "clues": [
+      "\"Universidad de Manila\" (southeast)",
+      "\"...Philippine Islands\" (east)",
+      "Jeepney busses, unique to the Philippines",
+      "Spanish language from ~380 years of colonial rule",
+      "Southeast Asian feel"
+    ]
+  },
+  {
     "id": "723431c",
     "name": "Marseille",
     "latitude": 43.3051315,
@@ -990,6 +1020,20 @@
       "Driving on the right",
       "Bikes! 🚴‍♀️",
       "Canals!"
+    ]
+  },
+  {
+    "id": "203d2ea",
+    "name": "Saint Helier",
+    "panoramaID": "nShMuxyPKurdg_cES3dmUQ",
+    "flag": "🇯🇪",
+    "difficulty": 9,
+    "clues": [
+      "French language (north)",
+      "UK road signs (southwest)",
+      "Flags! (south-southwest, northeast)",
+      "UK number plates and driving on the left",
+      "Coastal"
     ]
   },
   {
