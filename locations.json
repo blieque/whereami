@@ -14,6 +14,20 @@
     ]
   },
   {
+    "id": "32e020d",
+    "name": "Ankara",
+    "panoramaID": "Dve4ZD3GhFPQEpYNsBhWzg",
+    "flag": "🇹🇷",
+    "difficulty": 5,
+    "clues": [
+      "\"Ankara Kavurmacisi\" (east)",
+      "\"Alba Ankara Hotel\" (west)",
+      "Language with accented Latin characters",
+      "Uppercase \"İ\" with dot – unique to Turkic languages",
+      "Red flag (northeast)"
+    ]
+  },
+  {
     "id": "46cadf8",
     "name": "Athens",
     "panoramaID": "5TSMP6Uz3sQGghliMlmCtg",
@@ -352,6 +366,20 @@
       "\"Shop 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales\" (northwest)",
       "Mix of Welsh and English",
       "St John The Baptist City Parish Church (south)"
+    ]
+  },
+  {
+    "id": "4117f01",
+    "name": "Casablanca",
+    "latitude": 33.5898209,
+    "longitude": -7.6192404,
+    "flag": "🇲🇦",
+    "difficulty": 8,
+    "clues": [
+      "\"Port de Casablanca\" (sign) (south-southwest)",
+      "Mix of French and Arabic language – probably north Africa",
+      "Flags! (west, northwest)",
+      "Sign to Rabat (capital of Morocco)"
     ]
   },
   {
@@ -1080,6 +1108,32 @@
     ]
   },
   {
+    "id": "968b067",
+    "name": "Sapporo",
+    "panoramaID": "QTSnJGMLpQ5aMvgsVpKq4w",
+    "flag": "🇯🇵",
+    "difficulty": 3,
+    "clues": [
+      "\"Hotel Vista Sapporo\" (northwest)",
+      "\"Urban Sapporo\" (east)",
+      "\"Sapporo Drug Store\" (south, northeast)",
+      "Japanese language"
+    ]
+  },
+  {
+    "id": "00d9c84",
+    "name": "Sapporo",
+    "panoramaID": "bJAdljSEQnD_kpELUatvSw",
+    "flag": "🇯🇵",
+    "difficulty": 5,
+    "clues": [
+      "\"Urban Sapporo\" (south-southeast)",
+      "Street vending machines (northeast)",
+      "Japanese language",
+      "Small \"kei\" cars"
+    ]
+  },
+  {
     "id": "1eecb48",
     "name": "Seattle",
     "panoramaID": "Z10vsA6KJ-FaytHhuzgHZg",
@@ -1440,6 +1494,18 @@
       "Flag! (north-northwest)",
       "Old European architecture",
       "Trams"
+    ]
+  },
+  {
+    "isEnabled": false,
+    "name": "Yerevan",
+    "latitude": 40.1815608,
+    "longitude": 44.5145971,
+    "flag": "🇦🇲",
+    "difficulty": 9,
+    "clues": [
+      "\"Araratbank\"",
+      "\"Made in Armenia\""
     ]
   }
 ]
