@@ -708,6 +708,20 @@
     ]
   },
   {
+    "id": "c6a09f3",
+    "name": "London",
+    "panoramaID": "N_mlVaYuVHooIntWC-PxAw",
+    "flag": "🇬🇧",
+    "difficulty": 4,
+    "clues": [
+      "\"London Borough of Tower Hamlets\" (east)",
+      "E14 postcode (east)",
+      "London Busses sign (red) (northwest)",
+      "Standard unsatisfied British broadband customer (northwest)",
+      "Towers of Canary Wharf (south)"
+    ]
+  },
+  {
     "id": "4cb4391",
     "name": "Los Angeles",
     "latitude": 33.9218226,
@@ -1022,6 +1036,32 @@
     ]
   },
   {
+    "id": "f013648",
+    "name": "Riga",
+    "panoramaID": "7XAGKm5ALMGFYSr-7vY_uA",
+    "flag": "🇱🇻",
+    "difficulty": 4,
+    "clues": [
+      "\"Love Riga\" (southeast)",
+      "\"Amber Museum Riga\" (east)",
+      "\"Latvijas Balzams\" (south-southeast)",
+      "Old European architecture"
+    ]
+  },
+  {
+    "id": "9bc9454",
+    "name": "Riga",
+    "panoramaID": "A067w2MO1cN1DxorCbPLQw",
+    "flag": "🇱🇻",
+    "difficulty": 8,
+    "clues": [
+      "\"Riga\" (up high) (southeast)",
+      "\"Latviešu\" (northeast)",
+      "Flags! (north)",
+      "Old European architecture"
+    ]
+  },
+  {
     "id": "7630e90",
     "name": "Rio de Janeiro",
     "latitude": -22.9074212,
@@ -1092,6 +1132,20 @@
       "Tram lines in America 🚋",
       "The Bay (north)",
       "South tower of the Golden Gate Bridge (west)"
+    ]
+  },
+  {
+    "id": "477a046",
+    "name": "San Marino",
+    "panoramaID": "RvuQvPIN8ZWWVdvgJBaaFA",
+    "flag": "🇸🇲",
+    "difficulty": 9,
+    "clues": [
+      "Trilingual road signs (east)",
+      "Guaita Tower (San Marino's oldest fortress) (north)",
+      "Mostly Italian language",
+      "Mountainous",
+      "Tourist busses"
     ]
   },
   {
