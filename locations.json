@@ -1,5 +1,19 @@
 [
   {
+    "id": "8bea857",
+    "name": "Abu Dhabi",
+    "latitude": 24.4927466,
+    "longitude": 54.3672076,
+    "flag": "🇦🇪",
+    "difficulty": 7,
+    "clues": [
+      "\".ae\" website (northeast)",
+      "Mix of English and Arabic",
+      "Loads of new, widely spaced, medium-height towers",
+      "Where are the pedestrians?"
+    ]
+  },
+  {
     "id": "5b5eec7",
     "name": "Amsterdam",
     "panoramaID": "GUQinCz7woAicpxrLmaMHQ",
@@ -209,6 +223,37 @@
       "\"Mohrenstraße\" - eszett grapheme (ß) is unique to German",
       "\"Wolfgang Bauer\" – just has to be German (north-northwest)",
       "Flag! (west)"
+    ]
+  },
+  {
+    "id": "9a95d26",
+    "name": "Bern",
+    "panoramaID": "VnDDE7CLRXZjQYucDKrlKQ",
+    "flag": "🇨🇭",
+    "difficulty": 5,
+    "clues": [
+      "\"Stadt Bern\" (northeast)",
+      "\"PHBern\" (mirrored, vertical) (northwest)",
+      "\"Helvetiaplatz\" – Helvetia is a personification of Switzerland (southwest)",
+      "\".ch\" website (northeast)",
+      "Signs to Zürich and Basel (west)",
+      "Old European architecture",
+      "Trams"
+    ]
+  },
+  {
+    "id": "57dd31a",
+    "name": "Bern",
+    "panoramaID": "PO1dTCF8n8vpBCl4Z_axGQ",
+    "flag": "🇨🇭",
+    "difficulty": 8,
+    "clues": [
+      "\"Helvetiaplatz\" – Helvetia is a personification of Switzerland (south)",
+      "Signs to Lausanne and Fribourg, so probably Swizerland (northeast)",
+      "\"Kunsthalle\" suggests German Swizerland, not French",
+      "Old European architecture",
+      "Short red flag! (west)",
+      "Trams"
     ]
   },
   {
@@ -660,7 +705,7 @@
     "difficulty": 9,
     "clues": [
       "\"Instanbul Büyükşehir...\" on the pink sign (north)",
-      "Sun in the south, therefore nothern hemisphere",
+      "Sun in the south, therefore northern hemisphere",
       "Language with accented Latin characters"
     ]
   },
@@ -708,6 +753,19 @@
     ]
   },
   {
+    "id": "211e5a7",
+    "name": "Lisbon",
+    "panoramaID": "_Fcg_oCCM9nk7wHN4_uYEw",
+    "flag": "🇵🇹",
+    "difficulty": 7,
+    "clues": [
+      "\"Rua da Conceição\" – accents rule out Spanish (concrete dividers) (north-northeast)",
+      "Flags! (north, south)",
+      "Arco da Rua Augusta (arch) (south-southeast)",
+      "Old European architecture"
+    ]
+  },
+  {
     "id": "c6a09f3",
     "name": "London",
     "panoramaID": "N_mlVaYuVHooIntWC-PxAw",
@@ -716,7 +774,7 @@
     "clues": [
       "\"London Borough of Tower Hamlets\" (east)",
       "E14 postcode (east)",
-      "London Busses sign (red) (northwest)",
+      "London Buses sign (red) (northwest)",
       "Standard unsatisfied British broadband customer (northwest)",
       "Towers of Canary Wharf (south)"
     ]
@@ -785,7 +843,7 @@
     "clues": [
       "\"Universidad de Manila\" (southeast)",
       "\"...Philippine Islands\" (east)",
-      "Jeepney busses, unique to the Philippines",
+      "Jeepney buses, unique to the Philippines",
       "Spanish language from ~380 years of colonial rule",
       "Southeast Asian feel"
     ]
@@ -1145,7 +1203,7 @@
       "Guaita Tower (San Marino's oldest fortress) (north)",
       "Mostly Italian language",
       "Mountainous",
-      "Tourist busses"
+      "Tourist buses"
     ],
     "bonus": "28.mp4"
   },
@@ -1526,6 +1584,20 @@
     ]
   },
   {
+    "id": "f0a6d8e",
+    "name": "Yerevan",
+    "latitude": 40.1813555,
+    "longitude": 44.5081464,
+    "flag": "🇦🇲",
+    "difficulty": 9,
+    "clues": [
+      "\"Yerevan Rent\" (northwest)",
+      "\"Armenia360.org\" (car bonnet) (southwest)",
+      "Feels Russian, but writing isn't Cyrillic",
+      "\"Marshrutka\" taxi minibuses, common in ex-Soviet states (north)"
+    ]
+  },
+  {
     "id": "e96d6b8",
     "name": "Zagreb",
     "panoramaID": "aKBxsEU_827dg60cePBsAQ",
@@ -1550,18 +1622,6 @@
       "Flag! (north-northwest)",
       "Old European architecture",
       "Trams"
-    ]
-  },
-  {
-    "isEnabled": false,
-    "name": "Yerevan",
-    "latitude": 40.1815608,
-    "longitude": 44.5145971,
-    "flag": "🇦🇲",
-    "difficulty": 9,
-    "clues": [
-      "\"Araratbank\"",
-      "\"Made in Armenia\""
     ]
   }
 ]
