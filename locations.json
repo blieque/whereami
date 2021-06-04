@@ -725,6 +725,29 @@
     ]
   },
   {
+    "id": "1021cf2",
+    "name": "Johannesburg",
+    "panoramaID": "IxzHGWZZAKIgpePP3rZnuw",
+    "flag": "🇿🇦",
+    "difficulty": 6,
+    "clues": [
+      "\"Joburg\" (southeast)",
+      "\".co.za\" website (up high) (west)",
+      "Flags! (on minibuses) (west-northwest)"
+    ]
+  },
+  {
+    "id": "a24121d",
+    "name": "Johannesburg",
+    "panoramaID": "bKIP4oZym3DN_g2IolQVhg",
+    "flag": "🇿🇦",
+    "difficulty": 8,
+    "clues": [
+      "\".co.za\" website (east)",
+      "\"African Traditional\" (northeast)"
+    ]
+  },
+  {
     "id": "2075f56",
     "name": "Kuala Lumpur",
     "panoramaID": "ldNEGpmX-tUKWcjrV0uGRg",
@@ -984,6 +1007,20 @@
       "American \"One Way\" signs",
       "Fire escapes! 🔥",
       "Chinatown in Manhattan"
+    ]
+  },
+  {
+    "id": "c18d177",
+    "name": "Nuuk",
+    "panoramaID": "k3pMqj1pj_M3bDZsjnCDIw",
+    "flag": "🇬🇱",
+    "difficulty": 6,
+    "clues": [
+      "\"Greenland Travel\" (east)",
+      "\"Arctic Living\" (northwest)",
+      "\"Bank Nordik\" (south-southwest)",
+      "Long shadows",
+      "Flags! (Faroes, Norway, Denmark, Greenland) (northeast)"
     ]
   },
   {
