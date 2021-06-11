@@ -928,6 +928,19 @@
     ]
   },
   {
+    "id": "7d1120c",
+    "name": "Montevideo",
+    "panoramaID": "IMQ-widWDM2a7wEdfVZfwg",
+    "flag": "🇺🇾",
+    "difficulty": 7,
+    "clues": [
+      "\"Manos del Uruguay\" (east-northeast)",
+      "Flags! (building, bus windscreen) (south-southwest, west)",
+      "Street called \"Paraguay\" – probably South America (east)",
+      "Spanish language"
+    ]
+  },
+  {
     "id": "dab7f1e",
     "name": "Mumbai",
     "latitude": 19.0673905,
@@ -1009,6 +1022,21 @@
       "American \"One Way\" signs",
       "Fire escapes! 🔥",
       "Chinatown in Manhattan"
+    ]
+  },
+  {
+    "id": "1b92cc9",
+    "name": "Nicosia",
+    "latitude": 35.1650827,
+    "longitude": 33.3580482,
+    "flag": "🇨🇾",
+    "difficulty": 5,
+    "clues": [
+      "\"Hawaii Nicosia Tower\" (east-northeast)",
+      "\"Brain Game Nicosia\" (north-northeast)",
+      "\".com.cy\" website (west)",
+      "Mix of Latin and Greek scripts",
+      "Quality of imagery suggests smaller country"
     ]
   },
   {
@@ -1172,6 +1200,20 @@
       "Canadian red herring"
     ],
     "bonus": "01.mp4"
+  },
+  {
+    "id": "70649c2",
+    "name": "Rome",
+    "panoramaID": "tMFKgkeWys-mZJ4KTv254w",
+    "flag": "🇮🇹",
+    "difficulty": 5,
+    "clues": [
+      "\"Extra Territoriale Vaticano\" (Vatican property outside Vatican territory) (southeast)",
+      "Columns of Saint Peter's Square (west)",
+      "Dome of Saint Peter's Basilica (west)",
+      "Italian language and Euros (southeast)",
+      "Old European architecture and cobbled streets"
+    ]
   },
   {
     "id": "7b9453e",
