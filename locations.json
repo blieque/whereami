@@ -431,6 +431,19 @@
     "bonus": "27.mp4"
   },
   {
+    "id": "6b1e34e",
+    "name": "Casablanca",
+    "latitude": 33.5911306,
+    "longitude": -7.6185543,
+    "flag": "🇲🇦",
+    "difficulty": 8,
+    "clues": [
+      "Flags! (north, west, south)",
+      "\"...Recion Casablanca...\" (south-southwest)",
+      "Mix of French and Arabic language – probably north Africa (south)"
+    ]
+  },
+  {
     "id": "68c036a",
     "name": "Cologne",
     "panoramaID": "4DUx3Zttf58LQQ18lG2Dvg",
@@ -557,6 +570,20 @@
       "Scott Monument (southwest)",
       "2,467 out of 3,882 (63.5%) global Costa Coffee locations are in the UK ☕️",
       "Salisbury Crags in the distance (east-southeast)"
+    ]
+  },
+  {
+    "id": "21bb568",
+    "name": "Gdańsk",
+    "panoramaID": "PLnGi-3mFqOVhnhoMsMyNQ",
+    "flag": "🇵🇱",
+    "difficulty": 7,
+    "clues": [
+      "\"Muzeum Nauki Gdańskiej\" (up high) (northwest)",
+      "\"GD@ŃSK\" (white sign) (southeast)",
+      "Flags! (west-southwest)",
+      "\"Tyskie\" (Polish beer) (east)",
+      "Old European architecture"
     ]
   },
   {
@@ -777,6 +804,31 @@
       "\"Calle Tenerife\" (blue street sign) (north)",
       "Palm trees! 🌴",
       "Some very British-looking tourists"
+    ]
+  },
+  {
+    "id": "6d155d8",
+    "name": "Lima",
+    "panoramaID": "C7FkLu_cGEQFI5F7CKSrLA",
+    "flag": "🇵🇪",
+    "difficulty": 8,
+    "clues": [
+      "\"Expo Perú Sazon\" (southwest)",
+      "Mix of modern and old cars",
+      "Spanish language"
+    ]
+  },
+  {
+    "id": "972f07e",
+    "name": "Lima",
+    "panoramaID": "FNSIDRscdF-wBroQiMkDSw",
+    "flag": "🇵🇪",
+    "difficulty": 10,
+    "clues": [
+      "Flags! (south, southeast)",
+      "Well developed city and modern cars",
+      "Yellow and black chequered stripe on the taxi",
+      "Basilica and Convent of Saint Francis (north)"
     ]
   },
   {
@@ -1029,16 +1081,16 @@
   {
     "id": "1b92cc9",
     "name": "Nicosia",
-    "latitude": 35.1650827,
-    "longitude": 33.3580482,
+    "latitude": 35.165255,
+    "longitude": 33.357805,
     "flag": "🇨🇾",
     "difficulty": 5,
     "clues": [
-      "\"Hawaii Nicosia Tower\" (east-northeast)",
-      "\"Brain Game Nicosia\" (north-northeast)",
-      "\".com.cy\" website (west)",
+      "\"Hawaii Nicosia Tower\" (east)",
+      "\"Brain Game Nicosia\" (east)",
+      "\".com.cy\" website (southwest)",
       "Mix of Latin and Greek scripts",
-      "Quality of imagery suggests smaller country"
+      "Lower-quality, third-party imagery suggests a smaller country"
     ]
   },
   {
