@@ -185,7 +185,7 @@ console.log(objectArrayToTable(
 // Initialise server
 
 const connections = [];
-let startRoundAt = 0;
+let startRoundAt = {};
 
 const server = createServer((request, response) => {
   log(`Received request for ${request.url}`);
@@ -249,16 +249,6 @@ wsServer.on('request', (request) => {
               break;
             }
 
-            if (!payload?.silent) {
-              const now = Date.now();
-              // Wait 15 seconds after the round starts before starting another
-              // countdown to allow for late arrivals
-              if (now - startRoundAt > 15000) {
-                log('Setting round start time to 10 seconds in the future');
-                startRoundAt = now + 10000;
-              }
-            }
-
             const location = getLocationByID(payload.locationID);
             if (
               location === undefined ||
@@ -268,12 +258,28 @@ wsServer.on('request', (request) => {
               break;
             }
 
+            if (!payload?.silent) {
+              const now = Date.now();
+              // Wait 15 seconds after the round starts before starting another
+              // countdown to allow for late arrivals
+              if (now - (startRoundAt[location.name] || 0) > 15000) {
+                log(`Setting round start time for ${location.name} location(s) to 10 seconds in the future`);
+                startRoundAt[location.name] = now + 10000;
+
+                // Clean up some time after the timestamp becomes irrelvant.
+                setTimeout(
+                  () => delete startRoundAt[location.name],
+                  60000,
+                );
+              }
+            }
+
             log(`Providing map position for location "${payload.locationID}" to ${connection.remoteAddress}`);
             connection.sendUTF(JSON.stringify({
               type: 'position',
 
               ...(!payload?.silent
-                ? { startRoundAt }
+                ? { startRoundAt: startRoundAt[location.name] }
                 : null),
 
               ...(location.panoramaID !== undefined
