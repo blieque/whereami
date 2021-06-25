@@ -421,7 +421,7 @@
     "latitude": 33.5898209,
     "longitude": -7.6192404,
     "flag": "🇲🇦",
-    "difficulty": 8,
+    "difficulty": 7,
     "clues": [
       "\"Port de Casablanca\" (sign) (south-southwest)",
       "Mix of French and Arabic language – probably north Africa",
@@ -438,8 +438,8 @@
     "flag": "🇲🇦",
     "difficulty": 8,
     "clues": [
-      "Flags! (north, west, south)",
       "\"...Recion Casablanca...\" (south-southwest)",
+      "Flags! (north, east, south)",
       "Mix of French and Arabic language – probably north Africa (south)"
     ]
   },
@@ -777,6 +777,33 @@
       "\"African Traditional\" (northeast)"
     ],
     "bonus": "31.mp4"
+  },
+  {
+    "id": "0e386e7",
+    "name": "Kathmandu",
+    "latitude": 27.705973,
+    "longitude": 85.309535,
+    "flag": "🇳🇵",
+    "difficulty": 9,
+    "clues": [
+      "\"Ktm.\" (up high) (southwest)",
+      "\".edu.np\" website (up high) (southwest)",
+      "\"Annapurna\" (south)",
+      "Devanagari script",
+      "Those telegraph cables! (southwest)"
+    ]
+  },
+  {
+    "id": "50310c8",
+    "name": "Kyiv",
+    "panoramaID": "FU0MaTeQKDvWrm2ENuajRw",
+    "flag": "🇺🇦",
+    "difficulty": 6,
+    "clues": [
+      "\"Tour Info Kiev\" (west-southwest)",
+      "Flags! (north, east)",
+      "Cyrillic script"
+    ]
   },
   {
     "id": "2075f56",
@@ -1519,6 +1546,32 @@
       "Mix of Chinese and English",
       "Too much space for it to be for Hong Kong",
       "Driving on the right – not Hong Kong, Macau, Japan, or Singapore"
+    ]
+  },
+  {
+    "id": "a073419",
+    "name": "Tallinn",
+    "panoramaID": "yhZhPOpfk5jvOv81d-nWiw",
+    "flag": "🇪🇪",
+    "difficulty": 6,
+    "clues": [
+      "\"Olde Estonia\" (north, northeast)",
+      "\"Tule Estonia\" (southwest)",
+      "Flag! (up high) (southeast)",
+      "Old European architecture"
+    ]
+  },
+  {
+    "id": "8d36d52",
+    "name": "Tallinn",
+    "panoramaID": "b33n4H4Is3QjuxDSZhF-3A",
+    "flag": "🇪🇪",
+    "difficulty": 9,
+    "clues": [
+      "\"Estonian History Museum\" (northeast)",
+      "Swedish Embassy – psych!",
+      "Flags! (Estonia's most visible) (northeast)",
+      "Old European architecture"
     ]
   },
   {
