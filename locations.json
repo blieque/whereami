@@ -117,8 +117,20 @@
     "flag": "🇹🇭",
     "difficulty": 5,
     "clues": [
-      "\"...gkok\" (west-northwest)",
-      "Flags and flags and flags!",
+      "\"Bangkok\" (northeast)",
+      "Driving on the left",
+      "Yellow and green taxis",
+      "Thai script"
+    ]
+  },
+  {
+    "id": "344ed4e",
+    "name": "Bangkok",
+    "panoramaID": "xAe7D4HaXhYgH_t4b1NP3g",
+    "flag": "🇹🇭",
+    "difficulty": 8,
+    "clues": [
+      "Flags! (southwest)",
       "Driving on the left",
       "Yellow and green taxis",
       "Thai script"
@@ -366,7 +378,7 @@
       "Flag! (west)",
       "Eucalyptus trees 🐨",
       "Loooads of space – Canberra is a bit odd",
-      "Sun slightly to the north, therefore southern hemisphere",
+      "Sun slightly to the north, therefore southern hemisphere ☀️",
       "Driving on the left (we're on a one-way system)"
     ],
     "bonus": "11.mp4"
@@ -382,7 +394,7 @@
       "\"Cape Milner\" hotel signs (north and east)",
       "\"..pe Town\" on the bus (southeast)",
       "Devil's Peak (southeast) and Table Mountain (south)",
-      "Sun in the north, therefore southern hemisphere",
+      "Sun in the north, therefore southern hemisphere ☀️",
       "Driving on the left"
     ]
   },
@@ -398,7 +410,7 @@
       "\"Cape Town International\" sign (southeast)",
       "Devil's Peak and Table Mountain (south)",
       "Driving on the left",
-      "Sun in the north, therefore southern hemisphere",
+      "Sun in the north, therefore southern hemisphere ☀️",
       "Coastal"
     ]
   },
@@ -734,7 +746,7 @@
     "difficulty": 9,
     "clues": [
       "\"Instanbul Büyükşehir...\" on the pink sign (north)",
-      "Sun in the south, therefore northern hemisphere",
+      "Sun in the south, therefore northern hemisphere ☀️",
       "Language with accented Latin characters"
     ]
   },
@@ -794,18 +806,6 @@
     ]
   },
   {
-    "id": "50310c8",
-    "name": "Kyiv",
-    "panoramaID": "FU0MaTeQKDvWrm2ENuajRw",
-    "flag": "🇺🇦",
-    "difficulty": 6,
-    "clues": [
-      "\"Tour Info Kiev\" (west-southwest)",
-      "Flags! (north, east)",
-      "Cyrillic script"
-    ]
-  },
-  {
     "id": "2075f56",
     "name": "Kuala Lumpur",
     "panoramaID": "ldNEGpmX-tUKWcjrV0uGRg",
@@ -819,6 +819,18 @@
       "Half of Tower 1 of the Petronas Towers, former joint tallest towers in the world (north)"
     ],
     "bonus": "18.mp4"
+  },
+  {
+    "id": "50310c8",
+    "name": "Kyiv",
+    "panoramaID": "FU0MaTeQKDvWrm2ENuajRw",
+    "flag": "🇺🇦",
+    "difficulty": 6,
+    "clues": [
+      "\"Tour Info Kiev\" (west-southwest)",
+      "Flags! (north, east)",
+      "Cyrillic script"
+    ]
   },
   {
     "id": "514a10e",
@@ -968,7 +980,8 @@
       "Abundence of French",
       "Little blue French street signs",
       "Sunny South of France ⛱"
-    ]
+    ],
+    "bonus": "36.mp4"
   },
   {
     "id": "c31b9db",
@@ -1196,9 +1209,23 @@
     "difficulty": 3,
     "clues": [
       "\"City of Perth Library\" (west)",
+      "Sun in the north, therefore southern hemisphere ☀️",
+      "\"State Administrative Tribunal\" – N.Z. has regions, South Africa has provinces (south)"
+    ]
+  },
+  {
+    "id": "df2f670",
+    "name": "Perth",
+    "panoramaID": "eSUD0_G3zDsUdWsisVEP1A",
+    "flag": "🇦🇺",
+    "difficulty": 6,
+    "clues": [
+      "\"Rebooting Perth's Heart\" (south)",
+      "\"City of Perth\" (crest on road sign) (northeast)",
       "Driving on the left",
-      "Sun in the north, therefore southern hemisphere",
-      "\"State Administrative Tribunal\" – N.Z. has regions, South Africa has provinces (south-southwest)"
+      "Sun in the north, therefore southern hemisphere ☀️",
+      "Eucalyptus trees 🐨",
+      "\"Telstra\" (east)"
     ]
   },
   {
@@ -1227,7 +1254,8 @@
       "\"Reykjavik Water Utility\" (northwest)",
       "\"Icelandic Design\" (south)",
       "\"ð\" is almost unique to Icelandic"
-    ]
+    ],
+    "bonus": "34.mp4"
   },
   {
     "id": "0a3c672",
@@ -1237,11 +1265,12 @@
     "flag": "🇮🇸",
     "difficulty": 9,
     "clues": [
-      "\"Reykjavikur\" (east) (try squinting)",
+      "\"Reykjavikur\" (try squinting) (east)",
       "\".is\" website (northwest)",
       "\"ð\" is almost unique to Icelandic",
       "Trendy concrete block architecture"
-    ]
+    ],
+    "bonus": "34.mp4"
   },
   {
     "id": "f013648",
@@ -1307,7 +1336,7 @@
     "difficulty": 7,
     "clues": [
       "\"Rotterdamsch\" on building (north-northeast)",
-      "Almost all front number plates yellow – classic Netherlands",
+      "Yellow number plates front and rear – classic Netherlands",
       "Driving on the right",
       "Bikes! 🚴‍♀️",
       "Canals!"
@@ -1489,8 +1518,9 @@
       "\"Sofia Hotel Balkan\" on the roof (south-southwest)",
       "Flag! (just about) (south-southwest)",
       "\"Bulbank\" (southwest)",
-      "Cyrillic and Latin characters"
-    ]
+      "Cyrillic and Latin script"
+    ],
+    "bonus": "35.mp4"
   },
   {
     "id": "c897bcc",
@@ -1510,14 +1540,28 @@
   {
     "id": "d282f31",
     "name": "Sydney",
-    "latitude": -33.891112,
-    "longitude": 151.2743281,
+    "panoramaID": "f9-suoN6dHoM8IrmgCxuHA",
     "flag": "🇦🇺",
     "difficulty": 4,
     "clues": [
-      "\"Bondi Surf Seafood: Sydney's Best Fish and Chips\" 🏄‍♂️ (east)",
-      "Sun in the north, therefore southern hemisphere",
-      "Driving on the left"
+      "\"Bondi Surf Seafood: Sydney's Best Fish and Chips\" (north-northwest)",
+      "\"NSW\" (bus) (northeast)",
+      "Sun in the north, therefore southern hemisphere ☀️",
+      "Driving on the left",
+      "Bondi Beach! 🏄‍♂️"
+    ]
+  },
+  {
+    "id": "45523f4",
+    "name": "Sydney",
+    "panoramaID": "BtpqHRr9c6ibZKRYqlsEjg",
+    "flag": "🇦🇺",
+    "difficulty": 7,
+    "clues": [
+      "\"NSW\" (bus) (northwest)",
+      "Sun in the north, therefore southern hemisphere ☀️",
+      "Driving on the left",
+      "Ocean on the horizon (southeast)"
     ]
   },
   {
@@ -1530,7 +1574,7 @@
       "\"Documentos de São Paulo\" (by \"CDT\") (south-southwest)",
       "Flags! (Stripey one is the city flag) (north, south)",
       "\"Ç\" rules out Spanish",
-      "Sun in the north, therefore southern hemisphere"
+      "Sun in the north, therefore southern hemisphere ☀️"
     ]
   },
   {

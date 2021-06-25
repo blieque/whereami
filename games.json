@@ -1,25 +1,22 @@
 [
   {
     "date": "2020-10-02",
-    "__title": "Episode I: ",
     "locationIDs": [
-      "d282f31",
+      ["d282f31", "45523f4"],
       ["83751fe", "b0a8a17"],
       "cf3ff15"
     ]
   },
   {
     "date": "2020-10-09",
-    "__title": "Episode II: ",
     "locationIDs": [
-      "7b9453e",
       "99b5ff7",
+      "7b9453e",
       "723431c"
     ]
   },
   {
     "date": "2020-10-16",
-    "title": "Episode III: Revenge of the Cartographer",
     "locationIDs": [
       ["965ad95", "953faa7"],
       ["1dccd87", "43ef3fd"],
@@ -28,7 +25,6 @@
   },
   {
     "date": "2020-10-23",
-    "__title": "Episode IV:",
     "locationIDs": [
       "07291a3",
       ["0045a50", "8fe96dd"],
@@ -37,27 +33,22 @@
   },
   {
     "date": "2020-10-30",
-    "title": "Episode V: The Equator Strikes Back",
     "locationIDs": [
       "e4650bf",
       "19c55eb",
-      ["7e902a5", "0a3c672"],
-      "c8d4977",
-      "fe2a89e"
+      ["7e902a5", "0a3c672"]
     ]
   },
   {
     "date": "2020-11-06",
-    "title": "Episode VI: Return of the Jed-Ice Cap",
     "locationIDs": [
-      "cc074b0",
+      ["cc074b0", "344ed4e"],
       "f15dc58",
       "d817014"
     ]
   },
   {
     "date": "2020-11-13",
-    "__title": "Episode VII: The Shore Awakens",
     "locationIDs": [
       "c31b9db",
       "3ba9c7f",
@@ -66,7 +57,6 @@
   },
   {
     "date": "2020-11-20",
-    "__title": "Episode VIII: The Last _",
     "locationIDs": [
       "4cb4391",
       ["72e89ec", "655c7d5"],
