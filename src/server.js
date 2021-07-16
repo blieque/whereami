@@ -6,12 +6,22 @@ import websocket from 'websocket';
 
 // Utilities
 
+const prependLogMessage = (message) => {
+  const messageString = Array.isArray(message) ? message.join('\n') : message;
+  const prefix = `${(new Date()).toISOString()}: `;
+  return messageString.replace(/^/gm, (_, index) => {
+    return index === 0
+      ? prefix
+      : ' '.repeat(prefix.length)
+  });
+}
+
 const log = (message) => {
-  console.log(`${(new Date()).toISOString()}: ${message}`);
+  console.log(prependLogMessage(message));
 };
 
 const warn = (message) => {
-  console.warn(`${(new Date()).toISOString()}: ${message}`);
+  console.warn(prependLogMessage(message));
 };
 
 const getLocationByID = (locationID) => {
@@ -107,7 +117,7 @@ const objectArrayToTable = (input, keys) => {
   ]
   ```
  */
-const locations = JSON.parse(readFileSync('./locations.json'));
+const locations = JSON.parse(readFileSync(new URL('./locations.json', import.meta.url)));
 
 // Process locations
 
@@ -128,7 +138,10 @@ locations.forEach((location) => {
     modifiedLocations += 1;
   }
 });
-log(` └ modified ${modifiedLocations} locations`);
+log([
+  'Validated locations',
+  ` └ modified ${modifiedLocations} location(s)`,
+]);
 
 log(`Sorting locations`);
 locations.sort((a, b) => {
@@ -165,38 +178,96 @@ const locationsJSON = JSON.stringify(
   2,
 );
 writeFile(
-  'locations.json',
+  new URL('./locations.json', import.meta.url),
   `${locationsJSON}\n`,
   'utf8',
   (error) => {
     if (error !== null) {
       log('Error encountered saving `locations.json`:');
-      console.log(error);
+      log(error);
     }
   },
 );
 
-log(`Loaded ${locations.length} locations:`);
-console.log(objectArrayToTable(
-  locations,
-  ['id', 'name', 'difficulty', 'isEnabled'],
-));
+log(`Loaded ${locations.length} locations:\n${
+  objectArrayToTable(
+    locations,
+    ['id', 'name', 'difficulty', 'isEnabled'],
+  )
+}`);
 
 // Initialise server
+
+const origins = process.env.WHEREAMI_ORIGINS?.split(',');
+if (Array.isArray(origins)) {
+  const originsString = origins
+    .map(origin => `\n ─ ${origin}`)
+    .join('');
+  log(`Loaded origin list:${originsString}`);
+} else {
+  warn(`No origin list found in $WHEREAMI_ORIGINS`);
+}
 
 const connections = [];
 let startRoundAt = {};
 
 const server = createServer((request, response) => {
-  log(`Received request for ${request.url}`);
-  response.writeHead(404);
-  response.end();
+  const url = new URL(
+    request.url,
+    `http://${request.headers.host || 'no-host-header-received'}`,
+  );
+
+  const publicFiles = [
+    '/index.html',
+    '/games.html',
+    '/games.template.html',
+    '/client.js',
+    '/server.js',
+    '/generateGamesHTML.js',
+  ];
+
+  let filePath = url.pathname;
+  let redirect = '';
+
+  if (filePath === '/games.html') redirect = '/';
+
+  if (filePath.match(/^\/[0-9a-f]{7}(?:!.+)?$/) !== null) {
+    filePath = '/index.html';
+  }
+
+  if (filePath === '/') filePath = '/games.html';
+
+  let staticBody;
+  if (publicFiles.includes(filePath)) {
+    try {
+      staticBody = readFileSync(new URL(`.${filePath}`, import.meta.url));
+    } catch (error) {}
+  }
+
+  if (redirect?.length > 0) {
+    response.writeHead(302, { 'Location': redirect });
+    response.end();
+  } else if (staticBody?.length > 0) {
+    if (filePath.endsWith('.html')) {
+      response.setHeader('Content-Type', 'text/html; charset=UTF-8');
+    }
+    if (filePath.endsWith('.js')) {
+      response.setHeader('Content-Type', 'application/javascript; charset=UTF-8');
+    }
+    response.writeHead(200);
+    response.write(staticBody);
+    response.end();
+  } else {
+    response.writeHead(404);
+    response.write('Not Found\n');
+    response.end();
+  }
 });
 
 server.listen(
-  9000,
+  8080,
   () => {
-    log('Server is listening on port 9000');
+    log('Server is listening on port 8080');
   },
 );
 
@@ -206,13 +277,12 @@ const wsServer = new websocket.server({
 });
 
 wsServer.on('request', (request) => {
-  // Make sure we only accept requests from an allowed origin
+  if (request.resource !== '/socket') return;
+
+  // Only accept requests from allowed origins.
   if (
-    ![
-      'http://localhost:8080',
-      'http://192.168.1.1:8080',
-      'https://whereami.blieque.co.uk',
-    ].includes(request.origin)
+    Array.isArray(origins) &&
+    !origins.includes(request.origin)
   ) {
     request.reject();
     log(`Connection from origin '${request.origin}' rejected`);
@@ -221,8 +291,10 @@ wsServer.on('request', (request) => {
 
   const connection = request.accept('whoami', request.origin);
   connections.push(connection);
-  log(`Connection from ${connection.remoteAddress} accepted`);
-  log(` └ current connections: ${connections.length}`);
+  log([
+    `Connection from ${connection.remoteAddress} accepted`,
+    ` └ current connections: ${connections.length}`,
+  ]);
 
   // Create object to maintain per-connection state.
   connection._meta = {};
@@ -340,8 +412,10 @@ wsServer.on('request', (request) => {
         connections.indexOf(connection),
         1,
       );
-      log(`Connection to ${connection.remoteAddress} closed`);
-      log(` └ current connections: ${connections.length}`);
+      log([
+        `Connection to ${connection.remoteAddress} closed`,
+        ` └ current connections: ${connections.length}`,
+      ]);
     },
   );
 });

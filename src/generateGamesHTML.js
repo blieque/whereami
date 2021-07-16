@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import {
   readdirSync,
   writeFileSync,
@@ -31,9 +29,9 @@ const DIFFICULTIES = [
   ['⚫', 'Cruel'],
 ];
 
-const locations = JSON.parse(readFileSync('locations.json', 'utf8'));
-const games = JSON.parse(readFileSync('games.json', 'utf8'));
-const gamesTemplateHTML = readFileSync('games.template.html', 'utf8');
+const locations = JSON.parse(readFileSync(new URL('./locations.json', import.meta.url), 'utf8'));
+const games = JSON.parse(readFileSync(new URL('./games.json', import.meta.url), 'utf8'));
+const gamesTemplateHTML = readFileSync(new URL('./games.template.html', import.meta.url), 'utf8');
 
 const enabledGames = games.filter(game => game.isEnabled !== false);
 const allLocationIDs = locations.map(location => location.id || location.name);
@@ -301,7 +299,7 @@ const fileListHTML = h(
   'section.fileList',
   h(
     'ul',
-    readdirSync('.')
+    readdirSync(new URL('./', import.meta.url))
       .filter(file => file.endsWith('.html') || file.endsWith('.js'))
       .map(file => h('a', { href: `${URL_BASE}${file}` }, file))
       .map(code)
@@ -322,4 +320,4 @@ const gamesDocumentHTML = gamesTemplateHTML.replace(
     .join('<hr>'),
 );
 
-writeFileSync('games.html', gamesDocumentHTML);
+writeFileSync(new URL('./games.html', import.meta.url), gamesDocumentHTML);

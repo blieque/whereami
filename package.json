@@ -5,9 +5,10 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "dev:static": "python3 -m http.server --directory ./ 8080",
-    "dev:games": "fswatch locations.json games.json games.template.html generateGamesHTML.js | xargs -n 1 sh -c 'echo $(date +%T): Running ./generateGamesHTML.js && ./generateGamesHTML.js'"
+    "start": "node src/server.js",
+    "build": "node src/generateGamesHTML.js",
+    "dev:static": "python3 -m http.server --directory src/ 8080",
+    "dev:games": "fswatch src/locations.json src/games.json src/games.template.html src/generateGamesHTML.js | xargs -n 1 sh -c 'echo $(date +%T): Running generateGamesHTML.js && node src/generateGamesHTML.js'"
   },
   "author": "",
   "license": "ISC",

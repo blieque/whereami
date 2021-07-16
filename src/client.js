@@ -186,10 +186,8 @@ const initConnection = ({
   silent,
   solo,
 }) => {
-  // HTTP implies development server, HTTPS implies production
-  const url = location.protocol === 'http:'
-    ? `ws://${location.hostname}:9000`
-    : `wss://${location.hostname}/socket`;
+  const wsScheme = location.protocol === 'http:' ? 'ws:' : 'wss:';
+  const url = `${wsScheme}//${location.host}/socket`;
   console.log(`Opening WebSocket connection to ${url}`);
   const connection = new WebSocket(url, 'whoami');
 
