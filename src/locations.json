@@ -740,14 +740,13 @@
   {
     "id": "0045a50",
     "name": "Istanbul",
-    "latitude": 41.022858,
-    "longitude": 28.976975,
+    "panoramaID": "hvs76gEu36NaXSISrfcSYw",
     "flag": "🇹🇷",
     "difficulty": 9,
     "clues": [
-      "\"Instanbul Büyükşehir...\" on the pink sign (north)",
-      "Sun in the south, therefore northern hemisphere ☀️",
-      "Language with accented Latin characters"
+      "Accented uppercase \"I\" on the pink sign (and other accented Latin characters) (east)",
+      "Thin tower with loudspeakers – likely the minaret of a mosque",
+      "Sun slightly to the south, therefore northern hemisphere ☀️"
     ]
   },
   {
