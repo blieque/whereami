@@ -428,6 +428,15 @@
     ]
   },
   {
+    "id": "3c18e3e",
+    "name": "Cardigan",
+    "latitude": 52.0837308,
+    "longitude": -4.6607039,
+    "flag": "🇬🇧",
+    "difficulty": 7,
+    "allowMovement": true
+  },
+  {
     "id": "4117f01",
     "name": "Casablanca",
     "latitude": 33.5898209,
@@ -526,6 +535,15 @@
     ]
   },
   {
+    "id": "0f8c1db",
+    "name": "Derby",
+    "latitude": 52.9219891,
+    "longitude": -1.4736787,
+    "flag": "🇬🇧",
+    "difficulty": 4,
+    "allowMovement": true
+  },
+  {
     "id": "7d785f1",
     "name": "Dubai",
     "panoramaID": "wseuVQXfRiXdmnlAOq_QxQ",
@@ -568,6 +586,15 @@
       "Prices in Euros 🇪🇺",
       "Driving on the left"
     ]
+  },
+  {
+    "id": "07c1a73",
+    "name": "Dundee",
+    "latitude": 56.4643615,
+    "longitude": -2.9635128,
+    "flag": "🇬🇧",
+    "difficulty": 4,
+    "allowMovement": true
   },
   {
     "id": "86a98d1",
@@ -1226,6 +1253,15 @@
       "Eucalyptus trees 🐨",
       "\"Telstra\" (east)"
     ]
+  },
+  {
+    "id": "9c1b38d",
+    "name": "Portsmouth",
+    "latitude": 50.8092616,
+    "longitude": -1.0858859,
+    "flag": "🇬🇧",
+    "difficulty": 3,
+    "allowMovement": true
   },
   {
     "id": "8637c75",
