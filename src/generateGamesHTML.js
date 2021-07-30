@@ -38,6 +38,15 @@ const allLocationIDs = locations.map(location => location.id || location.name);
 const gameLocationIDs = enabledGames.flatMap(game => game.locationIDs.flat());
 const unusedLocationIDs = allLocationIDs
   .filter(locationID => !gameLocationIDs.includes(locationID));
+const serieses = enabledGames.reduce(
+  (serieses, game) => {
+    const series = game.series || 1;
+    if (serieses[series] == undefined) serieses[series] = [];
+    serieses[series].push(game);
+    return serieses;
+  },
+  [],
+);
 
 const parseTagShorthand = (input) => {
   if (
@@ -230,8 +239,9 @@ const formatDate = (date) => {
 
 const gameListHTML = h(
   'section.gameList',
-  enabledGames.map((game, i) => {
-    return h(
+  serieses.map((games, i) => h([
+    h('h2', `Series ${i}`),
+    games.map((game, i) => h(
       'article',
       { class: 'game' },
       [
@@ -243,7 +253,7 @@ const gameListHTML = h(
           ))
           : [],
 
-        h('h2', [
+        h('h3', [
           'Where Am I?',
           h(
             'small',
@@ -279,9 +289,14 @@ const gameListHTML = h(
             .map(li),
         ),
       ],
-    );
-  }),
+    )),
+  ])),
 );
+
+// const gameListHTML = h(
+//   'section.gameList',
+//   enabledGames
+// );
 
 const unusedLocationListHTML = h(
   'section.unusedLocationList',

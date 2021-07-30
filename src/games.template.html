@@ -189,7 +189,7 @@
         display: none;
       }
 
-      .game h2 {
+      .game h3 {
         margin-top: 0.5rem;
       }
 
@@ -213,6 +213,10 @@
         opacity: 0.6;
         font-size: 0.85em;
         top: 0.08rem;
+      }
+
+      .game + h2 {
+        margin-top: 2rem;
       }
 
       /* ROUND block */
@@ -382,7 +386,7 @@
           .parentElement
           .parentElement
           .parentElement
-          .querySelector('h2');
+          .querySelector('h3');
 
         const roundRange = document.createRange();
         roundRange.setStartBefore(elHeading);

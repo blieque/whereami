@@ -72,7 +72,31 @@ const makeElementDraggable = (el, elHandle) => {
   (elHandle || el).addEventListener('touchstart', pickUpElement);
 };
 
+/**
+ * Add a global event handler that captures up and down arrow key inputs and
+ * does nothing. This prevents them from being detected by the Google Maps embed
+ * and allowing the user to move down the street.
+ */
+const disableVerticalArrowKeys = () => {
+  window.addEventListener(
+    'keydown',
+    (event) => {
+      if (
+        ['ArrowUp', 'ArrowDown'].includes(event.key) &&
+        !event.metaKey &&
+        !event.altKey &&
+        !event.ctrlKey
+      ) {
+        event.stopPropagation()
+      };
+    },
+    { capture: true },
+  );
+}
+
 const initPanorama = () => {
+  if (!position.allowMovement) disableVerticalArrowKeys();
+
   const streetViewPanorama = new google.maps.StreetViewPanorama(
     elPanorama,
     {
@@ -92,7 +116,7 @@ const initPanorama = () => {
       },
       zoom: 0,
       addressControl: false,
-      clickToGo: false,
+      clickToGo: !!position.allowMovement,
       linksControl: false,
       motionTrackingControl: false,
       // panControl: false,
@@ -352,53 +376,53 @@ const reveal = ({name, flag, clues, bonus}, position) => {
   );
 };
 
-// Parse config from URL
-const configString = location.pathname.slice(1) || location.hash.slice(1);
-const configArray = configString.split('!');
-const config = {
-  locationID: configArray[0],
-  silent: configArray.includes('silent') || configArray.includes('solo'),
-  solo: configArray.includes('solo'),
+const init = () => {
+  // Parse config from URL
+  const configMatch = location.pathname.match(new RegExp(
+    `^\\/([0-9a-f]{7})${'(?:!([^!]+))?'.repeat(10)}$`,
+  ));
+  if (
+    !Array.isArray(configMatch) ||
+    configMatch.length < 2
+  ) {
+    console.error('Failed to parse `location.pathname`');
+    return;
+  }
+
+  const configParameters = configMatch.slice(2);
+  const config = {
+    locationID: configMatch[1],
+    silent: (
+      configParameters.includes('silent') ||
+      configParameters.includes('solo')
+    ),
+    solo: configParameters.includes('solo'),
+  };
+
+  // Initialisation
+  if (navigator.userAgent.includes('Windows')) {
+    document.body.classList.add('os--windows');
+  }
+
+  if (config.solo) {
+    elRevealer.classList.remove('revealer--hidden');
+    elRevealer.addEventListener('click', () => {
+      console.log(window.sendRevealMessage);
+      window.sendRevealMessage();
+    });
+  }
+
+  if (
+    typeof config.locationID === 'string' &&
+    config.locationID.length > 0
+  ) {
+    elReveal.style.display = 'none';
+    makeElementDraggable(elRevealCluesContainer, elRevealClues);
+    makeElementDraggable(elRevealBonusContainer, elRevealBonus);
+    initConnection(config);
+  } else {
+    console.error('No `locationID` found in `location.pathname` or `location.hash`');
+  }
 };
 
-// Initialisation
-if (navigator.userAgent.includes('Windows')) {
-  document.body.classList.add('os--windows');
-}
-
-window.addEventListener(
-  'keydown',
-  (event) => {
-    if (
-      ['ArrowUp', 'ArrowDown'].includes(event.key) &&
-      !event.metaKey &&
-      !event.altKey &&
-      !event.ctrlKey
-    ) {
-      event.stopPropagation()
-    };
-  },
-  { capture: true },
-);
-
-if (config.solo) {
-  elRevealer.classList.remove('revealer--hidden');
-  elRevealer.addEventListener('click', () => {
-    console.log(window.sendRevealMessage);
-    window.sendRevealMessage();
-  });
-}
-
-if (
-  typeof config.locationID === 'string' &&
-  config.locationID.length > 0
-) {
-  elReveal.style.display = 'none';
-  makeElementDraggable(elRevealCluesContainer, elRevealClues);
-  makeElementDraggable(elRevealBonusContainer, elRevealBonus);
-  initConnection(config);
-} else {
-  console.error('No `locationID` found in `location.pathname` or `location.hash`');
-}
-
-// setTimeout(() => reveal('Novosibirsk', '🇷🇺', ['a clue']), 1500);
+init();

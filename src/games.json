@@ -1,5 +1,6 @@
 [
   {
+    "series": 1,
     "date": "2020-10-02",
     "locationIDs": [
       ["d282f31", "45523f4"],
@@ -8,6 +9,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2020-10-09",
     "locationIDs": [
       "99b5ff7",
@@ -16,6 +18,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2020-10-16",
     "locationIDs": [
       ["965ad95", "953faa7"],
@@ -24,6 +27,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2020-10-23",
     "locationIDs": [
       "07291a3",
@@ -32,6 +36,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2020-10-30",
     "locationIDs": [
       "e4650bf",
@@ -40,6 +45,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2020-11-06",
     "locationIDs": [
       ["cc074b0", "344ed4e"],
@@ -48,6 +54,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2020-11-13",
     "locationIDs": [
       "c31b9db",
@@ -56,6 +63,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2020-11-20",
     "locationIDs": [
       "4cb4391",
@@ -64,6 +72,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2020-11-27",
     "locationIDs": [
       "e1ba0f6",
@@ -72,6 +81,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2020-12-04",
     "locationIDs": [
       "582f190",
@@ -80,6 +90,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2020-12-11",
     "locationIDs": [
       "e554f58",
@@ -88,6 +99,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2020-12-18",
     "locationIDs": [
       "9373e83",
@@ -97,6 +109,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-01-08",
     "locationIDs": [
       "a4af483",
@@ -105,6 +118,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-01-15",
     "locationIDs": [
       "e96d6b8",
@@ -113,6 +127,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-01-22",
     "locationIDs": [
       "b73eb32",
@@ -121,6 +136,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-01-29",
     "locationIDs": [
       "9fe4416",
@@ -129,6 +145,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-02-05",
     "locationIDs": [
       "bc37c63",
@@ -137,6 +154,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-02-12",
     "locationIDs": [
       "86a98d1",
@@ -145,6 +163,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-02-19",
     "locationIDs": [
       "5b5eec7",
@@ -153,6 +172,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-02-26",
     "locationIDs": [
       "dc5f66a",
@@ -161,6 +181,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-03-05",
     "locationIDs": [
       "642a963",
@@ -169,6 +190,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-03-12",
     "locationIDs": [
       ["1eecb48", "5b943bb"],
@@ -177,6 +199,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-03-19",
     "locationIDs": [
       "933f7ac",
@@ -185,6 +208,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-03-26",
     "locationIDs": [
       ["57a3a53", "afd885a"],
@@ -193,6 +217,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-04-09",
     "locationIDs": [
       "bac35db",
@@ -201,6 +226,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-04-16",
     "locationIDs": [
       "818fd17",
@@ -209,6 +235,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-04-23",
     "locationIDs": [
       "f087248",
@@ -217,6 +244,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-04-30",
     "locationIDs": [
       "0e8843d",
@@ -225,6 +253,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-05-07",
     "locationIDs": [
       "853f76b",
@@ -233,6 +262,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-05-14",
     "locationIDs": [
       ["968b067", "00d9c84"],
@@ -241,6 +271,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-05-21",
     "locationIDs": [
       "c6a09f3",
@@ -249,6 +280,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-05-28",
     "locationIDs": [
       ["f013648", "9bc9454"],
@@ -257,6 +289,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-06-04",
     "locationIDs": [
       "c18d177",
@@ -265,6 +298,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-06-11",
     "locationIDs": [
       "70649c2",
@@ -273,6 +307,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-06-18",
     "locationIDs": [
       "1b92cc9",
@@ -281,6 +316,7 @@
     ]
   },
   {
+    "series": 1,
     "date": "2021-06-25",
     "locationIDs": [
       "50310c8",

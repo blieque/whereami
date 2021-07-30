@@ -92,7 +92,14 @@ const objectArrayToTable = (input, keys) => {
   - `latitude` and `longitude` if `panoramaID` is provided
   - `panoramaID` if both `latitude` and `longitude` are provided
   - `flag`, default `undefined`
+  - `allowMovement`, default `false`
+  - `clues`, default `undefined`
   - `bonus`, default `undefined`
+
+  It is recommended to specify locations by `panoramaID` rather than `latitude`
+  and `longitude` where possible, unless `allowMovement` is `true`. It is
+  recommeded to always set `allowMovement` to `true` or provide an array of
+  `clues`. `flag` will not be used if `clues` is not an array of clues.
 
   `locations.json` is in the form:
 
@@ -107,6 +114,7 @@ const objectArrayToTable = (input, keys) => {
       "longitude": -0.0014511,
       "difficulty": 2,
       "flag": "🇬🇧",
+      "allowMovement": false,
       "clues": [
         "\"Royal Observatory\" the southeast",
         "London skyline to the north-northwest"
@@ -172,6 +180,7 @@ const locationsJSON = JSON.stringify(
     'longitude',
     'flag',
     'difficulty',
+    'allowMovement',
     'clues',
     'bonus',
   ],
@@ -363,6 +372,8 @@ wsServer.on('request', (request) => {
                   longitude: location.longitude,
                 }
               ),
+
+              allowMovement: location.allowMovement,
             }));
 
             log(`Remembering location "${payload.locationID}" for ${connection.remoteAddress}`);
