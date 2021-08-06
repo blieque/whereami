@@ -284,6 +284,15 @@
     "bonus": "02.mp4"
   },
   {
+    "id": "507fbc6",
+    "name": "Bletchley",
+    "latitude": 51.9967243,
+    "longitude": -0.7345204,
+    "flag": "🇬🇧",
+    "difficulty": 6,
+    "allowMovement": true
+  },
+  {
     "id": "534f6bd",
     "name": "Bogotá",
     "panoramaID": "oSpaGs5iDVtaN32DuYrZfQ",
@@ -542,6 +551,15 @@
     "longitude": -1.4736787,
     "flag": "🇬🇧",
     "difficulty": 4,
+    "allowMovement": true
+  },
+  {
+    "id": "46f1b44",
+    "name": "Derry",
+    "latitude": 54.9975499,
+    "longitude": -7.3190093,
+    "flag": "🇬🇧",
+    "difficulty": 8,
     "allowMovement": true
   },
   {
@@ -911,6 +929,15 @@
       "Arco da Rua Augusta (arch) (south-southeast)",
       "Old European architecture"
     ]
+  },
+  {
+    "id": "5d9d174",
+    "name": "Liverpool",
+    "latitude": 53.4053712,
+    "longitude": -2.9960282,
+    "flag": "🇬🇧",
+    "difficulty": 4,
+    "allowMovement": true
   },
   {
     "id": "c6a09f3",
