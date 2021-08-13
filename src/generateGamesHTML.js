@@ -253,7 +253,19 @@ const gameListHTML = h(
           ))
           : [],
 
-        h('h3', [
+        ...(game.title || (i + 1) % 10 === 0
+          ? [
+            h('h3', [
+              h(
+                'span',
+                { style: 'font-weight: 500' },
+                game.title || `Game ${(i + 1)}`,
+              ),
+            ]),
+          ]
+          : []),
+
+        h('h2', [
           'Where Am I?',
           h(
             'small',

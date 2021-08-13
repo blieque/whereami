@@ -185,12 +185,12 @@
         display: none;
       }
 
-      body:not(.copyingMarkup) .game small {
+      body:not(.copyingMarkup) .game h2 {
         display: none;
       }
 
-      .game h3 {
-        margin-top: 0.5rem;
+      body.copyingMarkup .game h3 {
+        display: none;
       }
 
       .game ol {
@@ -386,7 +386,7 @@
           .parentElement
           .parentElement
           .parentElement
-          .querySelector('h3');
+          .querySelector('h2');
 
         const roundRange = document.createRange();
         roundRange.setStartBefore(elHeading);
