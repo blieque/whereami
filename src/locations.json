@@ -277,7 +277,8 @@
     "longitude": -2.0067574,
     "flag": "🇬🇧",
     "difficulty": 8,
-    "allowMovement": true
+    "allowMovement": true,
+    "bonus": "39.mp4"
   },
   {
     "id": "c8d4977",
