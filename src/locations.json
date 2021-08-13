@@ -271,6 +271,15 @@
     "bonus": "29.mp4"
   },
   {
+    "id": "f090ec2",
+    "name": "Berwick-on-Tweed",
+    "latitude": 55.7695253,
+    "longitude": -2.0067574,
+    "flag": "🇬🇧",
+    "difficulty": 8,
+    "allowMovement": true
+  },
+  {
     "id": "c8d4977",
     "name": "Bilbao",
     "panoramaID": "KB52Hjfjouqp99uOtouJkw",
@@ -529,6 +538,15 @@
       "Feels very British Isles",
       "EU stripe on number plates"
     ]
+  },
+  {
+    "id": "c9d8a1c",
+    "name": "Coventry",
+    "latitude": 52.4084716,
+    "longitude": -1.5164214,
+    "flag": "🇬🇧",
+    "difficulty": 5,
+    "allowMovement": true
   },
   {
     "id": "85aece2",
@@ -1882,6 +1900,15 @@
       "Driving on the left",
       "Lots of Japanese cars, common in Aus. and NZ"
     ]
+  },
+  {
+    "id": "58f4819",
+    "name": "Wrexham",
+    "latitude": 53.0451438,
+    "longitude": -2.9915965,
+    "flag": "🇬🇧",
+    "difficulty": 5,
+    "allowMovement": true
   },
   {
     "id": "f0a6d8e",
