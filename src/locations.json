@@ -1,5 +1,14 @@
 [
   {
+    "id": "9a730be",
+    "name": "Aberdeen",
+    "latitude": 57.1441796,
+    "longitude": -2.0998654,
+    "flag": "🇬🇧",
+    "difficulty": 7,
+    "allowMovement": true
+  },
+  {
     "id": "8bea857",
     "name": "Abu Dhabi",
     "latitude": 24.4927466,
@@ -707,6 +716,15 @@
     "bonus": "06.mp4"
   },
   {
+    "id": "23de90e",
+    "name": "Glencoe",
+    "latitude": 56.6824619,
+    "longitude": -5.1027931,
+    "flag": "🇬🇧",
+    "difficulty": 8,
+    "allowMovement": true
+  },
+  {
     "id": "58be67f",
     "name": "Gothenburg",
     "panoramaID": "pyY99AmmZUmAZy-I82PaBw",
@@ -1261,6 +1279,24 @@
       "Flags! (southwest, northeast)",
       "French and English language"
     ]
+  },
+  {
+    "id": "cd76db6",
+    "name": "Oxford",
+    "latitude": 51.7537615,
+    "longitude": -1.2613064,
+    "flag": "🇬🇧",
+    "difficulty": 4,
+    "allowMovement": true
+  },
+  {
+    "id": "ebac6c3",
+    "name": "Oxford",
+    "latitude": 51.7589909,
+    "longitude": -1.2674296,
+    "flag": "🇬🇧",
+    "difficulty": 7,
+    "allowMovement": true
   },
   {
     "id": "e1ba0f6",
