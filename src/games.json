@@ -359,5 +359,23 @@
       "c9d8a1c",
       "9a730be"
     ]
+  },
+  {
+    "series": 3,
+    "date": "2022-01-21",
+    "locationIDs": [
+      ["fe2a89e", "df2f670"],
+      "6b1e34e",
+      "23de90e"
+    ]
+  },
+  {
+    "series": 3,
+    "date": "2022-01-28",
+    "locationIDs": [
+      "deb2f48",
+      "7bf6263",
+      "2afcf3d"
+    ]
   }
 ]
