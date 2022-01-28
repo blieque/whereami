@@ -147,6 +147,15 @@
     ]
   },
   {
+    "id": "2afcf3d",
+    "name": "Bangkok",
+    "latitude": 13.7651715,
+    "longitude": 100.5021092,
+    "flag": "🇹🇭",
+    "difficulty": 8,
+    "allowMovement": true
+  },
+  {
     "id": "57a3a53",
     "name": "Barcelona",
     "panoramaID": "zuWoalBpYQ1tg8ZOh1MXPQ",
@@ -395,6 +404,15 @@
       "Sandstone? 🤷‍♂️"
     ],
     "bonus": "14.mp4"
+  },
+  {
+    "id": "7bf6263",
+    "name": "Calgary",
+    "latitude": 51.0456641,
+    "longitude": -114.0704012,
+    "flag": "🇨🇦",
+    "difficulty": 7,
+    "allowMovement": true
   },
   {
     "id": "1dffa56",
@@ -1872,6 +1890,15 @@
       "Architecture of the Alps and big mountains"
     ],
     "bonus": "16.mp4"
+  },
+  {
+    "id": "deb2f48",
+    "name": "Valencia",
+    "latitude": 39.4659853,
+    "longitude": -0.3723903,
+    "flag": "🇪🇸",
+    "difficulty": 5,
+    "allowMovement": true
   },
   {
     "id": "e4650bf",
