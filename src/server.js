@@ -83,48 +83,6 @@ const objectArrayToTable = (input, keys) => {
     .join('\n');
 };
 
-/**
-  `id` can be omitted when adding new locations. It will be added by the server
-  at startup and saved back to `locations.json`.
-
-  Some properties are optional:
-  - `isEnabled`, default `true`
-  - `latitude` and `longitude` if `panoramaID` is provided
-  - `panoramaID` if both `latitude` and `longitude` are provided
-  - `flag`, default `undefined`
-  - `allowMovement`, default `false`
-  - `clues`, default `undefined`
-  - `bonus`, default `undefined`
-
-  It is recommended to specify locations by `panoramaID` rather than `latitude`
-  and `longitude` where possible, unless `allowMovement` is `true`. It is
-  recommeded to always set `allowMovement` to `true` or provide an array of
-  `clues`. `flag` will not be used if `clues` is not an array of clues.
-
-  `locations.json` is in the form:
-
-  ```
-  [
-    {
-      "id": "231b158",
-      "isEnabled": true,
-      "name": "London",
-      "panormaID": "AuEPJltHzwIzwxBBEDekQA",
-      "latitude": 51.4779302,
-      "longitude": -0.0014511,
-      "difficulty": 2,
-      "flag": "🇬🇧",
-      "allowMovement": false,
-      "clues": [
-        "\"Royal Observatory\" the southeast",
-        "London skyline to the north-northwest"
-      ],
-      "bonus": "01.mp4"
-    },
-    ...
-  ]
-  ```
- */
 const locations = JSON.parse(readFileSync(new URL('./locations.json', import.meta.url)));
 
 // Process locations
