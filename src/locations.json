@@ -207,7 +207,7 @@
     "difficulty": 8,
     "clues": [
       "\"Titanic Quarter\" (south)",
-      "\"H & W\" gantry crane – Harland and Wolff",
+      "\"H & W\" gantry crane – Harland and Wolff",
       "Sign to Bangor and Holywood (south)",
       "British road signs, driving on the left, no Irish – has to be UK"
     ],
@@ -742,7 +742,8 @@
     "longitude": -5.1027931,
     "flag": "🇬🇧",
     "difficulty": 8,
-    "allowMovement": true
+    "allowMovement": true,
+    "bonus": "41.mp4"
   },
   {
     "id": "58be67f",
@@ -1036,7 +1037,7 @@
       "Flag! (west)",
       "French and German city names (northeast)",
       "\".lu\" website (pink bus) (east-northeast)",
-      "Yellow number plates front and rear – must be Netherlands or Luxembourg"
+      "Yellow number plates front and rear – must be Netherlands or Luxembourg"
     ]
   },
   {
@@ -1769,7 +1770,7 @@
     "clues": [
       "\"Tbilisi History Museum\" (west-southwest)",
       "\"Rare Georgian Wines\" (north)",
-      "\"Drink wine\" – Georgia has a long history of wine making",
+      "\"Drink wine\" – Georgia has a long history of wine making",
       "Modern cars and old buildings (some unloved)",
       "Georgian script and English"
     ],
