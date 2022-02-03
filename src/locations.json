@@ -1408,7 +1408,8 @@
     "longitude": -78.4779724,
     "flag": "🇪🇨",
     "difficulty": 9,
-    "allowMovement": true
+    "allowMovement": true,
+    "bonus": "42.mp4"
   },
   {
     "id": "7e902a5",
