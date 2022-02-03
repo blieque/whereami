@@ -514,6 +514,15 @@
     ]
   },
   {
+    "id": "2273020",
+    "name": "Christchurch",
+    "latitude": -43.5342123,
+    "longitude": 172.6363991,
+    "flag": "🇳🇿",
+    "difficulty": 4,
+    "allowMovement": true
+  },
+  {
     "id": "68c036a",
     "name": "Cologne",
     "panoramaID": "4DUx3Zttf58LQQ18lG2Dvg",
@@ -1360,6 +1369,15 @@
     ]
   },
   {
+    "id": "b259bc5",
+    "name": "Porto",
+    "latitude": 41.1440267,
+    "longitude": -8.6099115,
+    "flag": "🇵🇹",
+    "difficulty": 6,
+    "allowMovement": true
+  },
+  {
     "id": "9c1b38d",
     "name": "Portsmouth",
     "latitude": 50.8092616,
@@ -1382,6 +1400,15 @@
       "Square cobbled pavements"
     ],
     "bonus": "08.mp4"
+  },
+  {
+    "id": "0bcb280",
+    "name": "Quito",
+    "latitude": -0.1773483,
+    "longitude": -78.4779724,
+    "flag": "🇪🇨",
+    "difficulty": 9,
+    "allowMovement": true
   },
   {
     "id": "7e902a5",
