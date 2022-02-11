@@ -38,6 +38,15 @@
     ]
   },
   {
+    "id": "32a3bf6",
+    "name": "Anchorage",
+    "latitude": 61.190469,
+    "longitude": -149.8681457,
+    "flag": "🇺🇸",
+    "difficulty": 7,
+    "allowMovement": true
+  },
+  {
     "id": "32e020d",
     "name": "Ankara",
     "panoramaID": "Dve4ZD3GhFPQEpYNsBhWzg",
@@ -919,6 +928,15 @@
     ]
   },
   {
+    "id": "3644e8b",
+    "name": "Kraków",
+    "latitude": 50.0648252,
+    "longitude": 19.9413354,
+    "flag": "🇵🇱",
+    "difficulty": 4,
+    "allowMovement": true
+  },
+  {
     "id": "2075f56",
     "name": "Kuala Lumpur",
     "panoramaID": "ldNEGpmX-tUKWcjrV0uGRg",
@@ -1400,6 +1418,15 @@
       "Square cobbled pavements"
     ],
     "bonus": "08.mp4"
+  },
+  {
+    "id": "ca86e68",
+    "name": "Pretoria",
+    "latitude": -25.7428365,
+    "longitude": 28.1926864,
+    "flag": "🇿🇦",
+    "difficulty": 8,
+    "allowMovement": true
   },
   {
     "id": "0bcb280",
