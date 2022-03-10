@@ -1,12 +1,12 @@
 # [Where Am I?](https://whereami.blieque.co.uk/)
 
 *Where Am I?* is a simple geography game which can be played solo or with
-others. It's a lot like GeoGuessr but is built to be played with group in a
-conference call.
+others. It's a lot like GeoGuessr but is designed to be played with a group of
+people in a conference call.
 
 ## Playing the Game
 
-1. One person acts as gamemaster. The visit the
+1. One person acts as gamemaster. They visit the
    [homepage](https://whereami.blieque.co.uk/) and choose a game to play.
 
 1. The gamemaster presses S. This will:
@@ -16,7 +16,8 @@ conference call.
     - Enable *Copy* buttons on each round of each game.
 
 1. The gamemaster clicks *Copy* on the first round of the chosen game and pastes
-   the result in the text chat of the conference call.
+   the result in the text chat of the conference call. This requires rich text
+   support in the chat application.
 
 1. The players simultaneously click the provided link and attempt to guess the
    city they're shown. Anyone may shout out an answer.
@@ -40,8 +41,8 @@ property means the players will be limited to the initial photosphere.
 ### Clues
 
 Particularly useful for non-moving locations, a list of clues may be specified
-with each location to show players what they should look out for in future
-rounds.
+with each location to show players what could have tipped them off and what they
+should look out for in future rounds.
 
 ### Bonuses
 
@@ -54,16 +55,17 @@ city name is revealed. Videos are not included in the Git repository.
 The first player to join the game at a particular city will trigger a
 synchronised 10-second countdown for all players playing that same city. This
 gives players a little more time to click the link when it appears in chat and
-avoids penalising players with slower a internet connections. Google Maps loads
-but is hidden from view while the countdown runs.
+avoids penalising players with slower internet connections. Google Maps still
+loads immediately but is hidden from view while the countdown runs.
 
 Additionally, after finishing, the countdown has its own 15-second cooldown,
 preventing late arrivals to the game from triggering a second countdown and
-being obstructed while others play.
+being obstructed while others start the game.
 
 ### Solo and Silent Modes
 
-URLs of game pages may have flags added to them, e.g., `https://whereami.blieque.co.uk/7b9453e!silent`
+URLs of game pages may have flags added to them, e.g.,
+`https://whereami.blieque.co.uk/7b9453e!silent`:
 
 - `!solo` – Show the player their own "Reveal" button on the game page. Do not
   reveal other simultaneous games when a "solo" player presses reveal, only
@@ -83,8 +85,8 @@ at startup and saved back to `locations.json`.
 
 Some properties are optional:
 - `isEnabled`, default `true`
-- `latitude` and `longitude` if `panoramaID` is provided
-- `panoramaID` if both `latitude` and `longitude` are provided
+- `latitude` and `longitude`, if `panoramaID` is provided
+- `panoramaID`, if both `latitude` and `longitude` are provided
 - `flag`, default `undefined`
 - `allowMovement`, default `false`
 - `clues`, default `undefined`
@@ -95,8 +97,29 @@ It is recommended to:
 - Specify locations by `panoramaID` rather than `latitude` and `longitude` where
   possible, unless `allowMovement` is `true`. 
 
+  - Values for `panoramaID`, `latitude`, and `longitude` can be found in the URL
+    of the page when viewing Google Street View. Consider this URL:
+    `https://www.google.co.uk/maps/@51.4779302,-0.0014511,3a,63.7y,327.19h,93.1t/data=!3m6!1e1!3m4!1sAuEPJltHzwIzwxBBEDekQA!2e0!7i13312!8i6656`.
+    `latitude` and `longitude` follow "`/maps/@`" and `panoramaID` is found
+    between "`!1s`" and the following "`!`", not inclusive.
+
+  - Specifying locations by `panoramaID` ensures the exact photosphere you
+    intended to use is loaded. By contrast, using `latitude` and `longitude` can
+    sometimes cause a photosphere from a slightly different location or date to
+    load. Using `panoramaID` is more brittle as photospheres are sometimes
+    removed when Google adds new imagery. Since locations with `allowMovement`
+    enabled are less likely to include clues for a specific photosphere, the
+    reliability of `latitude` and `longitude` is preferable for those locations.
+
+  - When the `panoramaID` in the Google Maps URL begins with `AF1Qip`, the
+    photosphere is user-uploaded. This is common near tourist attractions and in
+    countries without official Street View imagery, e.g., India. Specifying
+    these photospheres by `panoramaID` does not work due to limitations in the
+    Google Maps SDK. These locations can usually, although not always, be
+    specified by `latitude` and `longitude`.
+
 - Always either set `allowMovement` to `true` or provide an array of `clues`.
-  `flag` will not be used if `clues` is not an array of clues.
+  Note that `flag` will not be used if `clues` is not an array of clues.
 
 `locations.json` is in the form:
 
@@ -113,8 +136,8 @@ It is recommended to:
     "flag": "🇬🇧",
     "allowMovement": false,
     "clues": [
-      "\"Royal Observatory\" the southeast",
-      "London skyline to the north-northwest"
+      "\"Royal Observatory\" (southeast)",
+      "London skyline (north-northwest)"
     ],
     "bonus": "01.mp4"
   },
@@ -126,7 +149,7 @@ It is recommended to:
 
 Each game consists of an array of rounds. Each round is specified by a location
 ID or an array of location IDs. In the latter case, all locations should be in
-the same city and should be of differing difficulty.
+the same city and should be of varying difficulty.
 
 `games.json` is in the form:
 
