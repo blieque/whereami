@@ -778,6 +778,15 @@
     ]
   },
   {
+    "id": "cbe2dcd",
+    "name": "Hanoi",
+    "latitude": 21.0273015,
+    "longitude": 105.8340356,
+    "flag": "🇻🇳",
+    "difficulty": 6,
+    "allowMovement": true
+  },
+  {
     "id": "582f190",
     "name": "Havana",
     "latitude": 23.1374163,
@@ -1582,6 +1591,15 @@
     ]
   },
   {
+    "id": "e6d7046",
+    "name": "San Francisco",
+    "latitude": 37.7933457,
+    "longitude": -122.3962233,
+    "flag": "🇺🇸",
+    "difficulty": 5,
+    "allowMovement": true
+  },
+  {
     "id": "477a046",
     "name": "San Marino",
     "panoramaID": "RvuQvPIN8ZWWVdvgJBaaFA",
@@ -2023,6 +2041,16 @@
       "Driving on the left",
       "Lots of Japanese cars, common in Aus. and NZ"
     ]
+  },
+  {
+    "id": "a0681e8",
+    "name": "Weston Super Mare",
+    "latitude": 51.3475844,
+    "longitude": -2.9804034,
+    "flag": "🇬🇧",
+    "difficulty": 3,
+    "allowMovement": true,
+    "bonus": "44.mp4"
   },
   {
     "id": "58f4819",
