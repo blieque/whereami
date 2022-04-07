@@ -271,7 +271,7 @@ const gameListHTML = h(
             'small',
             { style: 'font-weight: 400' },
             [
-              ' – ',
+              ' – ',
               h(
                 'a',
                 { href: 'https://geolite.blieque.co.uk/games.html' },
