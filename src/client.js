@@ -303,14 +303,22 @@ const splitSpanLetters = (name) => {
 
   name
     .split('')
-    .map((character, i) => {
-      const el = document.createElement(character !== ' ' ? 'span' : 'br');
+    .flatMap((character, i) => {
+      const els = [];
+
       if (character !== ' ') {
+        const el = document.createElement('span');
         el.classList.add('reveal__character');
         el.innerText = character;
         el.style.transitionDelay = `${offsetDelays[i] * 5}s`;
+        els.push(el);
       }
-      return el;
+
+      if (character === ' ' || character === '-') {
+        els.push(document.createElement('br'));
+      }
+
+      return els;
     })
     .forEach(elSpan => {
       elRevealName.appendChild(elSpan);
@@ -325,7 +333,7 @@ const reveal = ({name, flag, clues, bonus}, position) => {
   elRevealer.classList.add('revealer--hidden');
 
   const longestWordLength = name
-    .split(' ')
+    .split(/[ -]/)
     .map(part => part.length)
     .reduce((a, b) => Math.max(a, b));
   elRevealName.style.fontSize = `${80 / longestWordLength}vmin`;
