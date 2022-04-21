@@ -373,6 +373,15 @@
     ]
   },
   {
+    "id": "70807a5",
+    "name": "Budapest",
+    "latitude": 47.50178135,
+    "longitude": 19.0490819,
+    "flag": "🇭🇺",
+    "difficulty": 7,
+    "allowMovement": true
+  },
+  {
     "id": "d817014",
     "name": "Buenos Aires",
     "latitude": -34.6059969,
@@ -1889,6 +1898,15 @@
     ]
   },
   {
+    "id": "e496a97",
+    "name": "Toronto",
+    "latitude": 43.6486827,
+    "longitude": -79.3864893,
+    "flag": "🇨🇦",
+    "difficulty": 6,
+    "allowMovement": true
+  },
+  {
     "id": "e8fc30d",
     "name": "Toulouse",
     "panoramaID": "SIiGEL__2IW3LdWyKPrqog",
@@ -1912,6 +1930,15 @@
       "French road signs",
       "Old European architecture"
     ]
+  },
+  {
+    "id": "68cb748",
+    "name": "Toulouse",
+    "latitude": 43.6033951,
+    "longitude": 1.4422201,
+    "flag": "🇫🇷",
+    "difficulty": 7,
+    "allowMovement": true
   },
   {
     "id": "10b051a",
